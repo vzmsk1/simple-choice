@@ -1,0 +1,142 @@
+body::after {
+    content: '';
+    position: fixed;
+    z-index: 600;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(37, 37, 37, 0.3);
+    backdrop-filter: blur(1.6rem);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.8s ease 0s;
+
+    .modal-show & {
+        opacity: 1;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    padding: 3rem 2.4rem;
+
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: visibility 0.8s ease 0s;
+
+    &.modal_show {
+        z-index: 601;
+
+        visibility: visible;
+        overflow: auto;
+
+        pointer-events: auto;
+
+        .modal__content {
+            visibility: visible;
+
+            transform: scale(1);
+        }
+    }
+
+    @media (max-width: 48em) {
+            padding: 6.6rem 3rem 11.4rem 3rem;
+    }
+
+    // .modal__wrapper
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+
+        width: 100%;
+        min-height: 100%;
+    }
+
+    // .modal__content
+
+    &__content {
+        position: relative;
+
+        width: 100%;
+
+        visibility: hidden;
+
+        transform: scale(0);
+
+        transition: transform 0.3s ease 0s;
+
+        .lock & {
+            visibility: visible;
+        }
+
+        @media (min-width: 48em) {
+            max-width: 156rem;
+        }
+    }
+
+    &__body {
+        position: relative;
+
+        border-radius: 0 10rem;
+
+        @media (max-width: 48em) {
+            border-radius: 0 8.8rem 0 8.8rem;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 3;
+        top: 4rem;
+        right: 4rem;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 9rem;
+        height: 9rem;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        @media (max-width: 48em) {
+            top: 3.2rem;
+            right: 3.2rem;
+
+            width: 8.8rem;
+            height: 8.8rem;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+
+        padding: 10rem;
+
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 48em) {
+            padding: 8rem 4rem 10rem 4rem;
+        }
+    }
+}
