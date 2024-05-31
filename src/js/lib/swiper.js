@@ -33,7 +33,9 @@ function initSliders() {
                 el: '.hero__fraction',
                 type: 'custom',
                 renderCustom: function (swiper, current, total) {
-                    return current;
+                    const cur = current < 10 ? '0' + current : current;
+
+                    return mm.matches ? cur : current;
                 }
             }
         });
@@ -56,6 +58,32 @@ function initSliders() {
 
         carousel.controller.control = titles;
         titles.controller.control = carousel;
+    }
+    if (document.querySelector('.shopify__swiper')) {
+        new Swiper('.shopify__swiper', {
+            modules: [Navigation, Pagination],
+            speed: 800,
+            spaceBetween: remToPx(4),
+            loop: true,
+            navigation: {
+                nextEl: '.shopify .swiper-nav__arr_next',
+                prevEl: '.shopify .swiper-nav__arr_prev'
+            },
+            pagination: {
+                el: '.shopify__fraction',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const cur = current < 10 ? '0' + current : current;
+
+                    return mm.matches ? cur : current;
+                }
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 4
+                }
+            }
+        });
     }
 }
 

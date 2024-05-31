@@ -1,15 +1,15 @@
 import gsap from 'gsap';
-import { bodyLock, bodyUnlock } from '../utils/utils';
+import { bodyLock, bodyUnlock, removeClasses } from '../utils/utils';
+
+gsap.defaults({
+    duration: 1
+});
 
 const mm = gsap.matchMedia();
 let set = gsap.timeline({
     defaults: {
         duration: 0
     }
-});
-
-gsap.defaults({
-    duration: 1
 });
 
 function gsapSet() {
@@ -28,8 +28,8 @@ function gsapSet() {
 
 function animateLoader(loader) {
     if (loader && !loader.classList.contains('_is-hidden')) {
-        gsapSet();
         bodyLock();
+        gsapSet();
 
         window.addEventListener('load', function () {
             const loaderAnim = gsap.timeline();
@@ -120,8 +120,63 @@ function animateHero() {
     }, 1000);
 }
 
+function initTiles() {
+    if (document.querySelectorAll('[data-tiles-container]').length) {
+        const containers = document.querySelectorAll('[data-tiles-container]');
+
+        function setClasses(items, idx, classname) {
+            if (items.length && items[idx]) {
+                removeClasses(items, classname);
+                items[idx].classList.add(classname);
+            }
+        }
+
+        containers.forEach((container) => {
+            const tiles = container.querySelectorAll('[data-tile]');
+            const bullets = Array.from(container.querySelectorAll('[data-tile-bullet]'));
+            const images = container.querySelectorAll('[data-tile-img]');
+
+            if (tiles.length && tiles.length > 1) {
+                tiles.forEach((tile, idx) =>
+                    tile.addEventListener('mouseover', function () {
+                        setClasses(images, idx, '_is-active');
+                        setClasses(bullets, idx, '_is-active');
+                    })
+                );
+
+                setClasses(images, 0, '_is-active');
+                setClasses(bullets, 0, '_is-active');
+            }
+
+            function onClickHandler(e) {
+                const { target } = e;
+                const targetBullet = target.closest('[data-tile-bullet]');
+
+                if (
+                    targetBullet ||
+                    target.closest('.shopify-card__cart-btn') ||
+                    target.closest('.shopify-card__fav-btn')
+                ) {
+                    e.preventDefault();
+                }
+
+                if (targetBullet) {
+                    const idx = bullets.indexOf(targetBullet);
+
+                    setClasses(bullets, idx, '_is-active');
+                    setClasses(images, idx, '_is-active');
+                }
+            }
+
+            container.addEventListener('click', onClickHandler);
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.loader');
+
+    initTiles();
 
     mm.add('(min-width: 768px)', () => {
         animateLoader(loader);

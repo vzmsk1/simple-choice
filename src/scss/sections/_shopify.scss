@@ -1,0 +1,54 @@
+.shopify {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__head {
+        margin-bottom: 8rem;
+
+        display: flex;
+        align-items: flex-start;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 4rem;
+        }
+    }
+
+    &__fraction {
+        align-self: end;
+
+        @media (min-width: 48em) {
+            margin-right: 41.3rem;
+            padding-top: 1.7rem;
+
+            align-self: stretch;
+            width: 2rem;
+        }
+    }
+
+    &__title-wrap {
+        margin-right: auto;
+
+        @media (max-width: 48em) {
+            margin-right: 0;
+
+            flex: 1 1 auto;
+            order: -1;
+            width: 100%;
+        }
+    }
+
+    &__swiper-nav {
+        @media (min-width: 48em) {
+            align-self: flex-end;
+        }
+    }
+
+    &__body {
+    }
+}

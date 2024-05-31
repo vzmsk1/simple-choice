@@ -74,6 +74,10 @@
     }
 
     &__swiper-nav {
+        svg {
+            color: #eae8e6;
+        }
+
         @media (min-width: 48em) {
             position: absolute;
             z-index: 2;

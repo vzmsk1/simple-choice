@@ -3,16 +3,32 @@
     flex-direction: column;
     width: 6.2rem;
 
+    @media (max-width: 48em) {
+        width: 10rem;
+    }
+
     &__arr {
         &_next {
             align-self: flex-end;
 
             transform: rotate(180deg);
         }
+        &_prev {
+            @media (max-width: 48em) {
+                transform: translateY(2rem);
+            }
+        }
     }
 
     &__arr-icon {
         width: 3.2rem;
         height: 3.2rem;
+
+        color: $blue;
+
+        @media (max-width: 48em) {
+            width: 5.2rem;
+            height: 5.2rem;
+        }
     }
 }
