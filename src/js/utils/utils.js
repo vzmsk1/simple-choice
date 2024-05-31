@@ -28,13 +28,10 @@ export const menuInit = () => {
     const mm = window.matchMedia('(max-width: 768px)');
 
     if (document.querySelector('.hamburger')) {
-        document.querySelector('.hamburger').addEventListener('click', function (e) {
+        document.addEventListener('click', function (e) {
             const isActive = document.documentElement.classList.contains('_menu-opened');
-            if (bodyLockStatus && !isActive) {
-                menuOpen();
-                console.log(e.target);
-            } else if (bodyLockStatus && isActive) {
-                menuClose();
+            if (e.target.closest('.hamburger') || (!e.target.closest('.menu-header') && isActive)) {
+                !isActive ? menuOpen() : menuClose();
             }
         });
 

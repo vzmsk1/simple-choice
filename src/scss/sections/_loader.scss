@@ -1,0 +1,72 @@
+.loader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    --y: 100%;
+    --y2: 0;
+
+    &._is-hidden {
+        display: none;
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: $blue;
+
+        transform: translateY(var(--y2));
+    }
+
+    @media (max-width: 48em) {
+        display: none;
+    }
+
+    &__inner {
+        height: 100%;
+
+        background-color: $gray;
+
+        clip-path: url(#cl-figure-3);
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+        }
+
+        &::after {
+            background-color: $beige;
+
+            transform: translateY(var(--y));
+        }
+    }
+
+    &__logo-wrap {
+        position: absolute;
+        z-index: 2;
+        top: 40.9rem;
+        left: 88.2rem;
+
+        width: 15.6rem;
+
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    }
+}

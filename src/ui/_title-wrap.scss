@@ -1,0 +1,29 @@
+.title-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+
+    @media (max-width: 48em) {
+        row-gap: 4.8rem;
+    }
+
+    &__subtitle {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+
+        @media (max-width: 48em) {
+            font-size: 3.2rem;
+            line-height: 4rem;
+            letter-spacing: 1rem;
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+    }
+}

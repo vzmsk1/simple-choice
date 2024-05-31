@@ -5,7 +5,7 @@ import '../scss/style.scss';
 import * as utils from './utils/utils.js';
 
 // hamburger menu
-// utils.menuInit();
+utils.menuInit();
 
 // set current year
 // utils.setCurrentYear();

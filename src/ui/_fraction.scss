@@ -1,0 +1,13 @@
+.fraction {
+    font-family: 'Lora';
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    text-transform: uppercase;
+
+    @media (min-width: 48em) {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        color: #eae8e6;
+    }
+}

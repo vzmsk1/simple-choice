@@ -1,0 +1,18 @@
+.swiper-nav {
+    display: flex;
+    flex-direction: column;
+    width: 6.2rem;
+
+    &__arr {
+        &_next {
+            align-self: flex-end;
+
+            transform: rotate(180deg);
+        }
+    }
+
+    &__arr-icon {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+}
