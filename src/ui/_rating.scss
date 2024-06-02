@@ -1,0 +1,11 @@
+.rating {
+    display: flex;
+    column-gap: 0.55rem;
+
+    &__item,
+    &__icon {
+        flex: 0 0 1.8rem;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}

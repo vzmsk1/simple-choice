@@ -1,9 +1,11 @@
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { bodyLock, bodyUnlock, removeClasses } from '../utils/utils';
 
 gsap.defaults({
     duration: 1
 });
+gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
 let set = gsap.timeline({
@@ -11,6 +13,30 @@ let set = gsap.timeline({
         duration: 0
     }
 });
+
+const scrollTriggerAnimations = {
+    shopify() {
+        const sections = document.querySelectorAll('.shopify');
+
+        if (sections.length) {
+            sections.forEach((section) => {
+                gsap.to(section.querySelectorAll('.shopify__slide_has-anim'), {
+                    translateY: '16rem',
+                    duration: 0
+                });
+
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top 40%'
+                    }
+                }).to(section.querySelectorAll('.shopify__slide_has-anim'), {
+                    translateY: 0
+                });
+            });
+        }
+    }
+};
 
 function gsapSet() {
     set.to('.header__content', { translateY: '-15rem', opacity: 0 });
@@ -137,12 +163,19 @@ function initTiles() {
             const images = container.querySelectorAll('[data-tile-img]');
 
             if (tiles.length && tiles.length > 1) {
-                tiles.forEach((tile, idx) =>
+                tiles.forEach((tile, idx) => {
                     tile.addEventListener('mouseover', function () {
                         setClasses(images, idx, '_is-active');
                         setClasses(bullets, idx, '_is-active');
-                    })
-                );
+                    });
+
+                    if (container.dataset.tilesContainer === 'first') {
+                        tile.addEventListener('mouseout', function () {
+                            setClasses(images, 0, '_is-active');
+                            setClasses(bullets, 0, '_is-active');
+                        });
+                    }
+                });
 
                 setClasses(images, 0, '_is-active');
                 setClasses(bullets, 0, '_is-active');
@@ -180,6 +213,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     mm.add('(min-width: 768px)', () => {
         animateLoader(loader);
+
+        scrollTriggerAnimations.shopify();
         return () => {};
     });
     mm.add('(max-width: 768px)', () => {

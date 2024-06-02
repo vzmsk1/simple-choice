@@ -1,0 +1,86 @@
+.review-card {
+    &.swiper-slide {
+        display: flex;
+    }
+
+    min-height: 38.5rem;
+    border-radius: 2rem;
+
+    overflow: hidden;
+
+    background-color: $gray;
+
+    &_blank {
+        opacity: 0.1;
+    }
+
+    &__inner {
+        padding: 3rem;
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        overflow: hidden;
+    }
+
+    &__text {
+        margin-bottom: auto;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        column-gap: 1.6rem;
+    }
+
+    &__image-wrap {
+        flex: 0 0 6.2rem;
+        width: 6.2rem;
+        height: 6.2rem;
+        border-radius: 1.2rem;
+
+        overflow: hidden;
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.6rem;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 130%;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        column-gap: 1.7rem;
+    }
+
+    &__date {
+        font-family: 'Lora';
+        font-size: 1.6rem;
+        line-height: 110%;
+        letter-spacing: 0.2rem;
+        color: rgba(0, 48, 87, 0.5);
+    }
+}

@@ -281,8 +281,14 @@
 
         object-fit: cover;
 
+        transition: opacity 0.3s ease;
+
         &._is-active {
             opacity: 1;
         }
+    }
+
+    &__btn {
+        align-self: flex-start;
     }
 }
