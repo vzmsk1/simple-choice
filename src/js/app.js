@@ -22,7 +22,7 @@ import './utils/forms';
 import './utils/tabs.js';
 
 // accordion
-// import './utils/accordion.js';
+import './utils/accordion.js';
 
 // select
 import './utils/select.js';

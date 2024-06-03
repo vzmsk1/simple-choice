@@ -2,72 +2,131 @@
     position: relative;
 
     display: flex;
-    column-gap: 20.7rem;
+    gap: 20.7rem;
 
     background-color: $blue;
+
+    @media (max-width: 48em) {
+        padding: 20rem 0 21.6rem 0;
+
+        flex-direction: column;
+        gap: 6.4rem;
+    }
 
     &__container {
     }
 
     &__content {
-        padding: 20rem 0;
+        margin-bottom: 6.4rem;
 
         display: flex;
         flex-direction: column;
-        max-width: 68rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+            padding: 20rem 0;
+
+            max-width: 68rem;
+        }
     }
 
     &__carousel {
-        position: absolute;
-        top: 0;
-        right: -33rem;
+        margin-bottom: 6.4rem;
 
-        display: flex;
-        gap: 4rem;
-        height: 100%;
+        @media (min-width: 48em) {
+            position: absolute;
+            top: 0;
+            right: -33rem;
+
+            margin-bottom: 0;
+
+            display: flex;
+            gap: 4rem;
+            height: 100%;
+
+            overflow: hidden;
+        }
     }
 
     &__title-wrap {
         color: $gray;
     }
 
-    &__swiper {
-        &.swiper {
-            height: 100%;
-            width: 40rem;
+    &__swiper-cnt {
+        @media (min-width: 48em) {
+            &:nth-child(2) {
+                transform: translateY(-20rem);
+
+                .swiper {
+                    overflow: visible;
+                }
+
+                .swiper-slide-next.review-card {
+                    background-color: $gray;
+
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+            }
         }
+    }
 
-        &:nth-child(2) {
+    &__swiper {
+        @media (min-width: 48em) {
             &.swiper {
-                height: calc(100% + 27rem);
-
-                transform: translateY(-27rem);
+                height: 100%;
+                width: 40rem;
+            }
+        }
+        @media (max-width: 48em) {
+            &.swiper {
+                overflow: visible;
             }
         }
     }
 
     &__slide {
-        &.swiper-slide {
-            height: auto;
+        @media (min-width: 48em) {
+            &.swiper-slide {
+                height: auto;
+            }
         }
     }
 
     &__fraction {
-        margin-bottom: 36.9rem;
+        color: #eae8e680;
+
+        @media (min-width: 48em) {
+            margin-bottom: 36.9rem;
+        }
     }
 
     &__title-wrap {
         margin-bottom: 4.5rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
     }
 
     &__group {
         display: flex;
         align-items: center;
         column-gap: 6rem;
+
+        @media (max-width: 48em) {
+            justify-content: space-between;
+            align-items: flex-end;
+        }
     }
 
     &__buttons {
         display: flex;
         column-gap: 1.6rem;
+
+        @media (max-width: 48em) {
+            display: none;
+        }
     }
 }

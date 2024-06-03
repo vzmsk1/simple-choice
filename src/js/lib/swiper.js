@@ -190,31 +190,105 @@ function initSliders() {
         carousel.controller.control = titles;
         titles.controller.control = carousel;
     }
-    if (document.querySelectorAll('.reviews__swiper').length) {
-        document.querySelectorAll('.reviews__swiper').forEach((carousel, idx) => {
-            new Swiper(carousel, {
-                modules: [Navigation, Pagination],
-                speed: 1000,
-                direction: 'vertical',
-                reverseDirection: idx === 1 ? true : false,
-                spaceBetween: remToPx(4),
-                slidesPerView: 'auto',
-                allowTouchMove: false,
-                loop: true,
-                navigation: {
-                    nextEl: '.reviews .swiper-nav__arr_next',
-                    prevEl: '.reviews .swiper-nav__arr_prev'
-                },
-                pagination: {
-                    el: '.reviews__fraction',
-                    type: 'custom',
-                    renderCustom: function (swiper, current, total) {
-                        const cur = current < 10 ? '0' + current : current;
+    if (
+        document.querySelectorAll('.reviews__swiper-cnt._desktop-only .reviews__swiper').length &&
+        !mm.matches
+    ) {
+        document
+            .querySelectorAll('.reviews__swiper-cnt._desktop-only .reviews__swiper')
+            .forEach((carousel, idx) => {
+                new Swiper(carousel, {
+                    modules: [Pagination],
+                    speed: 1000,
+                    direction: 'vertical',
+                    spaceBetween: remToPx(4),
+                    slidesPerView: 'auto',
+                    allowTouchMove: false,
+                    centeredSlides: idx !== 2,
+                    centeredSlidesBounds: idx !== 2,
+                    loop: true,
+                    pagination:
+                        idx === 2
+                            ? {
+                                  el: '.reviews__fraction',
+                                  type: 'custom',
+                                  renderCustom: function (swiper, current, total) {
+                                      const cur = current < 10 ? '0' + current : current;
 
-                        return cur;
+                                      return cur;
+                                  }
+                              }
+                            : {},
+                    on: {
+                        afterInit: (swiper) => {
+                            document
+                                .querySelector('.reviews .swiper-nav__arr_prev')
+                                .addEventListener('click', function () {
+                                    if (idx !== 1) {
+                                        swiper.slideNext();
+                                    } else {
+                                        swiper.slidePrev();
+                                    }
+                                });
+                            document
+                                .querySelector('.reviews .swiper-nav__arr_next')
+                                .addEventListener('click', function () {
+                                    if (idx !== 1) {
+                                        swiper.slidePrev();
+                                    } else {
+                                        swiper.slideNext();
+                                    }
+                                });
+                        }
                     }
-                }
+                });
             });
+    }
+    if (document.querySelector('.reviews__swiper-cnt._mobile-only .reviews__swiper') && mm.matches) {
+        new Swiper('.reviews__swiper-cnt._mobile-only .reviews__swiper', {
+            modules: [Navigation, Pagination],
+            speed: 1000,
+            spaceBetween: remToPx(4),
+            navigation: {
+                prevEl: '.reviews .swiper-nav__arr_prev',
+                nextEl: '.reviews .swiper-nav__arr_next'
+            },
+            pagination: {
+                el: '.reviews__fraction',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const cur = current < 10 ? '0' + current : current;
+
+                    return cur;
+                }
+            }
+        });
+    }
+    if (document.querySelector('.news__swiper')) {
+        new Swiper('.news__swiper', {
+            modules: [Navigation, Pagination],
+            virtualTranslate: true,
+            loop: true,
+            navigation: {
+                nextEl: '.news .swiper-nav__arr_next',
+                prevEl: '.news .swiper-nav__arr_prev'
+            },
+            pagination: {
+                el: '.news__fraction',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const cur = current < 10 ? '0' + current : current;
+
+                    return cur;
+                }
+            },
+            on: {
+                slideChangeTransitionStart: (swiper) => {
+                    setTimeout(() => {
+                        swiper.animating = false;
+                    }, 0);
+                }
+            }
         });
     }
 }

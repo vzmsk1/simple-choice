@@ -1,3 +1,15 @@
+@media (min-width: 48em) {
+    .swiper-slide-active.review-card {
+        &:not(.reviews__swiper-cnt_blank &) {
+            background-color: $gray;
+
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+}
+
 .review-card {
     &.swiper-slide {
         display: flex;
@@ -8,10 +20,34 @@
 
     overflow: hidden;
 
-    background-color: $gray;
+    @media (max-width: 48em) {
+        min-height: 60.4rem;
+        border-radius: 3.2rem;
 
-    &_blank {
-        opacity: 0.1;
+        background-color: $gray;
+    }
+
+    @media (min-width: 48em) {
+        background-color: transparent;
+
+        transition: background-color 1s ease;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: #174265;
+
+            opacity: 1;
+
+            transition: opacity 1s ease;
+        }
     }
 
     &__inner {
@@ -19,9 +55,13 @@
 
         display: flex;
         flex-direction: column;
-        height: 100%;
+        min-height: 100%;
 
         overflow: hidden;
+
+        @media (max-width: 48em) {
+            padding: 4.8rem 4rem;
+        }
     }
 
     &__text {
@@ -31,14 +71,22 @@
 
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
+
+        @media (max-width: 48em) {
+            -webkit-line-clamp: 8;
+        }
     }
 
     &__content {
         display: flex;
         align-items: center;
         column-gap: 1.6rem;
+
+        @media (max-width: 48em) {
+            column-gap: 3.2rem;
+        }
     }
 
     &__image-wrap {
@@ -48,6 +96,13 @@
         border-radius: 1.2rem;
 
         overflow: hidden;
+
+        @media (max-width: 48em) {
+            flex: 0 0 10rem;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 2rem;
+        }
     }
 
     &__image {
@@ -60,6 +115,10 @@
         display: flex;
         flex-direction: column;
         row-gap: 1.6rem;
+
+        @media (max-width: 48em) {
+            row-gap: 2.4rem;
+        }
     }
 
     &__title {
@@ -68,19 +127,32 @@
         line-height: 130%;
         letter-spacing: 0.3rem;
         text-transform: uppercase;
+
+        @media (max-width: 48em) {
+            font-size: 3.2rem;
+            line-height: 4rem;
+        }
     }
 
     &__group {
         display: flex;
         align-items: center;
         column-gap: 1.7rem;
+
+        @media (max-width: 48em) {
+            column-gap: 3.2rem;
+        }
     }
 
     &__date {
         font-family: 'Lora';
         font-size: 1.6rem;
         line-height: 110%;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.1rem;
         color: rgba(0, 48, 87, 0.5);
+
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+        }
     }
 }
