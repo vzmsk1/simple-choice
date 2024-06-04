@@ -283,9 +283,10 @@
     position: fixed;
     z-index: 105;
     top: 0;
-    left: 0;
+    right: 0;
 
-    width: 100%;
+    width: 100vw;
+
     border-radius: 0 0 2rem 2rem;
 
     background-color: $gray;
@@ -294,27 +295,49 @@
     visibility: hidden;
 
     transition:
-        opacity 1s ease,
-        visibility 1s ease;
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        width 0.8s ease,
+        transform 0.8s ease;
+
+    @media (min-width: 48em) {
+        width: 0;
+    }
 
     ._show-search & {
+        width: 100%;
+
         opacity: 1;
         visibility: visible;
+
+        transform: none;
+
+        .search-header__container {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     @media (max-width: 48em) {
         height: 100%;
         border-radius: 0;
 
-        overflow: auto;
+        overflow-x: hidden;
+
+        transform: translateX(110%);
     }
 
     &__container {
         display: flex;
         flex-direction: column;
 
-        @media (max-width: 48em) {
-            overflow-x: hidden;
+        @media (min-width: 48em) {
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity 0.8s ease 0.8s,
+                visibility 0.8s ease 0.8s;
         }
     }
 
@@ -458,6 +481,8 @@
     &__swiper {
         @media (max-width: 48em) {
             &.swiper {
+                width: 100%;
+
                 overflow: visible;
             }
         }

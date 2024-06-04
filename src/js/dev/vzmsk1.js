@@ -98,7 +98,7 @@ function handleSearch() {
         if (txt.match(search.value)) {
             result.innerHTML = txt.replace(search.value, `<span>${txt.match(search.value)[0]}</span>`);
         } else {
-            searchModal.classList.remove('_show-results');
+            result.innerHTML = txt;
         }
     }
 
@@ -106,14 +106,16 @@ function handleSearch() {
         search.addEventListener('input', function () {
             const value = trimValue(search.value);
 
+            if (results.length) {
+                results.forEach((result) => {
+                    searchCharacters(result);
+
+                    !value.length && (result.innerHTML = trimValue(result.dataset.value));
+                });
+            }
+
             if (value.length) {
                 searchModal.classList.add('_show-results');
-
-                if (results.length) {
-                    results.forEach((result) => {
-                        searchCharacters(result);
-                    });
-                }
             } else {
                 searchModal.classList.remove('_show-results');
             }

@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
+import { bodyLock, bodyUnlock } from './utils';
 
 gsap.defaults({
     duration: 1
