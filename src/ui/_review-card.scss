@@ -20,6 +20,8 @@
 
     overflow: hidden;
 
+    transition: background-color 1s ease;
+
     @media (max-width: 48em) {
         min-height: 60.4rem;
         border-radius: 3.2rem;

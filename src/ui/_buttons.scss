@@ -229,3 +229,21 @@
         }
     }
 }
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1rem;
+
+    &__txt {
+        font-weight: 500;
+    }
+
+    &__icon {
+        flex: 0 0 3.2rem;
+        width: 3.2rem;
+        height: 3.2rem;
+
+        transform: rotate(140deg);
+    }
+}

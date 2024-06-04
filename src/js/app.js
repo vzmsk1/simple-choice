@@ -30,6 +30,12 @@ import './utils/select.js';
 // modals
 import './utils/modals.js';
 
+// animations
+import './utils/animations';
+
+// header scroll
+import './utils/header-scroll';
+
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom

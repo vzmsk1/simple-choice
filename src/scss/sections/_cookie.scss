@@ -1,0 +1,50 @@
+.cookie {
+    position: fixed;
+    z-index: 100;
+    right: 10rem;
+    bottom: 5rem;
+
+    padding: 2.4rem 3.2rem;
+
+    display: flex;
+    align-items: center;
+    column-gap: 3.3rem;
+    border-radius: 2rem;
+
+    background: rgba(137, 137, 137, 0.1);
+    backdrop-filter: blur(1.6rem);
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+
+    @media (max-width: 48em) {
+        right: 4rem;
+        bottom: 4rem;
+
+        padding: 3.6rem;
+
+        column-gap: 8rem;
+        width: calc(100% - 8rem);
+        border-radius: 3.2rem;
+
+        .btn__txt {
+            white-space: nowrap;
+        }
+    }
+
+    &._is-hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__text {
+        font-weight: 500;
+        line-height: 140%;
+        color: $white;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+}

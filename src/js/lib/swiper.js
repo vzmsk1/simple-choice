@@ -5,6 +5,11 @@ import { Navigation, Pagination, EffectFade, Controller, Autoplay } from 'swiper
 
 const mm = window.matchMedia('(max-width: 768px)');
 
+const swiperDefaults = {
+    speed: 1500,
+    loop: true
+};
+
 function initSliders() {
     function setSlidesHeight(wrapper, slides) {
         const arr = [];
@@ -17,9 +22,8 @@ function initSliders() {
     if (document.querySelector('.hero__swiper')) {
         const carousel = new Swiper('.hero__swiper', {
             modules: [Navigation, Pagination, EffectFade, Controller, Autoplay],
-            speed: 1000,
+            ...swiperDefaults,
             effect: 'fade',
-            loop: true,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
@@ -38,12 +42,20 @@ function initSliders() {
 
                     return cur;
                 }
+            },
+            on: {
+                init: (swiper) => {
+                    swiper.autoplay.stop();
+
+                    setTimeout(() => {
+                        swiper.autoplay.start();
+                    }, 5000);
+                }
             }
         });
         const titles = new Swiper('.hero__titles', {
             modules: [Controller],
-            speed: 1000,
-            loop: true,
+            ...swiperDefaults,
             virtualTranslate: true,
             allowTouchMove: false,
             on: {
@@ -68,9 +80,8 @@ function initSliders() {
         document.querySelectorAll('.shopify__swiper').forEach((carousel) => {
             new Swiper(carousel, {
                 modules: [Navigation, Pagination],
-                speed: 800,
+                ...swiperDefaults,
                 spaceBetween: remToPx(4),
-                loop: true,
                 navigation: {
                     nextEl: carousel.closest('.shopify').querySelector('.swiper-nav__arr_next'),
                     prevEl: carousel.closest('.shopify').querySelector('.swiper-nav__arr_prev')
@@ -95,14 +106,13 @@ function initSliders() {
     if (document.querySelector('.about__swiper')) {
         const carousel = new Swiper('.about__swiper', {
             modules: [Navigation, Pagination, Controller, Autoplay],
-            speed: 1000,
+            ...swiperDefaults,
             virtualTranslate: true,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
                 waitForTransition: false
             },
-            loop: true,
             allowTouchMove: false,
             navigation: {
                 nextEl: '.about .swiper-nav__arr_next',
@@ -127,8 +137,7 @@ function initSliders() {
         });
         const titles = new Swiper('.about__titles-swiper', {
             modules: [Controller],
-            speed: 1000,
-            loop: true,
+            ...swiperDefaults,
             virtualTranslate: true,
             allowTouchMove: false,
             on: {
@@ -144,14 +153,13 @@ function initSliders() {
     if (document.querySelector('.lookbook__swiper ')) {
         const carousel = new Swiper('.lookbook__swiper ', {
             modules: [Navigation, Pagination, Controller, Autoplay],
-            speed: 1000,
+            ...swiperDefaults,
             virtualTranslate: true,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
                 waitForTransition: false
             },
-            loop: true,
             allowTouchMove: false,
             navigation: {
                 nextEl: '.lookbook .swiper-nav__arr_next',
@@ -176,8 +184,8 @@ function initSliders() {
         });
         const titles = new Swiper('.lookbook__titles', {
             modules: [Controller],
-            speed: 1000,
-            loop: true,
+
+            ...swiperDefaults,
             virtualTranslate: true,
             allowTouchMove: false,
             on: {
@@ -199,14 +207,14 @@ function initSliders() {
             .forEach((carousel, idx) => {
                 new Swiper(carousel, {
                     modules: [Pagination],
-                    speed: 1000,
+
+                    ...swiperDefaults,
                     direction: 'vertical',
                     spaceBetween: remToPx(4),
                     slidesPerView: 'auto',
                     allowTouchMove: false,
                     centeredSlides: idx !== 2,
                     centeredSlidesBounds: idx !== 2,
-                    loop: true,
                     pagination:
                         idx === 2
                             ? {
@@ -247,7 +255,8 @@ function initSliders() {
     if (document.querySelector('.reviews__swiper-cnt._mobile-only .reviews__swiper') && mm.matches) {
         new Swiper('.reviews__swiper-cnt._mobile-only .reviews__swiper', {
             modules: [Navigation, Pagination],
-            speed: 1000,
+
+            ...swiperDefaults,
             spaceBetween: remToPx(4),
             navigation: {
                 prevEl: '.reviews .swiper-nav__arr_prev',
@@ -268,7 +277,8 @@ function initSliders() {
         new Swiper('.news__swiper', {
             modules: [Navigation, Pagination],
             virtualTranslate: true,
-            loop: true,
+
+            ...swiperDefaults,
             navigation: {
                 nextEl: '.news .swiper-nav__arr_next',
                 prevEl: '.news .swiper-nav__arr_prev'
@@ -289,6 +299,13 @@ function initSliders() {
                     }, 0);
                 }
             }
+        });
+    }
+    if (document.querySelector('.search-header__swiper') && mm.matches) {
+        new Swiper('.search-header__swiper', {
+            ...swiperDefaults,
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(4)
         });
     }
 }

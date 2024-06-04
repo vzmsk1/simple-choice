@@ -12,13 +12,14 @@
     }
 
     &__btn {
+        border: 1.6px solid $gray;
+
         @media (max-width: 48em) {
             position: absolute;
             bottom: 22.6rem;
             left: 4rem;
 
             width: calc(100% - 8rem);
-            border: 1.6px solid $gray;
         }
     }
 
@@ -59,6 +60,7 @@
 
         @media (max-width: 48em) {
             justify-content: space-between;
+            align-items: flex-end;
         }
     }
 

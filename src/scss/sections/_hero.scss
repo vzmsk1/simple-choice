@@ -87,13 +87,13 @@
     }
 
     &__fraction {
-        color: rgba(234, 232, 230, 0.5);
+        color: $white;
 
         @media (min-width: 48em) {
             position: absolute;
             z-index: 2;
             top: 21.1rem;
-            left: 54rem;
+            left: 54.4rem;
         }
     }
 
@@ -105,7 +105,7 @@
                 position: absolute;
                 z-index: 2;
                 top: 61.6rem;
-                left: 53.9rem;
+                left: 53.2rem;
 
                 padding-top: 0;
 
@@ -201,8 +201,8 @@
 
     display: flex;
     flex-direction: column;
-    row-gap: 1.8rem;
-    width: 36.1rem;
+    row-gap: 1.2rem;
+    width: 35.1rem;
 
     color: $gray;
 
@@ -228,7 +228,7 @@
     }
 
     &__image-wrap {
-        height: 19.6rem;
+        height: 20.8rem;
     }
 
     &__image {
@@ -246,6 +246,8 @@
 
     &__text {
         max-width: 23.9rem;
+
+        line-height: 125%;
     }
 
     &__btn {
