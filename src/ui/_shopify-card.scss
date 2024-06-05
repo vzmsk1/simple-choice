@@ -102,6 +102,10 @@
         background-color: rgba(234, 232, 230, 0.1);
         backdrop-filter: blur(1.6rem);
 
+        svg {
+            color: $gray;
+        }
+
         @media (max-width: 48em) {
             display: none;
         }

@@ -182,30 +182,10 @@ function animateHero() {
     }, 1000);
 }
 
-function initAnchors() {
-    if (document.querySelectorAll('[data-anchor]').length && window.innerWidth > 768) {
-        document.querySelectorAll('[data-anchor]').forEach((anchor) => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                gsap.to(window, {
-                    scrollTo: {
-                        y: `#${anchor.dataset.anchor}`,
-                        offsetY: anchor.dataset.anchorOffset ? +anchor.dataset.anchorOffset : 0
-                    },
-                    duration: 1.5
-                });
-            });
-        });
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.loader');
 
     scrollTriggerAnimations.header();
-
-    initAnchors();
 
     mm.add('(min-width: 768px)', () => {
         animateLoader(loader);
