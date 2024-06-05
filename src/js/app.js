@@ -50,6 +50,9 @@ import './lib/map';
 // input mask
 import './lib/inputmask';
 
+// simplebar
+import './lib/simplebar';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';

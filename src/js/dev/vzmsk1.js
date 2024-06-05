@@ -1,4 +1,4 @@
-import { bodyLock, bodyUnlock, removeClasses, setClassOnClick } from '../utils/utils';
+import { bodyLock, bodyLockToggle, bodyUnlock, removeClasses, setClassOnClick } from '../utils/utils';
 
 const mq = window.matchMedia('(max-width: 768px)');
 
@@ -25,12 +25,10 @@ function initTiles() {
                         setClasses(bullets, idx, '_is-active');
                     });
 
-                    if (container.dataset.tilesContainer === 'first') {
-                        tile.addEventListener('mouseout', function () {
-                            setClasses(images, 0, '_is-active');
-                            setClasses(bullets, 0, '_is-active');
-                        });
-                    }
+                    tile.addEventListener('mouseout', function () {
+                        setClasses(images, 0, '_is-active');
+                        setClasses(bullets, 0, '_is-active');
+                    });
                 });
 
                 setClasses(images, 0, '_is-active');
@@ -63,6 +61,16 @@ function initTiles() {
     }
 }
 
+function toggleClass(target, trigger, closeTrigger, classname) {
+    if (target.closest(trigger)) {
+        document.documentElement.classList.toggle(classname);
+        mq.matches && bodyLockToggle();
+    } else if (!target.closest(closeTrigger) && document.documentElement.classList.contains(classname)) {
+        document.documentElement.classList.remove(classname);
+        mq.matches && bodyUnlock();
+    }
+}
+
 function onClickHandler(e) {
     const { target } = e;
 
@@ -81,6 +89,18 @@ function onClickHandler(e) {
         document.documentElement.classList.remove('_show-search');
         mq.matches && bodyUnlock();
     }
+
+    if (target.closest('.filters__reset-btn')) {
+        const form = target.closest('form');
+        form.reset();
+
+        if (form.querySelectorAll('[checked]').length) {
+            form.querySelectorAll('[checked]').forEach((el) => el.removeAttribute('checked'));
+        }
+    }
+
+    toggleClass(target, '.sort-catalog__btn', '.sort-catalog', '_show-categories');
+    toggleClass(target, '.filters__btn', '.filters', '_show-filters');
 }
 
 function handleSearch() {
@@ -126,7 +146,6 @@ function handleSearch() {
 document.addEventListener('DOMContentLoaded', function () {
     initTiles();
     handleSearch();
-
     setClassOnClick(document.querySelector('.cookie__btn'), document.querySelector('.cookie'), '_is-hidden');
 });
 

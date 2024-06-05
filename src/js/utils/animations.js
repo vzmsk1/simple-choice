@@ -36,34 +36,31 @@ const scrollTriggerAnimations = {
         }
     },
     header() {
-        if (document.querySelector('.hero')) {
-            const header = document.querySelector('.header');
+        const header = document.querySelector('.header');
 
-            function setHeaderClass(self) {
-                console.log(self.trigger);
-                if (!self.trigger.classList.contains('dark-bg')) {
-                    header.classList.add('_blue-colored');
-                } else {
-                    header.classList.remove('_blue-colored');
-                }
+        function setHeaderClass(self) {
+            if (!self.trigger.classList.contains('dark-bg')) {
+                header.classList.add('_blue-colored');
+            } else {
+                header.classList.remove('_blue-colored');
             }
-
-            document.querySelectorAll('section').forEach((section) => {
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: section,
-                        start: window.innerWidth > 768 ? 'top 30%' : 'top top',
-                        end: 'bottom top',
-                        onEnter: (self) => {
-                            setHeaderClass(self);
-                        },
-                        onEnterBack: (self) => {
-                            setHeaderClass(self);
-                        }
-                    }
-                });
-            });
         }
+
+        document.querySelectorAll('section').forEach((section) => {
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: window.innerWidth > 768 ? 'top 30%' : 'top top',
+                    end: 'bottom top',
+                    onEnter: (self) => {
+                        setHeaderClass(self);
+                    },
+                    onEnterBack: (self) => {
+                        setHeaderClass(self);
+                    }
+                }
+            });
+        });
     }
 };
 

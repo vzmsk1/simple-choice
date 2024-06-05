@@ -10,17 +10,17 @@ const swiperDefaults = {
     loop: true
 };
 
-function initSliders() {
-    function setSlidesHeight(wrapper, slides) {
-        const arr = [];
+function setSlidesHeight(wrapper, slides) {
+    const arr = [];
 
-        slides.forEach((slide) => arr.push(slide.offsetHeight));
+    slides.forEach((slide) => arr.push(slide.offsetHeight));
 
-        wrapper.style.height = `${Math.max(...arr)}px`;
-    }
+    wrapper.style.height = `${Math.max(...arr)}px`;
+}
 
-    if (document.querySelector('.hero__swiper')) {
-        const carousel = new Swiper('.hero__swiper', {
+function initHeroSlider(classname, eventsConfig = {}) {
+    if (document.querySelector(`.${classname}__swiper`)) {
+        const carousel = new Swiper(`.${classname}__swiper`, {
             modules: [Navigation, Pagination, EffectFade, Controller, Autoplay],
             ...swiperDefaults,
             effect: 'fade',
@@ -31,11 +31,11 @@ function initSliders() {
             },
             allowTouchMove: false,
             navigation: {
-                nextEl: '.hero .swiper-nav__arr_next',
-                prevEl: '.hero .swiper-nav__arr_prev'
+                nextEl: `.${classname} .swiper-nav__arr_next`,
+                prevEl: `.${classname} .swiper-nav__arr_prev`
             },
             pagination: {
-                el: '.hero__fraction',
+                el: `.${classname}__fraction`,
                 type: 'custom',
                 renderCustom: function (swiper, current, total) {
                     const cur = current < 10 ? '0' + current : current;
@@ -43,32 +43,16 @@ function initSliders() {
                     return cur;
                 }
             },
-            on: {
-                init: (swiper) => {
-                    swiper.autoplay.stop();
-
-                    setTimeout(() => {
-                        swiper.autoplay.start();
-                    }, 5000);
-                }
-            }
+            ...eventsConfig
         });
-        const titles = new Swiper('.hero__titles', {
+        const titles = new Swiper(`.${classname}__titles`, {
             modules: [Controller],
             ...swiperDefaults,
             virtualTranslate: true,
             allowTouchMove: false,
             on: {
                 afterInit: (swiper) => {
-                    if (mm.matches) {
-                        setSlidesHeight(swiper.wrapperEl, swiper.slides);
-                    } else {
-                        swiper.wrapperEl.style.height = '100%';
-                    }
-
-                    mm.addEventListener('change', function () {
-                        setSlidesHeight(swiper.wrapperEl, swiper.slides);
-                    });
+                    setSlidesHeight(swiper.wrapperEl, swiper.slides);
                 }
             }
         });
@@ -76,6 +60,20 @@ function initSliders() {
         carousel.controller.control = titles;
         titles.controller.control = carousel;
     }
+}
+
+function initSliders() {
+    initHeroSlider('hero', {
+        on: {
+            init: (swiper) => {
+                swiper.autoplay.stop();
+
+                setTimeout(() => {
+                    swiper.autoplay.start();
+                }, 5000);
+            }
+        }
+    });
     if (document.querySelectorAll('.shopify__swiper').length) {
         document.querySelectorAll('.shopify__swiper').forEach((carousel) => {
             new Swiper(carousel, {
@@ -277,7 +275,6 @@ function initSliders() {
         new Swiper('.news__swiper', {
             modules: [Navigation, Pagination],
             virtualTranslate: true,
-
             ...swiperDefaults,
             navigation: {
                 nextEl: '.news .swiper-nav__arr_next',
@@ -306,6 +303,19 @@ function initSliders() {
             ...swiperDefaults,
             slidesPerView: 'auto',
             spaceBetween: remToPx(4)
+        });
+    }
+    initHeroSlider('chapter-hero');
+    if (document.querySelector('.catalog__categories-swiper')) {
+        new Swiper('.catalog__categories-swiper', {
+            modules: [Navigation],
+            ...swiperDefaults,
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(2),
+            navigation: {
+                nextEl: '.catalog .swiper-nav__arr_next',
+                prevEl: '.catalog .swiper-nav__arr_prev'
+            }
         });
     }
 }
