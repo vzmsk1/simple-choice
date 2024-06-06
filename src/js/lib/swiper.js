@@ -24,11 +24,11 @@ function initHeroSlider(classname, eventsConfig = {}) {
             modules: [Navigation, Pagination, EffectFade, Controller, Autoplay],
             ...swiperDefaults,
             effect: 'fade',
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-                waitForTransition: false
-            },
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            //     waitForTransition: false
+            // },
             allowTouchMove: false,
             navigation: {
                 nextEl: `.${classname} .swiper-nav__arr_next`,

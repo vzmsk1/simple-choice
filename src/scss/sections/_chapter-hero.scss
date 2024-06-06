@@ -170,6 +170,21 @@
 .info-chapter-hero {
     position: relative;
 
+    ._is-active & {
+        .info-chapter-hero__btn-icon {
+            opacity: 1;
+
+            &_plus {
+                opacity: 0;
+            }
+        }
+
+        .info-chapter-hero__body {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     &__btn-wrap {
         position: absolute;
         top: 0;
@@ -180,15 +195,22 @@
         width: 6.2rem;
         height: 6.2rem;
 
-        @media (any-hover: hover) {
-            &:hover {
-                width: 45.7rem;
-                height: 100%;
+        .btn {
+            background-color: $gray;
+        }
 
-                + .info-chapter-hero__body {
-                    opacity: 1;
-                    visibility: visible;
-                }
+        .info-chapter-hero__btn-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            opacity: 0;
+            transform: translate(-50%, -50%);
+
+            transition: opacity 0.5s ease;
+
+            &_plus {
+                opacity: 1;
             }
         }
     }
@@ -216,6 +238,10 @@
             &:hover {
                 opacity: 1;
                 visibility: visible;
+
+                &:has(> .info-chapter-hero) {
+                    background: red;
+                }
             }
         }
     }

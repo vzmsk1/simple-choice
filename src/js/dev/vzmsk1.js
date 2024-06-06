@@ -100,7 +100,7 @@ function onClickHandler(e) {
     }
 
     toggleClass(target, '.sort-catalog__btn', '.sort-catalog', '_show-categories');
-    toggleClass(target, '.filters__btn', '.filters', '_show-filters');
+    toggleClass(target, '.filters__btn', '.filters__body', '_show-filters');
 }
 
 function handleSearch() {
@@ -144,6 +144,18 @@ function handleSearch() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    if (document.querySelectorAll('.chapter-hero__slide').length) {
+        document.querySelectorAll('.chapter-hero__slide').forEach((el) => {
+            el.addEventListener('mouseover', function (e) {
+                if (!e.target.closest('.info-chapter-hero')) {
+                    el.classList.remove('_is-active');
+                } else if (e.target.closest('.info-chapter-hero__btn-wrap')) {
+                    el.classList.add('_is-active');
+                }
+            });
+        });
+    }
+
     initTiles();
     handleSearch();
     setClassOnClick(document.querySelector('.cookie__btn'), document.querySelector('.cookie'), '_is-hidden');

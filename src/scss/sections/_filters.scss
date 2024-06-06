@@ -1,19 +1,25 @@
 .filters {
-    position: fixed;
-    z-index: 100;
-    bottom: 7rem;
-    left: 4rem;
-
-    height: 10rem;
-
-    @media (min-width: 48em) {
-        bottom: 4rem;
-        left: 10rem;
-
-        height: 6.2rem;
-    }
-
     &__btn {
+        &_open {
+            position: fixed;
+            z-index: 100;
+            bottom: 7rem;
+            left: 50%;
+
+            height: 10rem;
+
+            transform: translateX(-50%);
+
+            @media (min-width: 48em) {
+                bottom: 4rem;
+                left: 10rem;
+
+                height: 6.2rem;
+
+                transform: none;
+            }
+        }
+
         .btn__icon {
             &_close {
                 display: none;
@@ -30,9 +36,10 @@
     }
 
     &__body {
-        position: absolute;
-        top: -7.5rem;
-        left: 0;
+        position: fixed;
+        z-index: 100;
+        bottom: 11.4rem;
+        left: 10rem;
 
         padding: 4rem;
 
@@ -47,26 +54,27 @@
 
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-100%);
 
         transition:
             opacity 0.7s ease,
             visibility 0.7s ease,
             transform 0.7s ease;
 
+        &[data-simplebar] {
+            position: fixed;
+        }
+
         ._show-filters & {
             opacity: 1;
             visibility: visible;
             transform: none;
-
-            @media (min-width: 48em) {
-                transform: translateY(-100%);
-            }
         }
 
         @media (max-width: 48em) {
             position: fixed;
             top: 0;
+            bottom: auto;
+            left: 0;
 
             padding: 4rem;
 

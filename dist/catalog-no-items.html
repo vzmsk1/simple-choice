@@ -1,179 +1,980 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ui</title>
-    <style>
-      ul,
-      li {
-        list-style: none;
-      }
-    </style>
-  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
-  <body>
-    <div class="wrapper">
-      <main style="background-color: #e0e0e0; padding-bottom: 20rem">
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            row-gap: 3rem;
-            padding: 5rem;
-          "
-          class="container"
-        >
-          <!-- typography -->
-          <div style="text-align: center">
-            <div class="h h_h1">heading</div>
-            <div class="h h_lora h_h1">heading</div>
-            <div class="h h_h2">heading</div>
-            <div class="h h_lora h_h2">heading</div>
-            <div class="h h_h3">heading</div>
-            <div class="fw500">text</div>
-            <div class="txt20">text</div>
-            <div class="txt20 txt20_lora">text</div>
-            <div class="txt16">text</div>
-            <div class="txt15">text</div>
-            <div class="txt15 txt-wide">text</div>
-            <div class="decorate">текст</div>
-          </div>
-
-          <!-- buttons -->
-          <div style="display: flex; gap: 2rem">
-            <button type="button" class="i-btn">
-              <svg>
-                <use href="#vk-svg"></use>
-              </svg>
-            </button>
-          </div>
-          <div style="display: flex; gap: 2rem">
-            <button type="button" class="btn btn_primary btn_primary_i">
-              <svg>
-                <use href="#angle-arr-svg"></use>
-              </svg>
-            </button>
-            <button
-              type="button"
-              class="btn btn_primary btn_primary_i _is-disabled"
-            >
-              <svg>
-                <use href="#angle-arr-svg"></use>
-              </svg>
-            </button>
-          </div>
-          <div style="display: flex; gap: 2rem">
-            <button type="button" class="btn btn_secondary">
-              <span class="btn__txt">Ввести промокод</span>
-            </button>
-            <button type="button" class="btn btn_secondary _is-disabled">
-              <span class="btn__txt">Ввести промокод</span>
-            </button>
-          </div>
-          <div style="display: flex; gap: 2rem">
-            <button type="button" class="btn btn_primary">
-              <span class="btn__txt">Смотреть</span>
-            </button>
-            <button type="button" class="btn btn_primary _is-disabled">
-              <span class="btn__txt">Смотреть</span>
-            </button>
-          </div>
-          <div style="display: flex; gap: 2rem">
-            <button type="button" class="btn btn_i">
-              <span class="btn__txt">Показать ещё</span>
-              <svg><use href="#down-arr-svg"></use></svg>
-            </button>
-            <button type="button" class="btn btn_i _is-disabled">
-              <span class="btn__txt">Показать ещё</span>
-              <svg><use href="#down-arr-svg"></use></svg>
-            </button>
-          </div>
-
-          <!-- inputs -->
-          <form
-            data-dev
-            action="#"
-            style="
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              row-gap: 5rem;
-            "
-          >
-            <div data-hint="Заполните поле" class="input">
-              <input
-                data-validate
-                data-required
-                autocomplete="off"
-                type="text"
-                name="form[]"
-                placeholder="Ваше имя"
-                class="input__field"
-              />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Каталог</title>
+    <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="header__container container">
+        <a href="/" class="header__logo-wrap">
+            <svg class="header__logo-icon">
+                <use href="#logo-svg"></use>
+            </svg>
+        </a>
+        <div class="header__content">
+            <nav data-da=".menu-header__nav-wrap,768,last" class="header__nav">
+                <a href="#" class="header__nav-link">Каталог</a>
+                <a href="#" class="header__nav-link">Lookbook</a>
+                <a href="#" class="header__nav-link">О нас</a>
+                <a href="#" class="header__nav-link">Отзывы</a>
+                <a href="#" class="header__nav-link">Новости</a>
+                <a href="#" class="header__nav-link">Контакты</a>
+                <a href="#" class="header__nav-link _mobile-only">Доставка и оплата</a>
+                <a href="#" class="header__nav-link _mobile-only">Возврат</a>
+                <a href="#" class="header__nav-link _mobile-only">Вопросы-ответы</a>
+            </nav>
+            <a href="tel:79030075671" class="header__tel">
+                <svg class="header__tel-icon">
+                    <use href="#tel-svg"></use>
+                </svg>
+                <span class="header__tel-txt">+7 (903) 007-56-71</span>
+            </a>
+            <div class="header__actions">
+                <button data-search-btn="" type="button" class="header__actions-item">
+                    <svg class="header__actions-icon">
+                        <use href="#search-svg"></use>
+                    </svg></button><a href="#" class="header__actions-item">
+                    <svg class="header__actions-icon">
+                        <use href="#user-svg"></use>
+                    </svg> </a><a href="#" class="header__actions-item _desktop-only">
+                    <svg class="header__actions-icon">
+                        <use href="#fav-svg"></use>
+                    </svg> </a><a href="#" class="header__actions-item">
+                    <svg class="header__actions-icon">
+                        <use href="#cart-svg"></use>
+                    </svg> </a><button type="button" class="header__actions-item hamburger _mobile-only">
+                    <svg class="header__actions-icon">
+                        <use href="#hamburger-svg"></use>
+                    </svg>
+                </button>
             </div>
-            <div data-hint="Заполните поле" class="input">
-              <span class="input__label">Имя</span>
-              <input
-                data-validate
-                data-required
-                autocomplete="off"
-                type="text"
-                name="form[]"
-                placeholder="Ваше имя"
-                class="input__field"
-              />
-            </div>
-          </form>
-
-          <!-- dropdowns -->
-          <div style="width: 54.7rem">
-            <div class="dropdown">
-              <select
-                data-sel-hint="Город не выбран"
-                data-sel-label="Ваш город"
-                data-show-selection
-              >
-                <option value="1">Москва</option>
-                <option value="2">Москва</option>
-                <option value="3">Москва</option>
-                <option value="3">Москва</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- radio buttons -->
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              row-gap: 3rem;
-            "
-          >
-            <label class="option">
-              <input
-                type="radio"
-                name="option"
-                value="1"
-                class="option__input"
-              />
-              <span class="option__txt">Оплата банковской картой на сайте</span>
-            </label>
-            <label class="option _is-disabled">
-              <input
-                type="radio"
-                name="option"
-                value="1"
-                class="option__input"
-              />
-              <span class="option__txt">Оплата банковской картой на сайте</span>
-            </label>
-          </div>
         </div>
-      </main>
     </div>
-    <svg style="display: none">
+    <div class="header__menu menu-header">
+        <button type="button" class="menu-header__close-btn hamburger">
+            <svg class="menu-header__close-btn-icon"><use href="#cross-svg"></use></svg>
+        </button>
+        <a href="#" class="menu-header__logo-wrap">
+            <img class="menu-header__logo" src="./assets/images/logo-blue.svg" alt="">
+        </a>
+        <div class="menu-header__nav-wrap"></div>
+        <div class="menu-header__footer">
+            <ul class="menu-header__list">
+                <li class="menu-header__list-item">
+                    <a href="tel:79030075671" class="menu-header__list-item-txt">+7 (903) 007-56-71</a>
+                </li>
+                <li class="menu-header__list-item">
+                    <a href="mailto:simplechoice@mail.ru" class="menu-header__list-item-txt">simplechoice@mail.ru</a>
+                </li>
+            </ul>
+            <ul class="menu-header__socials">
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#ig-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#vk-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#whatsapp-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#telegram-svg"></use></svg></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header__search search-header">
+        <div class="search-header__container container">
+            <div class="search-header__head">
+                <div class="search-header__logo-wrap">
+                    <img class="search-header__logo" src="./assets/images/logo-blue.svg" alt="">
+                </div>
+                <form action="#" data-dev="" class="search-header__form">
+                    <div data-hint="Заполните поле" class="search-header__input input">
+                        <input data-validate="" data-required="" autocomplete="off" type="search" name="form[]" placeholder="Введите свой поисковой запрос" class="input__field">
+                    </div>
+                    <button type="submit" class="search-header__btn">
+                        <svg class="search-header__btn-icon">
+                            <use href="#search-svg"></use>
+                        </svg>
+                    </button>
+                </form>
+                <button data-search-btn="" class="search-header__close-btn">
+                    <svg class="search-header__close-btn-icon">
+                        <use href="#cross-svg"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="search-header__body">
+                <div class="search-header__aside">
+                    <div class="search-header__group search-header__group_results">
+                        <span class="search-header__title">Часто ищут</span>
+                        <ul class="search-header__list list-search-header">
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Не нашли что искали?" class="list-search-header__text">Не нашли что искали?</span>
+                            </li>
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Флисовый комбинезон" class="list-search-header__text">Флисовый комбинезон</span>
+                            </li>
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Жилет для мальчика" class="list-search-header__text">Жилет для мальчика</span>
+                            </li>
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Костюм на праздник для ребенка" class="list-search-header__text">Костюм на праздник для ребенка</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-header__group search-header__group_categories">
+                        <span class="search-header__title">Найти в категории</span>
+                        <ul class="search-header__list list-search-header list-search-header_reversed">
+                            <li class="list-search-header__item">
+                                <span class="list-search-header__text">Кофты для мальчиков</span>
+                                <svg class="list-search-header__icon">
+                                    <use href="#arr-left-svg"></use>
+                                </svg>
+                            </li>
+                            <li class="list-search-header__item">
+                                <span class="list-search-header__text">Кофты для девочек</span>
+                                <svg class="list-search-header__icon">
+                                    <use href="#arr-left-svg"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="search-header__btn btn btn_primary">
+                        <span class="btn__txt">Не нашли что искали?</span>
+                    </button>
+                </div>
+                <div class="search-header__main">
+                    <div class="search-header__swiper swiper">
+                        <ul class="search-header__swiper-wrapper swiper-wrapper">
+                            <li data-tiles-container="" class="search-header__slide shopify-card swiper-slide">
+                                <a href="#" class="shopify-card__inner">
+                                    <div class="shopify-card__body">
+                                        <div class="shopify-card__head">
+                                            <div class="shopify-card__title-wrap">
+                                                <span class="shopify-card__title">футболка</span>
+                                                <span class="shopify-card__subtitle">базовая</span>
+                                            </div>
+                                            <button type="button" class="shopify-card__fav-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#fav-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__footer">
+                                            <div class="shopify-card__group">
+                                                <div class="shopify-card__price">
+                                                    <span class="shopify-card__price-txt shopify-card__price-txt_value">2 500</span>
+                                                    <span class="shopify-card__price-txt">₽</span>
+                                                </div>
+                                                <div class="shopify-card__bullets">
+                                                    <button data-tile-bullet="" style="background-color: #ffffff" type="button" class="shopify-card__bullet"></button>
+                                                    <button data-tile-bullet="" style="background-color: #7ba8d1" type="button" class="shopify-card__bullet"></button>
+                                                    <button data-tile-bullet="" style="background-color: #0e0e0e" type="button" class="shopify-card__bullet"></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="shopify-card__cart-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#cart-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__btn-wrap">
+                                            <div class="shopify-card__btn-inner">
+                                                <button type="button" class="btn btn_primary">
+                                                    <span class="btn__txt">Купить в 1 клик</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="shopify-card__label">new</span>
+                                    </div>
+                                    <div class="shopify-card__image-wrap">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/ebb2366a1aeef24257b7daf42e6c343d.webp" alt="">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/cfa1cdaa056f260dfd496e12659b73a5972.webp" alt="">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/0a09fa5ddsg0b35ac7cfcccf3e63ee7bbabe.webp" alt="">
+                                    </div>
+                                    <div class="shopify-card__tiles">
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-tiles-container="" class="search-header__slide shopify-card swiper-slide">
+                                <a href="#" class="shopify-card__inner">
+                                    <div class="shopify-card__body">
+                                        <div class="shopify-card__head">
+                                            <div class="shopify-card__title-wrap">
+                                                <span class="shopify-card__title">футболка</span>
+                                                <span class="shopify-card__subtitle">базовая</span>
+                                            </div>
+                                            <button type="button" class="shopify-card__fav-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#fav-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__footer">
+                                            <div class="shopify-card__group">
+                                                <div class="shopify-card__price">
+                                                    <span class="shopify-card__price-txt shopify-card__price-txt_value">2 500</span>
+                                                    <span class="shopify-card__price-txt">₽</span>
+                                                </div>
+                                                <div class="shopify-card__bullets">
+                                                    <button data-tile-bullet="" style="background-color: #ffffff" type="button" class="shopify-card__bullet"></button>
+                                                    <button data-tile-bullet="" style="background-color: #7ba8d1" type="button" class="shopify-card__bullet"></button>
+                                                    <button data-tile-bullet="" style="background-color: #0e0e0e" type="button" class="shopify-card__bullet"></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="shopify-card__cart-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#cart-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__btn-wrap">
+                                            <div class="shopify-card__btn-inner">
+                                                <button type="button" class="btn btn_primary">
+                                                    <span class="btn__txt">Купить в 1 клик</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="shopify-card__label">new</span>
+                                    </div>
+                                    <div class="shopify-card__image-wrap">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/505abe15ee49f5bed9042a31c30a2f38.webp" alt="">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/cfa1cdaa056f260dfd496e12659b73a5972.webp" alt="">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/0a09fa5ddsg0b35ac7cfcccf3e63ee7bbabe.webp" alt="">
+                                    </div>
+                                    <div class="shopify-card__tiles">
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-tiles-container="" class="search-header__slide shopify-card swiper-slide">
+                                <a href="#" class="shopify-card__inner">
+                                    <div class="shopify-card__body">
+                                        <div class="shopify-card__head">
+                                            <div class="shopify-card__title-wrap">
+                                                <span class="shopify-card__title">футболка</span>
+                                                <span class="shopify-card__subtitle">базовая</span>
+                                            </div>
+                                            <button type="button" class="shopify-card__fav-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#fav-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__footer">
+                                            <div class="shopify-card__group">
+                                                <div class="shopify-card__price">
+                                                    <span class="shopify-card__price-txt shopify-card__price-txt_value">2 500</span>
+                                                    <span class="shopify-card__price-txt">₽</span>
+                                                </div>
+                                                <div class="shopify-card__bullets">
+                                                    <button data-tile-bullet="" style="background-color: #ffffff" type="button" class="shopify-card__bullet"></button>
+                                                    <button data-tile-bullet="" style="background-color: #7ba8d1" type="button" class="shopify-card__bullet"></button>
+                                                    <button data-tile-bullet="" style="background-color: #0e0e0e" type="button" class="shopify-card__bullet"></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="shopify-card__cart-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#cart-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__btn-wrap">
+                                            <div class="shopify-card__btn-inner">
+                                                <button type="button" class="btn btn_primary">
+                                                    <span class="btn__txt">Купить в 1 клик</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="shopify-card__label">new</span>
+                                    </div>
+                                    <div class="shopify-card__image-wrap">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/feb12ec186c933e1debd0e8f51528162.webp" alt="">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/cfa1cdaa056f260dfd496e12659b73a5972.webp" alt="">
+                                        <img data-tile-img="" class="shopify-card__image" src="./assets/images/content/0a09fa5ddsg0b35ac7cfcccf3e63ee7bbabe.webp" alt="">
+                                    </div>
+                                    <div class="shopify-card__tiles">
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                        <div data-tile="" class="shopify-card__tile"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="search-header__link link">
+                        <span class="link__txt">Смотреть все результаты</span>
+                        <svg class="link__icon"><use href="#arr-left-svg"></use></svg>
+                    </a>
+                </div>
+            </div>
+            <!--             <div class="search-header__no-results"> -->
+            <!--                 <span class="search-header__title">Ничего не найдено</span> -->
+            <!--                 <span class="search-header__text"> -->
+            <!--                     <svg class="search-header__text-icon"><use href="#search-svg"></use></svg> -->
+            <!--                     <span class="search-header__text-content" -->
+            <!--                         >По вашему запросу «<span></span>» ничего не найдено. Попробуйте изменить ваш -->
+            <!--                         запрос</span -->
+            <!--                     > -->
+            <!--                 </span> -->
+            <!--                 <button type="button" class="search-header__btn btn btn_primary"> -->
+            <!--                     <span class="btn__txt">Не нашли что искали?</span> -->
+            <!--                 </button> -->
+            <!--             </div> -->
+        </div>
+    </div>
+</header>
+
+
+            <main>
+                <section class="chapter-hero dark-bg">
+    <div class="chapter-hero__swiper swiper">
+        <ul class="chapter-hero__swiper-wrapper swiper-wrapper">
+            <li class="chapter-hero__slide slide-chapter-hero swiper-slide">
+                <div class="slide-chapter-hero__container container">
+                    <div class="slide-chapter-hero__info info-chapter-hero">
+                        <div class="info-chapter-hero__btn-wrap">
+                            <button type="button" class="info-chapter-hero__btn btn btn_primary btn_primary_i">
+                                <svg class="info-chapter-hero__btn-icon">
+                                    <use href="#angle-arr-svg"></use>
+                                </svg>
+                                <svg class="info-chapter-hero__btn-icon info-chapter-hero__btn-icon_plus">
+                                    <use href="#plus-svg"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="#" class="info-chapter-hero__body">
+                            <div class="info-chapter-hero__image-wrap">
+                                <img class="info-chapter-hero__image" src="./assets/images/items/710070.932x1242@2x.webp" alt="">
+                            </div>
+                            <div class="info-chapter-hero__content">
+                                <span class="info-chapter-hero__title">Джемпер</span>
+                                <span class="info-chapter-hero__subtitle">укороченный</span>
+                                <div class="info-chapter-hero__price price">
+                                    <span class="price__value">2500 </span>₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-chapter-hero__images">
+                        <div class="slide-chapter-hero__image-wrap slide-chapter-hero__image-wrap_has-bg">
+                            <img class="slide-chapter-hero__image" src="./assets/images/bg/8943bffed1ac471adff4f71968e207b1.webp" alt="">
+                        </div>
+                        <div class="slide-chapter-hero__image-wrap">
+                            <img class="slide-chapter-hero__image" src="./assets/images/items/dd42f20a2ac9e0404e3a8d87c44bef3a.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="chapter-hero__slide slide-chapter-hero swiper-slide">
+                <div class="slide-chapter-hero__container container">
+                    <div class="slide-chapter-hero__info info-chapter-hero">
+                        <div class="info-chapter-hero__btn-wrap">
+                            <button type="button" class="info-chapter-hero__btn btn btn_primary btn_primary_i">
+                                <svg class="info-chapter-hero__btn-icon">
+                                    <use href="#angle-arr-svg"></use>
+                                </svg>
+                                <svg class="info-chapter-hero__btn-icon info-chapter-hero__btn-icon_plus">
+                                    <use href="#plus-svg"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="#" class="info-chapter-hero__body">
+                            <div class="info-chapter-hero__image-wrap">
+                                <img class="info-chapter-hero__image" src="./assets/images/items/710070.932x1242@2x.webp" alt="">
+                            </div>
+                            <div class="info-chapter-hero__content">
+                                <span class="info-chapter-hero__title">Джемпер</span>
+                                <span class="info-chapter-hero__subtitle">укороченный</span>
+                                <div class="info-chapter-hero__price price">
+                                    <span class="price__value">2500 </span>₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-chapter-hero__images">
+                        <div class="slide-chapter-hero__image-wrap slide-chapter-hero__image-wrap_has-bg">
+                            <img class="slide-chapter-hero__image" src="./assets/images/bg/8943bffed1ac471adff4f71968e207b1.webp" alt="">
+                        </div>
+                        <div class="slide-chapter-hero__image-wrap">
+                            <img class="slide-chapter-hero__image" src="./assets/images/items/dd42f20a2ac9e0404e3a8d87c44bef3a.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="chapter-hero__container container">
+        <div class="chapter-hero__titles titles-swiper swiper">
+            <ul class="chapter-hero__titles-swiper-wrapper swiper-wrapper">
+                <li class="chapter-hero__title-wrap title-wrap swiper-slide">
+                    <span class="title-wrap__subtitle">Коллекция</span>
+                    <div class="title-wrap__title">
+                        <span class="title-wrap__title-txt h h_h1"><span>весна-</span></span>
+                        <span class="title-wrap__title-txt h h_lora h_h1"><span>лето 2024</span></span>
+                    </div>
+                </li>
+                <li class="chapter-hero__title-wrap title-wrap swiper-slide">
+                    <span class="title-wrap__subtitle">Коллекция</span>
+                    <div class="title-wrap__title">
+                        <span class="title-wrap__title-txt h h_h1"><span>FAncy</span></span>
+                        <span class="title-wrap__title-txt h h_lora h_h1"><span>denim</span></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="chapter-hero__navigation">
+            <div class="chapter-hero__fraction fraction"></div>
+            <div class="chapter-hero__swiper-nav swiper-nav swiper-nav_gray">
+                <button type="button" class="swiper-nav__arr swiper-nav__arr_prev">
+                    <svg class="swiper-nav__arr-icon"><use href="#arr-left-svg"></use></svg>
+                </button>
+                <button type="button" class="swiper-nav__arr swiper-nav__arr_next">
+                    <svg class="swiper-nav__arr-icon"><use href="#arr-left-svg"></use></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+                <section class="catalog">
+    <div class="catalog__container container">
+        <div class="catalog__head">
+            <div class="catalog__breadcrumbs breadcrumbs">
+                <a href="#" class="breadcrumbs__txt breadcrumbs__txt_link">Главная</a>
+                <span class="breadcrumbs__txt">Каталог</span>
+            </div>
+            <div class="catalog__row">
+                <span class="catalog__title h h_h1">Каталог</span>
+                <div data-da=".catalog__head,768,last" class="catalog__sort sort-catalog">
+                    <button class="sort-catalog__btn btn btn_primary btn_primary_icon">
+                        <svg class="btn__icon"><use href="#sort-svg"></use></svg>
+                        <span class="btn__txt">Сортировка</span>
+                    </button>
+                    <div class="sort-catalog__menu">
+                        <button class="sort-catalog__close-btn sort-catalog__btn">
+                            <svg class="sort-catalog__close-btn-icon"><use href="#cross-svg"></use></svg>
+                        </button>
+                        <span class="sort-catalog__title h h_h3">СОРТИРОВКА</span>
+                        <div class="sort-catalog__options">
+                            <div class="sort-catalog__option-btn option-btn">
+                                <input type="radio" checked="" name="catalogSortOption" class="option-btn__input">
+                                <span class="option-btn__text">Новинки</span>
+                            </div>
+                            <div class="sort-catalog__option-btn option-btn">
+                                <input type="radio" name="catalogSortOption" class="option-btn__input">
+                                <span class="option-btn__text">По возрастанию цены</span>
+                            </div>
+                            <div class="sort-catalog__option-btn option-btn">
+                                <input type="radio" name="catalogSortOption" class="option-btn__input">
+                                <span class="option-btn__text">По убыванию цены</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__categories">
+                <div class="catalog__categories-swiper swiper">
+                    <ul class="catalog__categories-swiper-wrapper swiper-wrapper">
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" checked="" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Все</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Осень-зима</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Весна-лето</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Новогодняя коллекция</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Все</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Осень-зима</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Весна-лето</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Новогодняя коллекция</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Все</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Осень-зима</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Весна-лето</span>
+                        </li>
+                        <li class="catalog__categories-slide swiper-slide option-btn option-btn_centered">
+                            <input type="radio" name="catalogCategoryOption-btn" class="option-btn__input">
+                            <span class="option-btn__text">Новогодняя коллекция</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog__categories-swiper-nav swiper-nav">
+                    <button type="button" class="swiper-nav__arr swiper-nav__arr_prev">
+                        <svg class="swiper-nav__arr-icon"><use href="#arr-left-svg"></use></svg>
+                    </button>
+                    <button type="button" class="swiper-nav__arr swiper-nav__arr_next">
+                        <svg class="swiper-nav__arr-icon"><use href="#arr-left-svg"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__body">
+            <div class="catalog__message">
+                <span class="catalog__subtitle h h_h3"> Ничего не найдено </span>
+                <p class="catalog__text">Не нашли что искали?</p>
+                <button type="button" class="catalog__btn btn btn_primary">
+                    <span class="btn__txt">Не нашли что искали?</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+            </main>
+
+            <button class="filters__btn filters__btn_open btn_primary btn_primary_icon">
+    <svg class="btn__icon"><use href="#filters-svg"></use></svg>
+    <svg class="btn__icon btn__icon_close"><use href="#cross-svg"></use></svg>
+    <span class="btn__txt">Фильтры</span>
+</button>
+<div data-sb="" class="filters__body">
+    <button class="filters__close-btn filters__btn">
+        <svg class="filters__close-btn-icon"><use href="#cross-svg"></use></svg>
+    </button>
+    <span class="filters__title h h_h3">ФИЛЬТРЫ</span>
+    <form action="#" data-dev="" data-accordion="" data-accordion-single="" class="filters__content">
+        <div class="filters__groups">
+            <div class="filters__group">
+                <span class="filters__subtitle txt20">Пол</span>
+                <div class="filters__options">
+                    <div class="filters__option-btn option-btn">
+                        <input checked="" type="radio" name="filtersGenderOption" class="option-btn__input">
+                        <span class="option-btn__text">Все</span>
+                    </div>
+                    <div class="filters__option-btn option-btn">
+                        <input type="radio" name="filtersGenderOption" class="option-btn__input">
+                        <span class="option-btn__text">Девочкам</span>
+                    </div>
+                    <div class="filters__option-btn option-btn">
+                        <input type="radio" name="filtersGenderOption" class="option-btn__input">
+                        <span class="option-btn__text">Мальчикам</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filters__group filters__group_accordion">
+                <button type="button" data-accordion-item="" class="filters__subtitle-wrap">
+                    <span class="filters__subtitle txt20">Категория</span>
+                    <svg class="filters__icon"><use href="#arr-sel-svg"></use></svg>
+                </button>
+                <div class="filters__inner">
+                    <div class="filters__cards">
+                        <div class="filters__category-s-card category-s-card">
+                            <input checked="" type="radio" name="filtersCategoryOption" class="category-s-card__input">
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img class="category-s-card__image" src="./assets/images/items/1657b93ad9070b308d50d1596bf89f8e.webp" alt="">
+                                </div>
+                                <span class="category-s-card__title">Футболки/ рубашки</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input">
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img class="category-s-card__image" src="./assets/images/items/fd46c34bc92caa4bee2781bf3a7a0a8f.webp" alt="">
+                                </div>
+                                <span class="category-s-card__title">Шорты/брюки</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input">
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img class="category-s-card__image" src="./assets/images/items/357b0c806c2a66de01df144ddcd68594c.webp" alt="">
+                                </div>
+                                <span class="category-s-card__title">Платья/юбки</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input">
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img class="category-s-card__image" src="./assets/images/items/9ddb7cf50d2fcf2ebc0511f3b3b15317f.webp" alt="">
+                                </div>
+                                <span class="category-s-card__title">Костюмы</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input">
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img class="category-s-card__image" src="./assets/images/items/a63a99ab8302e95b660de37db1c35e077cb8d6ae.webp" alt="">
+                                </div>
+                                <span class="category-s-card__title">Бомберы</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input">
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img class="category-s-card__image" src="./assets/images/items/357b0c806c2a66fde01df144ddc68594c.webp" alt="">
+                                </div>
+                                <span class="category-s-card__title">Плащи</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters__group filters__group_accordion">
+                <button type="button" data-accordion-item="" class="filters__subtitle-wrap">
+                    <span class="filters__subtitle txt20">Размер</span>
+                    <svg class="filters__icon"><use href="#arr-sel-svg"></use></svg>
+                </button>
+                <div class="filters__inner">
+                    <div class="filters__options">
+                        <div class="filters__option-btn option-btn">
+                            <input checked="" type="radio" name="filtersSizeOption" class="option-btn__input">
+                            <span class="option-btn__text">98</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input">
+                            <span class="option-btn__text">104</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input">
+                            <span class="option-btn__text">110</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input">
+                            <span class="option-btn__text">116</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input">
+                            <span class="option-btn__text">122</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input">
+                            <span class="option-btn__text">128</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters__group">
+                <span class="filters__subtitle txt20">Цвет</span>
+                <div class="filters__colors">
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input">
+                        <div style="background-color: #c69259" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input">
+                        <div style="background-color: #ffffff" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input">
+                        <div style="background-color: #7ba8d1" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input">
+                        <div style="background-color: #88b884" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input">
+                        <div style="background-color: #9e84b8" class="color__inner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="filters__reset-btn btn btn_secondary">
+            <span class="btn__txt">Очистить фильтры</span>
+        </button>
+    </form>
+</div>
+
+            <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <a href="/" class="footer__logo-wrap"><img class="footer__logo" src="./assets/images/logo-blue.svg" alt=""></a>
+            <nav class="footer__nav">
+                <a href="#" class="footer__nav-link">Каталог</a>
+                <a href="#" class="footer__nav-link">Отзывы</a>
+                <a href="#" class="footer__nav-link">Доставка и оплата</a>
+                <a href="#" class="footer__nav-link">Lookbook</a>
+                <a href="#" class="footer__nav-link">Новости</a>
+                <a href="#" class="footer__nav-link">Возврат</a>
+                <a href="#" class="footer__nav-link">О нас</a>
+                <a href="#" class="footer__nav-link">Контакты</a>
+                <a href="#" class="footer__nav-link">Вопросы-ответы</a>
+            </nav>
+            <ul class="footer__contacts-list list-contacts">
+                <li class="list-contacts__item">
+                    <span class="list-contacts__subtitle">телефон</span>
+                    <a href="tel:79030075671" class="list-contacts__text">+7 (903) 007-56-71</a>
+                </li>
+                <li class="list-contacts__item">
+                    <span class="list-contacts__subtitle">e-mail</span>
+                    <a href="mailto:simplechoice@mail.ru" class="list-contacts__text">simplechoice@mail.ru</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__lower">
+            <ul class="footer__socials socials-footer">
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#ig-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#vk-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#whatsapp-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#telegram-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copyrights">
+                <a href="#" class="footer__copyrights-txt">Политика конфиденциальности</a>
+                <a href="#" class="footer__copyrights-txt">Общие условия и согласие на обработку персональных данных</a>
+            </div>
+            <a href="https://requestdesign.ru/" class="footer__rd-logo-wrap">
+                <img class="footer__rd-logo" src="./assets/images/rd-logo.svg" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+
+            <div id="feedbackModal" aria-hidden="true" class="modal modal_feedback modal_fw">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner feedback-modal">
+                    <span class="feedback-modal__title">Обратная связь</span>
+                    <form action="#" data-dev="" class="feedback-modal__form">
+                        <div class="feedback-modal__fields">
+                            <div data-hint="Заполните поле" class="feedback-modal__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя*" class="input__field">
+                            </div>
+                            <div data-hint="Заполните поле" class="feedback-modal__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Телефон или почта*" class="input__field">
+                            </div>
+                            <div class="feedback-modal__field feedback-modal__field_large input">
+                                <input autocomplete="off" type="text" name="form[]" placeholder="Название товара" class="input__field">
+                            </div>
+                        </div>
+                        <div class="feedback-modal__group">
+                            <span class="feedback-modal__subtitle">Выберите нужный цвет</span>
+                            <div class="feedback-modal__colors">
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #f3fe78" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #ff533b" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #c69259" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input checked="" type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #ffffff" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #7ba8d1" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #ff6fa3" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #88b884" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #9e84b8" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #7a787d" class="color__inner"></span>
+                                </div>
+                                <div class="feedback-modal__color color">
+                                    <input type="radio" name="feedback-modalColor" class="color__input">
+                                    <span style="background-color: #403d43" class="color__inner"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-modal__group">
+                            <span class="feedback-modal__subtitle">Укажите размер</span>
+                            <div class="feedback-modal__sizes">
+                                <div class="feedback-modal__size">
+                                    <input checked="" type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">98</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">104</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">110</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">114</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">118</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">124</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">130</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">136</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">142</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">148</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">154</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">160</span>
+                                </div>
+                                <div class="feedback-modal__size">
+                                    <input type="radio" name="feedback-modalSize" class="feedback-modal__size-input">
+                                    <span class="feedback-modal__size-txt">164</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-hint="Заполните поле" class="feedback-modal__field input">
+                            <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Добавьте комментарий*" class="input__field">
+                        </div>
+                        <div class="feedback-modal__footer">
+                            <button type="submit" class="feedback-modal__btn btn btn_primary _is-disabled">
+                                <span class="btn__txt">Отправить</span>
+                            </button>
+                            <p class="feedback-modal__text">
+                                Нажимая на кнопку, Вы принимаете условия пользовательского соглашения
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- форма отправлена -->
+<div id="formSentModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner form-sent-modal">
+                    <span class="form-sent-modal__title h h_h3">Форма отправлена!</span>
+                    <p class="form-sent-modal__text">Спасибо, что поделились своими пожеланиями.</p>
+                    <a href="/" class="form-sent-modal__btn btn btn_primary">
+                        <span class="btn__txt">Перейти на главную</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <svg style="display: none">
     <symbol id="vk-svg" viewBox="0 0 32 32">
         <path d="M4 16C4 9.40228 9.40228 4 16 4C22.5977 4 28 9.40228 28 16C28 22.5977 22.5977 28 16 28C9.40228 28 4 22.5977 4 16Z" stroke="currentColor" stroke-width="2" fill="none"></path>
         <path d="M16.1322 20.3332C11.2758 20.3332 8.52393 17.1096 8.41602 11.6665H10.8442C10.8981 15.6299 12.7327 17.321 14.1357 17.638V11.6665H16.402V15.1015C17.8049 14.9429 19.2618 13.4104 19.7474 11.6665H22.0137C21.636 13.7803 20.0172 15.3657 18.8841 15.9998C20.0172 16.5283 21.8518 17.9023 22.4993 20.3332H19.9633C19.4237 18.695 18.0747 17.4267 16.294 17.2153V20.3332H16.1322Z" fill="currentColor"></path>
@@ -323,5 +1124,6 @@
     </svg>
 </div>
 
-  </body>
+        </div>
+    </body>
 </html>
