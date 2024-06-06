@@ -6,10 +6,11 @@ function initSimplebar() {
         document.querySelectorAll('[data-sb]').forEach((el) => {
             const clone = el.cloneNode(true);
 
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 768 && el.dataset.sb !== 'sb') {
                 el.parentElement.append(clone);
                 el.remove();
-            } else {
+            }
+            if (window.innerWidth > 768 || el.dataset.sb === 'sb') {
                 setTimeout(() => {
                     new SimpleBar(el, {
                         autoHide: false

@@ -61,13 +61,15 @@ function initTiles() {
     }
 }
 
-function toggleClass(target, trigger, closeTrigger, classname) {
-    if (target.closest(trigger)) {
+function toggleClass(e, trigger, closeTrigger, classname, lock = false) {
+    e.preventDefault();
+
+    if (e.target.closest(trigger)) {
         document.documentElement.classList.toggle(classname);
-        mq.matches && bodyLockToggle();
-    } else if (!target.closest(closeTrigger) && document.documentElement.classList.contains(classname)) {
+        lock && mq.matches && bodyLockToggle();
+    } else if (!e.target.closest(closeTrigger) && document.documentElement.classList.contains(classname)) {
         document.documentElement.classList.remove(classname);
-        mq.matches && bodyUnlock();
+        lock && mq.matches && bodyUnlock();
     }
 }
 
@@ -99,8 +101,9 @@ function onClickHandler(e) {
         }
     }
 
-    toggleClass(target, '.sort-catalog__btn', '.sort-catalog', '_show-categories');
-    toggleClass(target, '.filters__btn', '.filters__body', '_show-filters');
+    toggleClass(e, '.sort-catalog__btn', '.sort-catalog', '_show-categories', true);
+    toggleClass(e, '.filters__btn', '.filters__body', '_show-filters', true);
+    toggleClass(e, '.header__actions-item_cart', '.header-cart-widget', '_show-cart-widget');
 }
 
 function handleSearch() {

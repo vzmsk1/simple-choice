@@ -57,7 +57,7 @@
         }
     }
 
-    &:not(&_compact) {
+    &:not(&_compact, .cart-widget) {
         &._header-scroll {
             &._blue-colored {
                 .header {
@@ -235,6 +235,10 @@
             width: 4.8rem;
             height: 4.8rem;
         }
+    }
+
+    &__actions-cart {
+        position: relative;
     }
 }
 

@@ -1,0 +1,51 @@
+.cart-no-items {
+    padding-top: 19.6rem;
+
+    @media (max-width: 48em) {
+        padding-top: 17rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        margin-bottom: 8.2rem;
+
+        font-weight: 300;
+        font-size: 11rem;
+        line-height: 110%;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+
+            font-size: 9.6rem;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 3.2rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4rem;
+
+            max-width: 65rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 6.4rem;
+
+        max-width: 66rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 4rem;
+
+            max-width: 52.6rem;
+        }
+    }
+}
