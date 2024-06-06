@@ -36,6 +36,9 @@ import './utils/animations';
 // header scroll
 import './utils/header-scroll';
 
+// quantity
+import './utils/quantity';
+
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom

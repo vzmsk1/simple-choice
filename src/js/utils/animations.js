@@ -182,7 +182,7 @@ function animateHero() {
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.loader');
 
-    scrollTriggerAnimations.header();
+    !document.querySelector('.header_compact') && scrollTriggerAnimations.header();
 
     mm.add('(min-width: 768px)', () => {
         animateLoader(loader);

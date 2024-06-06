@@ -40,7 +40,7 @@ class Accordion {
         const activeTitle = accordionGroup.querySelector(`[${this.attrs.ITEM}].${this.classes.ACTIVE}`);
         const speed = accordionGroup.dataset.accordionSpeed
             ? parseInt(accordionGroup.dataset.accordionSpeed)
-            : 500;
+            : 700;
 
         if (activeTitle && !accordionGroup.querySelectorAll('._slide').length) {
             activeTitle.classList.remove(this.classes.ACTIVE);

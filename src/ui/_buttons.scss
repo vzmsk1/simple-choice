@@ -273,6 +273,18 @@
     align-items: center;
     column-gap: 1rem;
 
+    @media (max-width: 48em) {
+        column-gap: 2rem;
+    }
+
+    &_left {
+        .link {
+            &__icon {
+                transform: none;
+            }
+        }
+    }
+
     &_down {
         .link {
             &__icon {
@@ -291,5 +303,11 @@
         height: 3.2rem;
 
         transform: rotate(140deg);
+
+        @media (max-width: 48em) {
+            flex: 0 0 4.8rem;
+            width: 4.8rem;
+            height: 4.8rem;
+        }
     }
 }

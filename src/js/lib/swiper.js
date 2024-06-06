@@ -24,11 +24,11 @@ function initHeroSlider(classname, eventsConfig = {}) {
             modules: [Navigation, Pagination, EffectFade, Controller, Autoplay],
             ...swiperDefaults,
             effect: 'fade',
-            // autoplay: {
-            //     delay: 4000,
-            //     disableOnInteraction: false,
-            //     waitForTransition: false
-            // },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                waitForTransition: false
+            },
             allowTouchMove: false,
             navigation: {
                 nextEl: `.${classname} .swiper-nav__arr_next`,
@@ -306,16 +306,23 @@ function initSliders() {
         });
     }
     initHeroSlider('chapter-hero');
-    if (document.querySelector('.catalog__categories-swiper')) {
-        new Swiper('.catalog__categories-swiper', {
+    if (document.querySelector('.accordion-cart-item__swiper')) {
+        new Swiper('.accordion-cart-item__swiper', {
             modules: [Navigation],
             ...swiperDefaults,
             slidesPerView: 'auto',
-            spaceBetween: remToPx(2),
+            spaceBetween: mm.matches ? remToPx(1.6) : remToPx(2.4),
             navigation: {
-                nextEl: '.catalog .swiper-nav__arr_next',
-                prevEl: '.catalog .swiper-nav__arr_prev'
+                nextEl: '.accordion-cart-item .swiper-nav__arr_next',
+                prevEl: '.accordion-cart-item .swiper-nav__arr_prev'
             }
+        });
+    }
+    if (document.querySelector('.search-header__swiper') && mm.matches) {
+        new Swiper('.search-header__swiper', {
+            ...swiperDefaults,
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(4)
         });
     }
 }

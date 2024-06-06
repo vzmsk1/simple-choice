@@ -29,30 +29,60 @@
         }
     }
 
-    &._header-scroll {
-        &._blue-colored {
-            .header {
-                &__logo-icon,
-                &__container,
-                &__tel-icon,
-                &__tel,
-                &__actions-icon {
-                    color: $blue;
+    &_compact {
+        position: absolute;
+
+        .header {
+            &__container {
+                justify-content: space-between;
+            }
+
+            &__link,
+            &__logo-icon,
+            &__actions-icon {
+                color: $blue;
+            }
+
+            &__link {
+                opacity: 0.7;
+
+                @media (max-width: 48em) {
+                    display: none;
                 }
             }
-        }
 
-        .header__container {
-            @media (min-width: 48em) {
-                padding: 0 3.2rem;
-            }
-
-            &::after {
-                opacity: 1;
+            &__logo-wrap {
+                margin-right: 0;
             }
         }
-        .header__logo-icon {
-            color: $white;
+    }
+
+    &:not(&_compact) {
+        &._header-scroll {
+            &._blue-colored {
+                .header {
+                    &__logo-icon,
+                    &__container,
+                    &__tel-icon,
+                    &__tel,
+                    &__actions-icon {
+                        color: $blue;
+                    }
+                }
+            }
+
+            .header__container {
+                @media (min-width: 48em) {
+                    padding: 0 3.2rem;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+            .header__logo-icon {
+                color: $white;
+            }
         }
     }
 
