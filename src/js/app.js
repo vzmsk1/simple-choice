@@ -61,3 +61,4 @@ import './lib/simplebar';
 import './dev/vzmsk1.js';
 import './dev/markusDM.js';
 import './dev/monsters.js';
+import './dev/kuloverova.js';

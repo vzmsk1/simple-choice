@@ -1822,6 +1822,7 @@
     </div>
 </div>
 
+
 <!-- заказ оформлен -->
 <div id="orderModal" aria-hidden="true" class="modal modal_order">
     <div class="modal__wrapper">
@@ -1887,6 +1888,243 @@
         </div>
     </div>
 </div>
+
+<!-- изменение номера  -->
+<div id="changePhoneModal" aria-hidden="true" class="modal modal_change">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner modal_change__inner">
+                    <div class="modal_change__title-box">
+                        <span class="modal_change__title h h_h3">Введите новый номер</span>
+                        <p class="modal_change__text txt16">
+                            Введите новый контактный номер телефона. <br>Вам поступит СМС с кодом.
+                        </p>
+                    </div>
+                    <form action="#" data-dev="" class="modal_change__form">
+                        <div class="modal_change__fields">
+                            <div data-hint="Заполните поле" class="modal_change__field input">
+                                <input data-validate="" data-required="" data-tel-mask="" autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="input__field">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="modal_change__btn btn btn_primary _is-disabled">
+                            <span class="btn__txt">Получить код</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- изменение почты -->
+<div id="changeMailModal" aria-hidden="true" class="modal modal_change">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner modal_change__inner">
+                    <div class="modal_change__title-box">
+                        <span class="modal_change__title h h_h3">Введите новый <br class="_mobile-only">E-mail</span>
+                        <p class="modal_change__text txt16">
+                            Введите новый адрес электронной почты. <br>Вам поступит СМС с кодом.
+                        </p>
+                    </div>
+                    <form action="#" data-dev="" class="modal_change__form">
+                        <div class="modal_change__fields">
+                            <div data-hint="Заполните поле" class="modal_change__field input">
+                                <input data-validate="" data-required="email" autocomplete="off" type="text" name="form[]" placeholder="E-mail" class="input__field">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="modal_change__btn btn btn_primary _is-disabled">
+                            <span class="btn__txt">Получить код</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Изменение изображения -->
+<div id="changeImageModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">Изменить изображение</span>
+                    <p class="info-modal__text">
+                        Вы можете загрузить изображение в формате JPG или PNG и весом не более 10 МБ.
+                    </p>
+                    <label class="info-modal__label">
+                        <span class="info-modal__btn btn btn_primary">Выбрать файл </span>
+                        <input class="info-modal__input-file" type="file" name="" id="">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Изображение загружено -->
+<div id="imageUploadedModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">изображение загружено</span>
+                    <p class="info-modal__text">Ваше фото профиля успешно изменено</p>
+                    <a href="/" class="info-modal__btn btn btn_primary">
+                        <span class="btn__txt">Вернуться в личный кабинет</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Изображение не загружено -->
+<div id="imageUnUploadedModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">Ваше изображение <br>не загружено</span>
+                    <p class="info-modal__text">
+                        Убедитесь, что ваше изображение соответствует формату JPG или PNG и не превышает 10 МБ
+                    </p>
+                    <label class="info-modal__label">
+                        <span class="info-modal__btn btn btn_primary">Выбрать файл </span>
+                        <input class="info-modal__input-file" type="file" name="" id="">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Номер изменен -->
+<div id="phoneChangedModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">Номер успешно изменен</span>
+                    <p class="info-modal__text">Ваш новый контактный номер телефона успешно изменен</p>
+                    <a href="/" class="info-modal__btn btn btn_primary">
+                        <span class="btn__txt">Вернуться в личный кабинет</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Почта изменена -->
+<div id="mailChangedModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">E-mail успешно изменен</span>
+                    <p class="info-modal__text">Ваш новый адрес электронной почты успешно изменен</p>
+                    <a href="/" class="info-modal__btn btn btn_primary">
+                        <span class="btn__txt">Вернуться в личный кабинет</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Отмена заказа -->
+<div id="cancellationsModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">Отмена заказа</span>
+                    <p class="info-modal__text">
+                        Вы точно хотите отменить заказ? Изменить действие уже будет невозможно
+                    </p>
+                    <a href="/" class="info-modal__btn btn btn_primary">
+                        <span class="btn__txt">Отменить заказ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Удаление аккаунта -->
+<div id="accountDeletingModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">Вы действительно хотите удалить аккаунт?</span>
+                    <p class="info-modal__text">После удаления аккаунта все данные будут утеряны</p>
+                    <a href="/" class="info-modal__btn btn btn_primary">
+                        <span class="btn__txt">Удалить аккаунт</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Выход из аккаунта -->
+<div id="accountLogoutModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner info-modal">
+                    <span class="info-modal__title h h_h3">Вы действительно хотите выйти?</span>
+                    <p class="info-modal__text">
+                        После выхода из аккаунта необходимо будет повторно пройти авторизацию
+                    </p>
+                    <a href="/" class="info-modal__btn btn btn_primary">
+                        <span class="btn__txt">Выйти из аккаунта</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
             <svg style="display: none">
     <symbol id="vk-svg" viewBox="0 0 32 32">
