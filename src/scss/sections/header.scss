@@ -29,9 +29,12 @@
         }
     }
 
+    &._ignore-scroll,
     &_compact {
         position: absolute;
+    }
 
+    &_compact {
         .header {
             &__container {
                 justify-content: space-between;
@@ -57,31 +60,32 @@
         }
     }
 
-    &:not(&_compact, .cart-widget) {
-        &._header-scroll {
-            &._blue-colored {
-                .header {
-                    &__logo-icon,
-                    &__container,
-                    &__tel-icon,
-                    &__tel,
-                    &__actions-icon {
-                        color: $blue;
-                    }
-                }
+    &:not(&._ignore-scroll)._header-scroll,
+    &._ignore-scroll {
+        .header__container {
+            @media (min-width: 48em) {
+                padding: 0 3.2rem;
             }
 
-            .header__container {
-                @media (min-width: 48em) {
-                    padding: 0 3.2rem;
-                }
-
-                &::after {
-                    opacity: 1;
-                }
+            &::after {
+                opacity: 1;
             }
-            .header__logo-icon {
-                color: $white;
+        }
+
+        .header__logo-icon {
+            color: $white;
+        }
+
+        &._blue-colored,
+        &.header_compact {
+            .header {
+                &__logo-icon,
+                &__container,
+                &__tel-icon,
+                &__tel,
+                &__actions-icon {
+                    color: $blue;
+                }
             }
         }
     }
@@ -199,7 +203,7 @@
         text-transform: uppercase;
         color: #eae8e6;
 
-        transition: color 0.8s ease;
+        transition: color 0.7s ease;
 
         @media (max-width: 48em) {
             display: none;
@@ -211,7 +215,7 @@
         width: 2.4rem;
         height: 2.4rem;
 
-        transition: color 0.8s ease;
+        transition: color 0s;
     }
 
     &__actions {
@@ -228,7 +232,7 @@
         width: 2.4rem;
         height: 2.4rem;
 
-        transition: color 0.8s ease;
+        transition: color 0s;
 
         @media (max-width: 48em) {
             flex: 0 0 4.8rem;
