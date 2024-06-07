@@ -123,7 +123,7 @@ export class Select {
 
         this.build(relativeSel);
 
-        relativeSel.dataset.speed = relativeSel.dataset.speed ? relativeSel.dataset.speed : '700';
+        relativeSel.dataset.speed = relativeSel.dataset.speed ? relativeSel.dataset.speed : '150';
         relativeSel.addEventListener('change', function (e) {
             _this.initSelections(e);
         });
@@ -517,9 +517,9 @@ export class Select {
 
         optionHTML += optionLink
             ? `<a ${optionLinkTarget} ${showSelection} href="${optionLink}" data-opt-val="${option.value}" class="${this.classes.OPTION}">`
-            : `<button ${optionLang} ${showSelection} class="${this.classes.OPTION}" data-opt-val="${option.value}" type="button">`;
+            : `<button ${optionLang} ${showSelection} class="${this.classes.OPTION}" data-opt-val="${option.value}" type="button"><span>`;
         optionHTML += this.getContent(option);
-        optionHTML += optionLink ? `</a>` : `</button>`;
+        optionHTML += optionLink ? `</a>` : `</span></button>`;
         return optionHTML;
     }
     // get select content
