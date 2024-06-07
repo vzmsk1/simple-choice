@@ -88,10 +88,20 @@
       border-radius: 2rem;
 
       background-color: $white;
-
+      max-height: 29rem;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &::-webkit-scrollbar-track {
+        display: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
       @media (max-width: 48em) {
         top: calc(100% + 2.4rem);
-
+        max-height: 43rem;
         padding: 2.4rem 2rem;
 
         box-shadow: 2.8rem 4rem 32rem rgba(51, 52, 54, 0.18);

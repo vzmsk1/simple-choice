@@ -62,7 +62,7 @@ function initTiles() {
 }
 
 function toggleClass(e, trigger, closeTrigger, classname, lock = false) {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (e.target.closest(trigger)) {
         document.documentElement.classList.toggle(classname);
