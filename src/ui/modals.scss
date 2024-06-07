@@ -38,6 +38,21 @@ body::after {
 
     transition: visibility 0.8s ease 0s;
 
+    &_edit-address {
+        .modal {
+            &__content {
+                max-width: 117.4rem;
+            }
+            &__close {
+                top: 3.3rem;
+                right: 3.6rem;
+            }
+        }
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
     &_fw {
         .modal {
             &__content {
@@ -391,5 +406,36 @@ body::after {
             width: 6.4rem;
             height: 6.4rem;
         }
+    }
+}
+
+.edit-address-modal {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin-bottom: 3.2rem;
+    }
+
+    &__fields {
+        margin-bottom: 6rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+        column-gap: 4rem;
+        row-gap: 5.2rem;
+    }
+
+    &__fields-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+        grid-column: span 2;
+    }
+
+    &__btn {
+        align-self: flex-start;
+        min-width: 50.6rem;
     }
 }

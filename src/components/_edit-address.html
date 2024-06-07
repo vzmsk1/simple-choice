@@ -1,0 +1,65 @@
+<section class="edit-address">
+    <div class="edit-address__container container">
+        <span class="edit-address__title h h_h2">Редактировать адрес</span>
+        <form action="#" data-dev class="edit-address__form">
+            <div class="edit-address__fields">
+                <div class="edit-address__field dropdown">
+                    <span class="dropdown__label">Ваш адрес:</span>
+                    <select data-sel-label="Ваш город" data-show-selection>
+                        <option value="1">Москва</option>
+                        <option value="2">Москва</option>
+                        <option value="3">Москва</option>
+                        <option value="4">Москва</option>
+                    </select>
+                </div>
+                <div data-hint="Заполните поле" class="edit-address__field input">
+                    <input
+                        data-validate
+                        data-required
+                        autocomplete="off"
+                        type="text"
+                        name="form[]"
+                        placeholder="Улица"
+                        class="input__field"
+                    />
+                </div>
+                <div data-hint="Заполните поле" class="edit-address__field input">
+                    <input
+                        data-validate
+                        data-required
+                        autocomplete="off"
+                        type="text"
+                        name="form[]"
+                        placeholder="Номер дома"
+                        class="input__field"
+                    />
+                </div>
+                <div data-hint="Заполните поле" class="edit-address__field edit-address__field_sm input">
+                    <input
+                        data-validate
+                        data-required
+                        autocomplete="off"
+                        type="text"
+                        name="form[]"
+                        placeholder="Подъезд"
+                        class="input__field"
+                    />
+                </div>
+                <div data-hint="Заполните поле" class="edit-address__field edit-address__field_sm input">
+                    <input
+                        data-validate
+                        data-required
+                        autocomplete="off"
+                        type="text"
+                        name="form[]"
+                        placeholder="Номер квартиры"
+                        class="input__field"
+                    />
+                </div>
+            </div>
+            <button type="submit" class="edit-address__btn btn btn_primary">
+                <span class="btn__txt">Сохранить</span>
+            </button>
+        </form>
+    </div>
+</section>

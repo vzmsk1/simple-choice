@@ -1,0 +1,47 @@
+.edit-address {
+    padding-top: 19.6rem;
+
+    @media (max-width: 48em) {
+        padding-top: 17rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 6.4rem;
+    }
+
+    &__fields {
+        margin-bottom: 9.6rem;
+        padding: 6.4rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.4rem;
+        row-gap: 6rem;
+        border-radius: 3.2rem;
+
+        background-color: $white;
+
+        @media (min-width: 48em) {
+            width: 91rem;
+        }
+    }
+
+    &__field {
+        min-width: 0;
+
+        &:not(&_sm) {
+            grid-column: span 2;
+        }
+    }
+
+    &__btn {
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+}

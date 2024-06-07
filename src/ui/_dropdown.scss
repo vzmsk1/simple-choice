@@ -1,5 +1,13 @@
 .dropdown {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    &__label {
+        font-weight: 500;
+    }
 }
 
 .select {

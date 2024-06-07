@@ -269,3 +269,79 @@
         </div>
     </div>
 </div>
+
+<!-- редактировать адрес -->
+<div id="editAddressModal" aria-hidden="true" class="modal modal_edit-address">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <form action="#" data-dev class="modal__inner edit-address-modal">
+                    <span class="edit-address-modal__title h h_h3">Редактировать адрес</span>
+                    <div class="edit-address-modal__fields">
+                        <div class="edit-address-modal__field dropdown">
+                            <span class="dropdown__label">Ваш адрес:</span>
+                            <select data-sel-label="Ваш город" data-show-selection>
+                                <option value="1">Москва</option>
+                                <option value="2">Москва</option>
+                                <option value="3">Москва</option>
+                                <option value="4">Москва</option>
+                            </select>
+                        </div>
+                        <div data-hint="Заполните поле" class="edit-address-modal__field input">
+                            <input
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="text"
+                                name="form[]"
+                                placeholder="Улица"
+                                class="input__field"
+                            />
+                        </div>
+                        <div class="edit-address-modal__fields-row">
+                            <div data-hint="Заполните поле" class="edit-address-modal__field input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Номер дома"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div data-hint="Заполните поле" class="edit-address-modal__field input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Подъезд"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div data-hint="Заполните поле" class="edit-address-modal__field input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Номер квартиры"
+                                    class="input__field"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="edit-address-modal__btn btn btn_primary">
+                        <span class="btn__txt">Сохранить</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
