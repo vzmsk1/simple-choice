@@ -9,6 +9,15 @@
         <div class="wrapper">
             <include src="./components/header.html"></include>
             <main>
+                <section class="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb__list">
+                            <li><a href="#">Главная </a></li>
+                            <li><a href="#">Личный кабинет </a></li>
+                            <li>Личные данные</li>
+                        </ul>
+                    </div>
+                </section>
                 <section class="lk">
                     <div class="container">
                         <div class="lk__inner">
@@ -19,7 +28,7 @@
                                         <a href="#" class="lk__nav-item txt20">Мои покупки</a>
                                         <a href="#" class="lk__nav-item txt20">Избранное</a>
                                     </div>
-                                    <button class="lk__nav-exit" data-modal="#feedbackModal">
+                                    <button class="lk__nav-exit" data-modal="#accountLogoutModal">
                                         <span class="lk__nav-exit-text fw500">Выйти из аккаунта</span>
                                         <div class="lk__nav-exit-svg-box">
                                             <img src="./assets/images/icons/exit.svg" alt="" />
@@ -42,7 +51,7 @@
                                             <a href="#" class="lk__nav-mob-selector-item">Избранное</a>
                                             <button
                                                 class="lk__nav-exit lk__nav-mob-selector-exit"
-                                                data-modal="#feedbackModal"
+                                                data-modal="#accountLogoutModal"
                                             >
                                                 <span class="lk__nav-exit-text">Выйти из аккаунта</span>
                                                 <div class="lk__nav-exit-svg-box">
@@ -82,7 +91,7 @@
 
                                             <button
                                                 class="lk__personal-file-text txt16"
-                                                data-modal="#feedbackModal"
+                                                data-modal="#changeImageModal"
                                             >
                                                 Изменить изображение
                                             </button>
@@ -170,7 +179,7 @@
                                             <div
                                                 data-hint="Заполните поле"
                                                 class="input lk__personal-form-input"
-                                                data-modal="#feedbackModal"
+                                                data-modal="#changePhoneModal"
                                             >
                                                 <span class="input__label"
                                                     >Телефон*
@@ -201,7 +210,7 @@
                                             <div
                                                 data-hint="Заполните поле"
                                                 class="input lk__personal-form-input"
-                                                data-modal="#feedbackModal"
+                                                data-modal="#changeMailModal"
                                             >
                                                 <span class="input__label">Ваш E-mail*</span>
 
@@ -228,7 +237,7 @@
                                             <span class="btn__txt">Сохранить изменения</span>
                                         </button>
 
-                                        <button class="lk__personal-remove" data-modal="#feedbackModal">
+                                        <button class="lk__personal-remove" data-modal="#accountDeletingModal">
                                             <span class="lk__personal-remove-text">Удалить аккаунт</span>
                                             <div class="lk__personal-remove-svg-box">
                                                 <img src="./assets/images/icons/trash.svg" alt="" />

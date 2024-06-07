@@ -388,11 +388,63 @@ body::after {
         position: absolute;
         inset: 0;
     }
-    // .form-sent-modal__btn
+
+}
+
+.modal_change {
+
+    // .modal_change__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 4.6rem;
+    }
+
+    // .modal_change__title-box
+
+    &__title-box {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    // .modal_change__title
+
+    &__title {
+    }
+
+    // .modal_change__text
+
+    &__text {
+        color: rgba(0, 48, 87, 0.5);
+    }
+
+    // .modal_change__form
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    // .modal_change__fields
+
+    &__fields {
+    }
+
+    // .modal_change__field
+
+    &__field {
+    }
+
+    // .modal_change__btn
 
     &__btn {
     }
 }
+
+
 
 .color {
     position: relative;
