@@ -60,8 +60,7 @@
         }
     }
 
-    &:not(&._ignore-scroll)._header-scroll,
-    &._ignore-scroll {
+    &._header-scroll:not(&._ignore-scroll, &.header_compact) {
         .header__container {
             @media (min-width: 48em) {
                 padding: 0 3.2rem;
@@ -72,20 +71,22 @@
             }
         }
 
-        .header__logo-icon {
-            color: $white;
+        &:not(&._blue-colored) {
+            .header__logo-icon {
+                color: $white;
+            }
         }
+    }
 
-        &._blue-colored,
-        &.header_compact {
-            .header {
-                &__logo-icon,
-                &__container,
-                &__tel-icon,
-                &__tel,
-                &__actions-icon {
-                    color: $blue;
-                }
+    &._blue-colored,
+    &.header_compact {
+        .header {
+            &__logo-icon,
+            &__container,
+            &__tel-icon,
+            &__tel,
+            &__actions-icon {
+                color: $blue;
             }
         }
     }

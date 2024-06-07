@@ -123,7 +123,7 @@ export class Select {
 
         this.build(relativeSel);
 
-        relativeSel.dataset.speed = relativeSel.dataset.speed ? relativeSel.dataset.speed : '150';
+        relativeSel.dataset.speed = relativeSel.dataset.speed ? relativeSel.dataset.speed : '700';
         relativeSel.addEventListener('change', function (e) {
             _this.initSelections(e);
         });
