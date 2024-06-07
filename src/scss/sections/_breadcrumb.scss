@@ -1,0 +1,19 @@
+.breadcrumb {
+    margin-top: 17.6rem;
+    &__list {
+        list-style: none;
+
+        li {
+            display: inline;
+        }
+
+        a {
+            color: #00305780;
+        }
+        li+li:before {
+            color: #00305780;
+            content: "/\00a0";
+            padding: 0 1.2rem;
+        }
+    }
+}
