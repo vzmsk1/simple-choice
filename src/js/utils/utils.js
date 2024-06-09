@@ -316,13 +316,3 @@ export const switchAttrValue = () => {
         });
     }
 };
-
-export const setClassOnClick = (trigger, item, classname, lock = false) => {
-    if (item) {
-        trigger.addEventListener('click', function () {
-            item.classList.add(classname);
-        });
-
-        lock && bodyLock();
-    }
-};

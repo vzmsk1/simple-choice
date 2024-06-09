@@ -124,22 +124,4 @@
         bottom: 0;
         right: 0;
     }
-
-    &__tiles {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        display: flex;
-        width: 100%;
-        height: 100%;
-
-        @media (max-width: 48em) {
-            display: none;
-        }
-    }
-
-    &__tile {
-        flex: 1 1 auto;
-    }
 }

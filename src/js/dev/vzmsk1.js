@@ -1,65 +1,6 @@
-import { bodyLock, bodyLockToggle, bodyUnlock, removeClasses, setClassOnClick } from '../utils/utils';
+import { bodyLock, bodyLockToggle, bodyUnlock } from '../utils/utils';
 
 const mq = window.matchMedia('(max-width: 768px)');
-
-function initTiles() {
-    if (document.querySelectorAll('[data-tiles-container]').length) {
-        const containers = document.querySelectorAll('[data-tiles-container]');
-
-        function setClasses(items, idx, classname) {
-            if (items.length && items[idx]) {
-                removeClasses(items, classname);
-                items[idx].classList.add(classname);
-            }
-        }
-
-        containers.forEach((container) => {
-            const tiles = container.querySelectorAll('[data-tile]');
-            const bullets = Array.from(container.querySelectorAll('[data-tile-bullet]'));
-            const images = container.querySelectorAll('[data-tile-img]');
-
-            if (tiles.length && tiles.length > 1) {
-                tiles.forEach((tile, idx) => {
-                    tile.addEventListener('mouseover', function () {
-                        setClasses(images, idx, '_is-active');
-                        setClasses(bullets, idx, '_is-active');
-                    });
-
-                    tile.addEventListener('mouseout', function () {
-                        setClasses(images, 0, '_is-active');
-                        setClasses(bullets, 0, '_is-active');
-                    });
-                });
-
-                setClasses(images, 0, '_is-active');
-                setClasses(bullets, 0, '_is-active');
-            }
-
-            function onClickHandler(e) {
-                const { target } = e;
-                const targetBullet = target.closest('[data-tile-bullet]');
-
-                if (
-                    targetBullet ||
-                    target.closest('.shopify-card__cart-btn') ||
-                    target.closest('.shopify-card__fav-btn') ||
-                    target.closest('.shopify-card__btn-wrap')
-                ) {
-                    e.preventDefault();
-                }
-
-                if (targetBullet) {
-                    const idx = bullets.indexOf(targetBullet);
-
-                    setClasses(bullets, idx, '_is-active');
-                    setClasses(images, idx, '_is-active');
-                }
-            }
-
-            container.addEventListener('click', onClickHandler);
-        });
-    }
-}
 
 function toggleClass(e, trigger, closeTrigger, classname, lock = false) {
     if (e.target.closest(trigger)) {
@@ -99,6 +40,12 @@ function onClickHandler(e) {
         if (form.querySelectorAll('[checked]').length) {
             form.querySelectorAll('[checked]').forEach((el) => el.removeAttribute('checked'));
         }
+    }
+
+    if (target.closest('.cookie__btn')) {
+        document.querySelector('.cookie').classList.add('_is-hidden');
+
+        bodyLock();
     }
 
     toggleClass(e, '.sort-catalog__btn', '.sort-catalog', '_show-categories', true);
@@ -159,9 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    initTiles();
     handleSearch();
-    setClassOnClick(document.querySelector('.cookie__btn'), document.querySelector('.cookie'), '_is-hidden');
 });
 
 document.addEventListener('click', onClickHandler);

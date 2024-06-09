@@ -67,6 +67,7 @@ function initSliders() {
         on: {
             init: (swiper) => {
                 swiper.autoplay.stop();
+                swiper.slideTo(0);
 
                 setTimeout(() => {
                     swiper.autoplay.start();
