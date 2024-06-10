@@ -73,10 +73,13 @@ class Validation {
                 this.removeError(requiredField);
             }
         }
+
         return err;
     }
 
     clearFields(form) {
+        const btn = form.querySelector('.btn');
+
         form.reset();
 
         setTimeout(() => {
@@ -98,6 +101,8 @@ class Validation {
                     checkbox.checked = false;
                 }
             }
+
+            btn && btn.classList.add('_is-disabled');
         }, 0);
     }
 
@@ -137,6 +142,7 @@ class FormSubmition extends Validation {
 
     async handleSubmition(form, e) {
         const err = !form.hasAttribute(this.attrs.IGNORE_VALIDATION) ? this.getErrors(form) : 0;
+        const btn = form.querySelector('.btn._is-disabled');
 
         if (err === 0) {
             const ajax = form.hasAttribute(this.attrs.AJAX);
@@ -165,6 +171,7 @@ class FormSubmition extends Validation {
                 }
             } else if (form.hasAttribute(this.attrs.DEV)) {
                 // in development mode
+
                 e.preventDefault();
                 this.sendForm(form);
             }
@@ -247,9 +254,30 @@ class FormFields extends Validation {
         }
     }
 
+    checkFields(form) {
+        const requiredFields = form.querySelectorAll('[data-required]');
+        const btn = form.querySelector('button[type="submit"]');
+
+        setTimeout(() => {
+            const filledFields = form.querySelectorAll('._is-filled');
+
+            if (form.querySelector('._has-error') || filledFields.length !== requiredFields.length) {
+                btn && btn.classList.add('_is-disabled');
+            }
+            if (!form.querySelector('._has-error') && filledFields.length === requiredFields.length) {
+                btn && btn.classList.remove('_is-disabled');
+            }
+        }, 0);
+    }
+
     handleFocusout(e) {
         const target = e.target;
+
         if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
+            const form = target.closest('form');
+
+            this.checkFields(form);
+
             if (target.dataset.placeholder) {
                 target.placeholder = target.dataset.placeholder;
             }
