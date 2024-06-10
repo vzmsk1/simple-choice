@@ -51,6 +51,7 @@ function onClickHandler(e) {
     toggleClass(e, '.sort-catalog__btn', '.sort-catalog', '_show-categories', true);
     toggleClass(e, '.filters__btn', '.filters__body', '_show-filters', true);
     toggleClass(e, '.header__actions-item_cart', '.header-cart-widget', '_show-cart-widget');
+    toggleClass(e, '.header__actions-item--lk', '.header-lk-widget', '_show-lk-widget');
 }
 
 function handleSearch() {
