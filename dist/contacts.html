@@ -1,195 +1,613 @@
+<!doctype html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>список страниц</title>
+        <title>Контакты</title>
     <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
     <body>
-        <div class="root">
-            <h2>список страниц:</h2>
-            <ol>
-                <li>
-                    <a target="_blank" href="./home.html">главная</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./catalog.html">каталог</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./catalog-no-items.html">каталог (не найдено)</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./cart.html">корзина</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./cart-no-items.html">корзина (нет товаров)</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./checkout.html">оформление заказа</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./checkout-auth.html"
-                        >оформление заказа (пользователь авторизован)</a
-                    >
-                </li>
-                <li>
-                    <a target="_blank" href="./edit-address.html">редактировать адрес</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./data-policy.html">политика обработки персональных данных</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./privacy-policy.html">политика конфиденциальности</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./404.html">404</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./lk-personal.html">ЛК (личные данные)</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./lk-personal-field.html">ЛК (личные данные-заполненно)</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./reviews.html">Отзывы</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./contacts.html">Контакты</a>
-                </li>
-            </ol>
-            <h2>модалки:</h2>
-            <ol>
-                <li>
-                    <button type="button" data-modal="#feedbackModal">обратная связь</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#formSentModal">форма отправлена</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#orderModal">заказ оформлен</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#editAddressModal">редактировать адрес</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#changePhoneModal">Изменение номера</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#changeMailModal">Изменение почты</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#changeImageModal">Изменение изображения</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#imageUploadedModal">Изображение загружено</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#imageUnUploadedModal">Изображение не загружено</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#phoneChangedModal">Номер изменен</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#mailChangedModal">Почта изменена</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#cancellationsModal">Отмена заказа</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#accountDeletingModal">Удаление аккаунта</button>
-                </li>
-                <li>
-                    <button type="button" data-modal="#accountLogoutModal">Выход из аккаунта</button>
-                </li>
-            </ol>
-            <a target="_blank" href="./ui.html">*ui*</a>
+        <div class="wrapper">
+            <header class="header _blue-colored">
+    <div class="header__container container">
+        <a href="/" class="header__logo-wrap">
+            <svg class="header__logo-icon">
+                <use href="#logo-svg"></use>
+            </svg>
+        </a>
+        <div class="header__content">
+            <nav data-da=".menu-header__nav-wrap,768,last" class="header__nav">
+                <a href="#" class="header__nav-link">Каталог</a>
+                <a href="#" class="header__nav-link">Lookbook</a>
+                <a href="#" class="header__nav-link">О нас</a>
+                <a href="#" class="header__nav-link">Отзывы</a>
+                <a href="#" class="header__nav-link">Новости</a>
+                <a href="#" class="header__nav-link">Контакты</a>
+                <a href="#" class="header__nav-link _mobile-only">Доставка и оплата</a>
+                <a href="#" class="header__nav-link _mobile-only">Возврат</a>
+                <a href="#" class="header__nav-link _mobile-only">Вопросы-ответы</a>
+            </nav>
+            <a href="tel:79030075671" class="header__tel">
+                <svg class="header__tel-icon">
+                    <use href="#tel-svg"></use>
+                </svg>
+                <span class="header__tel-txt">+7 (903) 007-56-71</span>
+            </a>
+            <div class="header__actions">
+                <button data-search-btn="" type="button" class="header__actions-item">
+                    <svg class="header__actions-icon">
+                        <use href="#search-svg"></use>
+                    </svg></button><a href="#" class="header__actions-item">
+                    <svg class="header__actions-icon">
+                        <use href="#user-svg"></use>
+                    </svg> </a><a href="#" class="header__actions-item _desktop-only">
+                    <svg class="header__actions-icon">
+                        <use href="#fav-svg"></use>
+                    </svg>
+                </a>
+
+                <a href="#" class="header__actions-item header__actions-item_cart">
+                    <svg class="header__actions-icon">
+                        <use href="#cart-svg"></use>
+                    </svg>
+                </a>
+
+                <button type="button" class="header__actions-item hamburger _mobile-only">
+                    <svg class="header__actions-icon">
+                        <use href="#hamburger-svg"></use>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <style>
-            @charset "UTF-8";
-            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
-            * {
-                padding: 0;
-                margin: 0;
-                border: 0;
-                box-sizing: border-box;
-            }
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-                min-width: 32rem;
-                background-color: #ffffff;
-                color: $blue;
-            }
-            html {
-                font-size: 0.5208335vw;
-            }
-            body {
-                padding: 5rem 0;
-                font-size: 100%;
-                line-height: 1;
-                font-size: 1.8rem;
-                user-select: none;
-            }
-            .root {
-                font-family: 'Source Code Pro';
-            }
-            .root ul,
-            .root ol {
-                margin-bottom: 10rem;
-            }
-            .root ul li,
-            .root ol li {
-                font-size: 2.3rem;
-            }
-            .root li {
-                margin-bottom: 2rem;
-                font-size: 2rem;
-                text-transform: lowercase;
-            }
-            .root a {
-                text-decoration: none;
-            }
-            .root a {
-                color: #202020;
-                transition: color 0.5s ease;
-            }
-            .root a:visited {
-                text-decoration: none;
-                color: #202020;
-            }
-            .root a:hover {
-                color: #202020;
-                text-decoration: underline;
-            }
-            .root h1 {
-                margin-bottom: 5rem;
-                font-size: 5rem;
-                font-weight: 300;
-                text-align: center;
-            }
-            .root h2 {
-                margin-bottom: 2.5rem;
-                font-size: 2.5rem;
-                font-weight: 300;
-            }
-            .root {
-                padding: 5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            @media (max-width: 48em) {
-                html {
-                    font-size: calc((100 / 375) * 5vw);
-                }
-                body {
-                    font-size: 2.8rem;
-                }
-            }
-        </style>
-        <div id="feedbackModal" aria-hidden="true" class="modal modal_feedback modal_fw">
+    </div>
+    <div class="header__menu menu-header">
+        <button type="button" class="menu-header__close-btn hamburger">
+            <svg class="menu-header__close-btn-icon"><use href="#cross-svg"></use></svg>
+        </button>
+        <a href="#" class="menu-header__logo-wrap">
+            <img class="menu-header__logo" src="./assets/images/logo-blue.svg" alt="">
+        </a>
+        <div class="menu-header__nav-wrap"></div>
+        <div class="menu-header__footer">
+            <ul class="menu-header__list">
+                <li class="menu-header__list-item">
+                    <a href="tel:79030075671" class="menu-header__list-item-txt">+7 (903) 007-56-71</a>
+                </li>
+                <li class="menu-header__list-item">
+                    <a href="mailto:simplechoice@mail.ru" class="menu-header__list-item-txt">simplechoice@mail.ru</a>
+                </li>
+            </ul>
+            <ul class="menu-header__socials">
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#ig-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#vk-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#whatsapp-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-header__socials-item">
+                    <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                        <svg>
+                            <use href="#telegram-svg"></use></svg></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header__search search-header">
+        <div class="search-header__container container">
+            <div class="search-header__head">
+                <div class="search-header__logo-wrap">
+                    <img class="search-header__logo" src="./assets/images/logo-blue.svg" alt="">
+                </div>
+                <form action="#" data-dev="" class="search-header__form">
+                    <div data-hint="Заполните поле" class="search-header__input input">
+                        <input data-validate="" data-required="" autocomplete="off" type="search" name="form[]" placeholder="Введите свой поисковой запрос" class="input__field">
+                    </div>
+                    <button type="submit" class="search-header__btn">
+                        <svg class="search-header__btn-icon">
+                            <use href="#search-svg"></use>
+                        </svg>
+                    </button>
+                </form>
+                <button data-search-btn="" class="search-header__close-btn">
+                    <svg class="search-header__close-btn-icon">
+                        <use href="#cross-svg"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="search-header__body">
+                <div class="search-header__aside">
+                    <div class="search-header__group search-header__group_results">
+                        <span class="search-header__title">Часто ищут</span>
+                        <ul class="search-header__list list-search-header">
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Не нашли что искали?" class="list-search-header__text">Не нашли что искали?</span>
+                            </li>
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Флисовый комбинезон" class="list-search-header__text">Флисовый комбинезон</span>
+                            </li>
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Жилет для мальчика" class="list-search-header__text">Жилет для мальчика</span>
+                            </li>
+                            <li class="list-search-header__item">
+                                <svg class="list-search-header__icon">
+                                    <use href="#search-svg"></use>
+                                </svg>
+                                <span data-value="Костюм на праздник для ребенка" class="list-search-header__text">Костюм на праздник для ребенка</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-header__group search-header__group_categories">
+                        <span class="search-header__title">Найти в категории</span>
+                        <ul class="search-header__list list-search-header list-search-header_reversed">
+                            <li class="list-search-header__item">
+                                <span class="list-search-header__text">Кофты для мальчиков</span>
+                                <svg class="list-search-header__icon">
+                                    <use href="#arr-left-svg"></use>
+                                </svg>
+                            </li>
+                            <li class="list-search-header__item">
+                                <span class="list-search-header__text">Кофты для девочек</span>
+                                <svg class="list-search-header__icon">
+                                    <use href="#arr-left-svg"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="search-header__btn btn btn_primary">
+                        <span class="btn__txt">Не нашли что искали?</span>
+                    </button>
+                </div>
+                <div class="search-header__main">
+                    <div class="search-header__swiper swiper">
+                        <ul class="search-header__swiper-wrapper swiper-wrapper">
+                            <li class="search-header__slide shopify-card swiper-slide">
+                                <a href="#" class="shopify-card__inner">
+                                    <div class="shopify-card__body">
+                                        <div class="shopify-card__head">
+                                            <div class="shopify-card__title-wrap">
+                                                <span class="shopify-card__title">футболка</span>
+                                                <span class="shopify-card__subtitle">базовая</span>
+                                            </div>
+                                            <button type="button" class="shopify-card__fav-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#fav-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__footer">
+                                            <div class="shopify-card__group">
+                                                <div class="shopify-card__price">
+                                                    <span class="shopify-card__price-txt shopify-card__price-txt_value">2 500</span>
+                                                    <span class="shopify-card__price-txt">₽</span>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="shopify-card__cart-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#cart-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__btn-wrap">
+                                            <div class="shopify-card__btn-inner">
+                                                <button type="button" class="btn btn_primary">
+                                                    <span class="btn__txt">Купить в 1 клик</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="shopify-card__label">new</span>
+                                    </div>
+                                    <div class="shopify-card__image-wrap">
+                                        <img class="shopify-card__image" src="./assets/images/content/ebb2366a1aeef24257b7daf42e6c343d.webp" alt="">
+                                        <img class="shopify-card__image" src="./assets/images/content/0a09fa50b35ac7cfcccf3e63ee7bbabe.webp" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="search-header__slide shopify-card swiper-slide">
+                                <a href="#" class="shopify-card__inner">
+                                    <div class="shopify-card__body">
+                                        <div class="shopify-card__head">
+                                            <div class="shopify-card__title-wrap">
+                                                <span class="shopify-card__title">футболка</span>
+                                                <span class="shopify-card__subtitle">базовая</span>
+                                            </div>
+                                            <button type="button" class="shopify-card__fav-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#fav-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__footer">
+                                            <div class="shopify-card__group">
+                                                <div class="shopify-card__price">
+                                                    <span class="shopify-card__price-txt shopify-card__price-txt_value">2 500</span>
+                                                    <span class="shopify-card__price-txt">₽</span>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="shopify-card__cart-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#cart-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__btn-wrap">
+                                            <div class="shopify-card__btn-inner">
+                                                <button type="button" class="btn btn_primary">
+                                                    <span class="btn__txt">Купить в 1 клик</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="shopify-card__label">new</span>
+                                    </div>
+                                    <div class="shopify-card__image-wrap">
+                                        <img class="shopify-card__image" src="./assets/images/content/505abe15ee49f5bed9042a31c30a2f38.webp" alt="">
+                                        <img class="shopify-card__image" src="./assets/images/content/0a09fa50b35ac7cfcccf3e63ee7bbabe.webp" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="search-header__slide shopify-card swiper-slide">
+                                <a href="#" class="shopify-card__inner">
+                                    <div class="shopify-card__body">
+                                        <div class="shopify-card__head">
+                                            <div class="shopify-card__title-wrap">
+                                                <span class="shopify-card__title">футболка</span>
+                                                <span class="shopify-card__subtitle">базовая</span>
+                                            </div>
+                                            <button type="button" class="shopify-card__fav-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#fav-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__footer">
+                                            <div class="shopify-card__group">
+                                                <div class="shopify-card__price">
+                                                    <span class="shopify-card__price-txt shopify-card__price-txt_value">2 500</span>
+                                                    <span class="shopify-card__price-txt">₽</span>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="shopify-card__cart-btn btn btn_primary btn_primary_i">
+                                                <svg>
+                                                    <use href="#cart-svg"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="shopify-card__btn-wrap">
+                                            <div class="shopify-card__btn-inner">
+                                                <button type="button" class="btn btn_primary">
+                                                    <span class="btn__txt">Купить в 1 клик</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="shopify-card__label">new</span>
+                                    </div>
+                                    <div class="shopify-card__image-wrap">
+                                        <img class="shopify-card__image" src="./assets/images/content/feb12ec186c933e1debd0e8f51528162.webp" alt="">
+                                        <img class="shopify-card__image" src="./assets/images/content/0a09fa50b35ac7cfcccf3e63ee7bbabe.webp" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="search-header__link link">
+                        <span class="link__txt">Смотреть все результаты</span>
+                        <svg class="link__icon"><use href="#arr-left-svg"></use></svg>
+                    </a>
+                </div>
+            </div>
+            <!--             <div class="search-header__no-results"> -->
+            <!--                 <span class="search-header__title">Ничего не найдено</span> -->
+            <!--                 <span class="search-header__text"> -->
+            <!--                     <svg class="search-header__text-icon"><use href="#search-svg"></use></svg> -->
+            <!--                     <span class="search-header__text-content" -->
+            <!--                         >По вашему запросу «<span></span>» ничего не найдено. Попробуйте изменить ваш -->
+            <!--                         запрос</span -->
+            <!--                     > -->
+            <!--                 </span> -->
+            <!--                 <button type="button" class="search-header__btn btn btn_primary"> -->
+            <!--                     <span class="btn__txt">Не нашли что искали?</span> -->
+            <!--                 </button> -->
+            <!--             </div> -->
+        </div>
+    </div>
+    <div class="header__header-cart-widget header-cart-widget">
+    <div class="header-cart-widget__head">
+        <span class="header-cart-widget__title h h_h3">Корзина</span>
+        <span class="header-cart-widget__quantity">2 товара</span>
+    </div>
+    <div data-sb="" class="header-cart-widget__body">
+        <div class="header-cart-widget__item item-header-cart-widget">
+            <a href="#" class="item-header-cart-widget__image-wrap">
+                <img class="item-header-cart-widget__image" src="./assets/images/items/707164.932x1242@2x.webp" alt="">
+            </a>
+
+            <div class="item-header-cart-widget__title-wrap">
+                <a href="#" class="item-header-cart-widget__title">Платье с перьями</a>
+                <button type="button" class="item-header-cart-widget__remove-btn">
+                    <svg class="item-header-cart-widget__remove-btn-icon">
+                        <use href="#cross-svg"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="item-header-cart-widget__characteristics">
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Цвет:</span>
+                    <div style="background-color: #eac8bd" class="characteristic-item-header-cart-widget__color"></div>
+                </li>
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Размер:</span>
+                    <div class="characteristic-item-header-cart-widget__text">124</div>
+                </li>
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Кол-во:</span>
+                    <div class="characteristic-item-header-cart-widget__text">1 шт</div>
+                </li>
+            </ul>
+            <div class="item-header-cart-widget__footer">
+                <div class="item-header-cart-widget__price price price_cart">
+                    <span class="price__value">140 000</span>
+                    <span class="price__symbol">₽</span>
+                </div>
+                <div class="item-header-cart-widget__quantity quantity">
+                    <button class="quantity__count quantity__count_minus" data-action="minus" type="button">
+                        <svg class="quantity__count-icon">
+                            <use href="#minus-svg"></use>
+                        </svg>
+                    </button>
+                    <input class="quantity__input" type="number" min="0" value="1">
+                    <button class="quantity__count quantity__count_add" data-action="add" type="button">
+                        <svg class="quantity__count-icon">
+                            <use href="#plus-svg"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-cart-widget__item item-header-cart-widget">
+            <a href="#" class="item-header-cart-widget__image-wrap">
+                <img class="item-header-cart-widget__image" src="./assets/images/items/01608508450-e1.webp" alt="">
+            </a>
+            <div class="item-header-cart-widget__title-wrap">
+                <a href="#" class="item-header-cart-widget__title">СТРЕЙЧЕВЫЙ ПИДЖАК ДВУБОРТНЫЙ</a>
+                <button type="button" class="item-header-cart-widget__remove-btn">
+                    <svg class="item-header-cart-widget__remove-btn-icon">
+                        <use href="#cross-svg"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="item-header-cart-widget__characteristics">
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Цвет:</span>
+                    <div style="background-color: #c69259" class="characteristic-item-header-cart-widget__color"></div>
+                </li>
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Размер:</span>
+                    <div class="characteristic-item-header-cart-widget__text">124</div>
+                </li>
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Кол-во:</span>
+                    <div class="characteristic-item-header-cart-widget__text">1 шт</div>
+                </li>
+            </ul>
+            <div class="item-header-cart-widget__footer">
+                <div class="item-header-cart-widget__price price price_cart">
+                    <span class="price__value">140 000</span>
+                    <span class="price__symbol">₽</span>
+                </div>
+                <div class="item-header-cart-widget__quantity quantity">
+                    <button class="quantity__count quantity__count_minus" data-action="minus" type="button">
+                        <svg class="quantity__count-icon">
+                            <use href="#minus-svg"></use>
+                        </svg>
+                    </button>
+                    <input class="quantity__input" type="number" min="0" value="1">
+                    <button class="quantity__count quantity__count_add" data-action="add" type="button">
+                        <svg class="quantity__count-icon">
+                            <use href="#plus-svg"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-cart-widget__item item-header-cart-widget">
+            <a href="#" class="item-header-cart-widget__image-wrap">
+                <img class="item-header-cart-widget__image" src="./assets/images/items/707164.932x1242@2x.webp" alt="">
+            </a>
+            <div class="item-header-cart-widget__title-wrap">
+                <a href="#" class="item-header-cart-widget__title">Платье с перьями</a>
+                <button type="button" class="item-header-cart-widget__remove-btn">
+                    <svg class="item-header-cart-widget__remove-btn-icon">
+                        <use href="#cross-svg"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="item-header-cart-widget__characteristics">
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Цвет:</span>
+                    <div style="background-color: #eac8bd" class="characteristic-item-header-cart-widget__color"></div>
+                </li>
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Размер:</span>
+                    <div class="characteristic-item-header-cart-widget__text">124</div>
+                </li>
+                <li class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget">
+                    <span class="characteristic-item-header-cart-widget__title">Кол-во:</span>
+                    <div class="characteristic-item-header-cart-widget__text">1 шт</div>
+                </li>
+            </ul>
+            <div class="item-header-cart-widget__footer">
+                <div class="item-header-cart-widget__price price price_cart">
+                    <span class="price__value">140 000</span>
+                    <span class="price__symbol">₽</span>
+                </div>
+                <div class="item-header-cart-widget__quantity quantity">
+                    <button class="quantity__count quantity__count_minus" data-action="minus" type="button">
+                        <svg class="quantity__count-icon">
+                            <use href="#minus-svg"></use>
+                        </svg>
+                    </button>
+                    <input class="quantity__input" type="number" min="0" value="1">
+                    <button class="quantity__count quantity__count_add" data-action="add" type="button">
+                        <svg class="quantity__count-icon">
+                            <use href="#plus-svg"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="header-cart-widget__btn btn btn_primary">
+        <span class="btn__txt">Перейти в корзину</span>
+    </a>
+</div>
+
+</header>
+
+            <main>
+                <section class="contacts-page">
+    <div class="container">
+        <div class="contacts-page__left">
+            <ul class="breadcrumb__list">
+                <li><a href="#">Главная</a></li>
+                <li>Контакты</li>
+            </ul>
+            <div class="contacts-page__title h h_h2">контакты</div>
+            <div class="contacts-page__info">
+                <div class="contacts-page__info-item">
+                    <span>телефон</span>
+                    <span>+7 (903) 007-56-71</span>
+                </div>
+                <div class="contacts-page__info-item">
+                    <span>e-mail</span>
+                    <span>simplechoice@mail.ru</span>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-page__photo">
+            <img src="../assets/images/contacts-page/contacts-page-main.webp" alt="">
+        </div>
+        <div class="contacts-page__right">
+            <div class="contacts-page__sign">
+                <img src="../assets/images/contacts-page/contacts-page-sign.webp" alt="">
+            </div>
+            <form class="contacts-page__form" data-dev="" action="#">
+                <div class="contacts-page__form-title h h_h3">оставьте нам заявку, и мы свяжемся с вами </div>
+                <div class="contacts-page__form-container">
+                    <div data-hint="Заполните поле" class="input">
+                        <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="input__field">
+                    </div>
+                    <div data-hint="Заполните поле" class="input">
+                        <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="input__field">
+                    </div>
+                    <div data-hint="Заполните поле" class="input">
+                        <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="E-mail" class="input__field">
+                    </div>
+                </div>
+                
+                <div class="contacts-page__footer">
+                    <button type="submit" class="contacts-page__btn btn btn_primary _is-disabled">
+                        <span class="btn__txt">Отправить</span>
+                    </button>
+                    <p class="contacts-page__text">
+                        Нажимая на кнопку, Вы принимаете условия пользовательского соглашения
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+            </main>
+            <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <a href="/" class="footer__logo-wrap"><img class="footer__logo" src="./assets/images/logo-blue.svg" alt=""></a>
+            <nav class="footer__nav">
+                <a href="#" class="footer__nav-link">Каталог</a>
+                <a href="#" class="footer__nav-link">Отзывы</a>
+                <a href="#" class="footer__nav-link">Доставка и оплата</a>
+                <a href="#" class="footer__nav-link">Lookbook</a>
+                <a href="#" class="footer__nav-link">Новости</a>
+                <a href="#" class="footer__nav-link">Возврат</a>
+                <a href="#" class="footer__nav-link">О нас</a>
+                <a href="#" class="footer__nav-link">Контакты</a>
+                <a href="#" class="footer__nav-link">Вопросы-ответы</a>
+            </nav>
+            <ul class="footer__contacts-list list-contacts">
+                <li class="list-contacts__item">
+                    <span class="list-contacts__subtitle">телефон</span>
+                    <a href="tel:79030075671" class="list-contacts__text">+7 (903) 007-56-71</a>
+                </li>
+                <li class="list-contacts__item">
+                    <span class="list-contacts__subtitle">e-mail</span>
+                    <a href="mailto:simplechoice@mail.ru" class="list-contacts__text">simplechoice@mail.ru</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__lower">
+            <ul class="footer__socials socials-footer">
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#ig-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#vk-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#whatsapp-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-footer__item">
+                    <a href="#" target="_blank" class="socials-footer__inner i-btn">
+                        <svg>
+                            <use href="#telegram-svg"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copyrights">
+                <a href="#" class="footer__copyrights-txt">Политика конфиденциальности</a>
+                <a href="#" class="footer__copyrights-txt">Общие условия и согласие на обработку персональных данных</a>
+            </div>
+            <a href="https://requestdesign.ru/" class="footer__rd-logo-wrap">
+                <img class="footer__rd-logo" src="./assets/images/rd-logo.svg" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+
+            <div id="feedbackModal" aria-hidden="true" class="modal modal_feedback modal_fw">
     <div class="modal__wrapper">
         <div class="modal__content">
             <div class="modal__body">
@@ -654,7 +1072,7 @@
 
 
 
-        <svg style="display: none">
+            <svg style="display: none">
     <symbol id="vk-svg" viewBox="0 0 32 32">
         <path d="M4 16C4 9.40228 9.40228 4 16 4C22.5977 4 28 9.40228 28 16C28 22.5977 22.5977 28 16 28C9.40228 28 4 22.5977 4 16Z" stroke="currentColor" stroke-width="2" fill="none"></path>
         <path d="M16.1322 20.3332C11.2758 20.3332 8.52393 17.1096 8.41602 11.6665H10.8442C10.8981 15.6299 12.7327 17.321 14.1357 17.638V11.6665H16.402V15.1015C17.8049 14.9429 19.2618 13.4104 19.7474 11.6665H22.0137C21.636 13.7803 20.0172 15.3657 18.8841 15.9998C20.0172 16.5283 21.8518 17.9023 22.4993 20.3332H19.9633C19.4237 18.695 18.0747 17.4267 16.294 17.2153V20.3332H16.1322Z" fill="currentColor"></path>
@@ -828,5 +1246,6 @@
     </svg>
 </div>
 
+        </div>
     </body>
 </html>
