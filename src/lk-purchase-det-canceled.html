@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ЛК Личные данные</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb__list">
+                            <li><a href="#">Главная </a></li>
+                            <li><a href="#">Личный кабинет </a></li>
+                            <li>Мои покупки</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="lk">
+                    <div class="container">
+                        <div class="lk__inner">
+                            <div class="lk__nav">
+                                <div class="lk__nav-wrapper _desktop-only">
+                                    <div class="lk__nav-box">
+                                        <a href="#" class="lk__nav-item txt20">Личные данные</a>
+                                        <a href="#" class="lk__nav-item txt20 isActive">Мои покупки</a>
+                                        <a href="#" class="lk__nav-item txt20">Избранное</a>
+                                    </div>
+                                    <button class="lk__nav-exit" data-modal="#accountLogoutModal">
+                                        <span class="lk__nav-exit-text fw500">Выйти из аккаунта</span>
+                                        <div class="lk__nav-exit-svg-box">
+                                            <img src="./assets/images/icons/exit.svg" alt="" />
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="lk__nav-mob-selector _mobile-only">
+                                    <div class="lk__nav-mob-selector-top">
+                                        <span class="lk__nav-mob-selector-top-text">Мои покупки</span>
+                                        <div class="lk__nav-mob-selector-top-svg-box">
+                                            <img src="./assets/images/icons/sm-arr.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="lk__nav-mob-selector-bottom">
+                                        <div class="lk__nav-mob-selector-bottom-list">
+                                            <a href="#" class="lk__nav-mob-selector-item">Личные данные</a>
+                                            <a href="#" class="lk__nav-mob-selector-item isActive"
+                                                >Мои покупки</a
+                                            >
+                                            <a href="#" class="lk__nav-mob-selector-item">Избранное</a>
+                                            <button
+                                                class="lk__nav-exit lk__nav-mob-selector-exit"
+                                                data-modal="#accountLogoutModal"
+                                            >
+                                                <span class="lk__nav-exit-text">Выйти из аккаунта</span>
+                                                <div class="lk__nav-exit-svg-box">
+                                                    <img src="./assets/images/icons/exit.svg" alt="" />
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lk__content">
+                                <a href="#" class="lk__back-link link link_left">
+                                    <svg class="link__icon"><use href="#arr-left-svg"></use></svg>
+                                    <span class="link__txt">К списку заказов</span>
+                                </a>
+                                <div class="lk__purchase-det">
+                                    <div class="lk__purchase-det-wrapper lk__purchase-det-wrapper--canceled">
+                                        <div class="lk__purchase-det-content-box">
+                                            <div class="lk__purchase-det-title-box">
+                                                <a href="#" class="lk__purchase-det-title h h_h3"
+                                                    >Заказ №12345</a
+                                                >
+                                                <p class="lk__purchase-det-status txt20">
+                                                    <span>отменен</span>
+                                                </p>
+                                            </div>
+                                            <div class="lk__purchase-det-count-box">
+                                                <p class="lk__purchase-det-count txt18">4 позиции</p>
+                                                |
+                                                <p class="lk__purchase-det-price txt18">40 000₽</p>
+                                            </div>
+                                        </div>
+                                        <div class="lk__purchase-det-info-box">
+                                            <p class="lk__purchase-det-payment-text _desktop-only txt18">
+                                                Оплачено
+                                            </p>
+                                            <p class="lk__purchase-det-delivery-text txt16">
+                                                Курьерская доставка
+                                            </p>
+                                        </div>
+                                        <div class="lk__purchase-det-time-box txt18">
+                                            <p class="lk__purchase-det-day">24 мая 2024</p>
+                                            <p class="lk__purchase-det-time">09:00-12:00</p>
+                                        </div>
+                                        <div class="lk__purchase-det-adress-box txt18">
+                                            <p class="lk__purchase-det-adress-title">Адрес доставки:</p>
+                                            <p class="lk__purchase-det-adress-desc">
+                                                г. Москва, Заречная ул., 2/1, с.27.
+                                            </p>
+                                        </div>
+                                        <div class="lk__purchase-det-btn-box">
+                                            <a href="#" class="lk__purchase-det-btn-text">Повторить заказ</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="lk__purchase-det-list-wrapper">
+                                        <div class="lk__purchase-det-list-box">
+                                            <div class="lk__purchase-det-list-title-box">
+                                                <p class="lk__purchase-det-list-title">Товары в заказе</p>
+                                                <p class="lk__purchase-det-list-count">4 позиции</p>
+                                            </div>
+                                            <ul class="lk__purchase-det-list">
+                                                <li class="lk__purchase-det-item-wrapper">
+                                                    <a href="#" class="lk__purchase-det-item">
+                                                        <div class="lk__purchase-det-item-title _mobile-only">
+                                                            Стрейчевый пиджак
+                                                        </div>
+                                                        <div class="lk__purchase-det-item-img-box">
+                                                            <img
+                                                                src="./assets/images/items/purchase-2.webp"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                        <div class="lk__purchase-det-item-content-wrapper">
+                                                            <div class="lk__purchase-det-item-content-box">
+                                                                <div
+                                                                    class="lk__purchase-det-item-title-box _desktop-only"
+                                                                >
+                                                                    <p class="lk__purchase-det-item-title">
+                                                                        Стрейчевый пиджак
+                                                                    </p>
+                                                                    <p class="lk__purchase-det-item-vendor">
+                                                                        Арт. GNM145007
+                                                                    </p>
+                                                                </div>
+                                                                <ul
+                                                                    class="lk__purchase-det-characteristic-list"
+                                                                >
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Цвет:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                style="
+                                                                                    background-color: #b8a795;
+                                                                                "
+                                                                                class="lk__purchase-det-characteristic-item-color"
+                                                                            ></span>
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >Темно - бежевый</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Размер:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >124</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Количество:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >1шт</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="lk__purchase-det-item-price-box">
+                                                                <span
+                                                                    class="lk__purchase-det-item-price-value"
+                                                                    >140 000</span
+                                                                >
+                                                                <span
+                                                                    class="lk__purchase-det-item-price-symbol"
+                                                                    >₽</span
+                                                                >
+                                                            </div>
+                                                        </div></a
+                                                    >
+                                                </li>
+                                                <li class="lk__purchase-det-item-wrapper">
+                                                    <a href="#" class="lk__purchase-det-item">
+                                                        <p class="lk__purchase-det-item-title _mobile-only">
+                                                            Рубашка с рисунком
+                                                        </p>
+                                                        <div class="lk__purchase-det-item-img-box">
+                                                            <img
+                                                                src="./assets/images/items/purchase-4.webp"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                        <div class="lk__purchase-det-item-content-wrapper">
+                                                            <div class="lk__purchase-det-item-content-box">
+                                                                <div
+                                                                    class="lk__purchase-det-item-title-box _desktop-only"
+                                                                >
+                                                                    <p class="lk__purchase-det-item-title">
+                                                                        Рубашка с рисунком
+                                                                    </p>
+                                                                    <p class="lk__purchase-det-item-vendor">
+                                                                        Арт. GNM145007
+                                                                    </p>
+                                                                </div>
+                                                                <ul
+                                                                    class="lk__purchase-det-characteristic-list"
+                                                                >
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Цвет:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                style="
+                                                                                    background-color: #f1e5d7;
+                                                                                "
+                                                                                class="lk__purchase-det-characteristic-item-color"
+                                                                            ></span>
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >Бежевый</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Размер:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >124</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Количество:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >1шт</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="lk__purchase-det-item-price-box">
+                                                                <span
+                                                                    class="lk__purchase-det-item-price-value"
+                                                                    >140 000</span
+                                                                >
+                                                                <span
+                                                                    class="lk__purchase-det-item-price-symbol"
+                                                                    >₽</span
+                                                                >
+                                                            </div>
+                                                        </div></a
+                                                    >
+                                                </li>
+                                                <li class="lk__purchase-det-item-wrapper">
+                                                    <a href="#" class="lk__purchase-det-item">
+                                                        <p class="lk__purchase-det-item-title _mobile-only">
+                                                            Платье с перьями
+                                                        </p>
+                                                        <div class="lk__purchase-det-item-img-box">
+                                                            <img
+                                                                src="./assets/images/items/purchase-1.webp"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                        <div class="lk__purchase-det-item-content-wrapper">
+                                                            <div class="lk__purchase-det-item-content-box">
+                                                                <div
+                                                                    class="lk__purchase-det-item-title-box _desktop-only"
+                                                                >
+                                                                    <p class="lk__purchase-det-item-title">
+                                                                        Платье с перьями
+                                                                    </p>
+                                                                    <p class="lk__purchase-det-item-vendor">
+                                                                        Арт. GNM145007
+                                                                    </p>
+                                                                </div>
+                                                                <ul
+                                                                    class="lk__purchase-det-characteristic-list"
+                                                                >
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Цвет:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                style="
+                                                                                    background-color: #f1d4cc;
+                                                                                "
+                                                                                class="lk__purchase-det-characteristic-item-color"
+                                                                            ></span>
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >Розовый</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Размер:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >124</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+
+                                                                    <li
+                                                                        class="lk__purchase-det-characteristic-item"
+                                                                    >
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-title txt18"
+                                                                        >
+                                                                            Количество:
+                                                                        </p>
+                                                                        <p
+                                                                            class="lk__purchase-det-characteristic-item-text"
+                                                                        >
+                                                                            <span
+                                                                                class="lk__purchase-det-characteristic-item-text-content"
+                                                                                >1шт</span
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="lk__purchase-det-item-price-box">
+                                                                <span
+                                                                    class="lk__purchase-det-item-price-value"
+                                                                    >140 000</span
+                                                                >
+                                                                <span
+                                                                    class="lk__purchase-det-item-price-symbol"
+                                                                    >₽</span
+                                                                >
+                                                            </div>
+                                                        </div></a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="lk__purchase-det-btn btn btn_i">
+                                            <span class="btn__txt">Показать ещё</span>
+                                            <svg><use href="#down-arr-svg"></use></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>
