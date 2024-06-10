@@ -1,12 +1,10 @@
 window.$ = window.jQuery = require('jquery');
 
-
 document.addEventListener('DOMContentLoaded', function () {
     try {
         lkDropdownMob();
     } catch {}
 });
-
 
 function lkDropdownMob() {
     $('.lk__nav-mob-selector-top').on('click', function () {
