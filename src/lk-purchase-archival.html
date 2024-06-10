@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ЛК Личные данные</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb__list">
+                            <li><a href="#">Главная </a></li>
+                            <li><a href="#">Личный кабинет </a></li>
+                            <li>Мои покупки</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="lk">
+                    <div class="container">
+                        <div class="lk__inner">
+                            <div class="lk__nav">
+                                <div class="lk__nav-wrapper _desktop-only">
+                                    <div class="lk__nav-box">
+                                        <a href="#" class="lk__nav-item txt20">Личные данные</a>
+                                        <a href="#" class="lk__nav-item txt20 isActive">Мои покупки</a>
+                                        <a href="#" class="lk__nav-item txt20">Избранное</a>
+                                    </div>
+                                    <button class="lk__nav-exit" data-modal="#accountLogoutModal">
+                                        <span class="lk__nav-exit-text fw500">Выйти из аккаунта</span>
+                                        <div class="lk__nav-exit-svg-box">
+                                            <img src="./assets/images/icons/exit.svg" alt="" />
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="lk__nav-mob-selector _mobile-only">
+                                    <div class="lk__nav-mob-selector-top">
+                                        <span class="lk__nav-mob-selector-top-text">Мои покупки</span>
+                                        <div class="lk__nav-mob-selector-top-svg-box">
+                                            <img src="./assets/images/icons/sm-arr.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="lk__nav-mob-selector-bottom">
+                                        <div class="lk__nav-mob-selector-bottom-list">
+                                            <a href="#" class="lk__nav-mob-selector-item">Личные данные</a>
+                                            <a href="#" class="lk__nav-mob-selector-item isActive"
+                                                >Мои покупки</a
+                                            >
+                                            <a href="#" class="lk__nav-mob-selector-item">Избранное</a>
+                                            <button
+                                                class="lk__nav-exit lk__nav-mob-selector-exit"
+                                                data-modal="#accountLogoutModal"
+                                            >
+                                                <span class="lk__nav-exit-text">Выйти из аккаунта</span>
+                                                <div class="lk__nav-exit-svg-box">
+                                                    <img src="./assets/images/icons/exit.svg" alt="" />
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lk__content">
+                                <p class="lk__content-title h h_h2">Мои покупки</p>
+                                <div  class="lk__purchase">
+                                    <div class="lk__purchase-tab-box">
+                                        <a href="#" class="lk__purchase-tab"> Активные (7) </a>
+                                        <a href="#" class="lk__purchase-tab isActive"> Архивные (10) </a>
+                                        <a href="#" class="lk__purchase-tab"> Отмененные (3) </a>
+                                    </div>
+                                    <div class="lk__purchase-list-wrapper">
+                                        <ul class="lk__purchase-list">
+                                            <li class="lk__purchase-item lk__purchase-item--archival">
+                                                <div class="lk__purchase-info-box">
+                                                    <p class="lk__purchase-delivery-text txt16">
+                                                        Курьерская доставка
+                                                    </p>
+                                                </div>
+                                                <div class="lk__purchase-content-wrapper">
+                                                    <div class="lk__purchase-content-box">
+                                                        <div class="lk__purchase-title-box">
+                                                            <a href="#" class="lk__purchase-title h h_h3"
+                                                                >Заказ №12345</a
+                                                            >
+                                                            <p class="lk__purchase-status txt20">
+                                                                <span>ВЫПОЛНЕН</span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="lk__purchase-count-box">
+                                                            <p class="lk__purchase-count txt18">4 позиции</p>
+                                                            |
+                                                            <p class="lk__purchase-price txt18">40 000₽</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lk__purchase-swiper-box">
+                                                        <div class="lk__purchase-swiper swiper">
+                                                            <div
+                                                                class="lk__purchase-swiper-wrapper swiper-wrapper"
+                                                            >
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-3.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-4.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-5.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-1.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lk__purchase-time-box txt18">
+                                                    <p class="lk__purchase-day">Доставлен 24 мая 2024</p>
+                                                </div>
+                                                <div class="lk__purchase-repeat-box">
+                                                    <a href="" class="lk__purchase-repeat txt18"
+                                                        >Повторить заказ</a
+                                                    >
+                                                </div>
+                                            </li>
+
+                                            <li class="lk__purchase-item lk__purchase-item--archival">
+                                                <div class="lk__purchase-info-box">
+                                                    <p class="lk__purchase-delivery-text txt16">
+                                                        Курьерская доставка
+                                                    </p>
+                                                </div>
+                                                <div class="lk__purchase-content-wrapper">
+                                                    <div class="lk__purchase-content-box">
+                                                        <div class="lk__purchase-title-box">
+                                                            <a href="#" class="lk__purchase-title h h_h3"
+                                                                >Заказ №12345</a
+                                                            >
+                                                            <p class="lk__purchase-status txt20">
+                                                                <span>ВЫПОЛНЕН</span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="lk__purchase-count-box">
+                                                            <p class="lk__purchase-count txt18">4 позиции</p>
+                                                            |
+                                                            <p class="lk__purchase-price txt18">40 000₽</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lk__purchase-swiper-box">
+                                                        <div class="lk__purchase-swiper swiper">
+                                                            <div
+                                                                class="lk__purchase-swiper-wrapper swiper-wrapper"
+                                                            >
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-3.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-4.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-5.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lk__purchase-time-box txt18">
+                                                    <p class="lk__purchase-day">Доставлен 24 мая 2024</p>
+                                                </div>
+                                                <div class="lk__purchase-swiper-not-available-box">
+                                                    <p class="lk__purchase-swiper-not-available-title">
+                                                        Нет в наличии:
+                                                    </p>
+                                                    <div class="lk__purchase-swiper swiper">
+                                                        <div
+                                                            class="lk__purchase-swiper-wrapper swiper-wrapper"
+                                                        >
+                                                            <div
+                                                                class="lk__purchase-swiper-slide swiper-slide"
+                                                            >
+                                                                <a href="#" class="lk__purchase-slide-inner">
+                                                                    <img
+                                                                        src="./assets/images/items/purchase-1.webp"
+                                                                        alt=""
+                                                                    />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lk__purchase-repeat-box">
+                                                    <a href="" class="lk__purchase-repeat txt18"
+                                                        >Повторить заказ</a
+                                                    >
+                                                </div>
+                                            </li>
+
+                                            <li class="lk__purchase-item lk__purchase-item--archival">
+                                                <div class="lk__purchase-info-box">
+                                                    <p class="lk__purchase-delivery-text txt16">
+                                                        Курьерская доставка
+                                                    </p>
+                                                </div>
+                                                <div class="lk__purchase-content-wrapper">
+                                                    <div class="lk__purchase-content-box">
+                                                        <div class="lk__purchase-title-box">
+                                                            <a href="#" class="lk__purchase-title h h_h3"
+                                                                >Заказ №12345</a
+                                                            >
+                                                            <p class="lk__purchase-status txt20">
+                                                                <span>ВЫПОЛНЕН</span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="lk__purchase-count-box">
+                                                            <p class="lk__purchase-count txt18">4 позиции</p>
+                                                            |
+                                                            <p class="lk__purchase-price txt18">40 000₽</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lk__purchase-swiper-box">
+                                                        <div class="lk__purchase-swiper swiper">
+                                                            <div
+                                                                class="lk__purchase-swiper-wrapper swiper-wrapper"
+                                                            >
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-3.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-4.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-5.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="lk__purchase-swiper-slide swiper-slide"
+                                                                >
+                                                                    <a
+                                                                        href="#"
+                                                                        class="lk__purchase-slide-inner"
+                                                                    >
+                                                                        <img
+                                                                            src="./assets/images/items/purchase-1.webp"
+                                                                            alt=""
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lk__purchase-time-box txt18">
+                                                    <p class="lk__purchase-day">Доставлен 24 мая 2024</p>
+                                                </div>
+                                                <div class="lk__purchase-repeat-box">
+                                                    <a href="" class="lk__purchase-repeat txt18"
+                                                        >Повторить заказ</a
+                                                    >
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="lk__purchase-btn btn btn_i">
+                                            <span class="btn__txt">Показать ещё</span>
+                                            <svg><use href="#down-arr-svg"></use></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>

@@ -37,7 +37,7 @@
                                 <svg class="header__actions-icon">
                                     <use href="#search-svg"></use>
                                 </svg></button
-                            ><a href="#" class="header__actions-item">
+                            ><a href="#" class="header__actions-item header__actions-item--lk">
                                 <svg class="header__actions-icon">
                                     <use href="#user-svg"></use>
                                 </svg> </a
@@ -624,6 +624,15 @@
     </a>
 </div>
 
+                <div class="header__header-lk-widget header-lk-widget">
+    <span class="header-lk-widget__title txt18">Войдите, чтобы&nbsp;получить доступ к&nbsp;избранным товарам, возможности сохранять товары и&nbsp;оформлять
+        заказы</span>
+
+    <a href="#" data-modal="#loginPhoneModal" class="header-lk-widget__btn btn btn_primary">
+        <span class="btn__txt">Войти или зарегистрироваться</span>
+    </a>
+</div>
+
             </header>
 
             <main>
@@ -892,7 +901,6 @@
     </div>
 </div>
 
-
 <!-- заказ оформлен -->
 <div id="orderModal" aria-hidden="true" class="modal modal_order">
     <div class="modal__wrapper">
@@ -974,7 +982,7 @@
                             Введите новый контактный номер телефона. <br>Вам поступит СМС с кодом.
                         </p>
                     </div>
-                    <form action="#" data-dev="" class="modal_change__form">
+                    <form data-modal-message="#codePhoneModal" action="" data-dev="" class="modal_change__form">
                         <div class="modal_change__fields">
                             <div data-hint="Заполните поле" class="modal_change__field input">
                                 <input data-validate="" data-required="" data-tel-mask="" autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="input__field">
@@ -1006,7 +1014,7 @@
                             Введите новый адрес электронной почты. <br>Вам поступит СМС с кодом.
                         </p>
                     </div>
-                    <form action="#" data-dev="" class="modal_change__form">
+                    <form data-modal-message="#codeMailModal" action="#" data-dev="" class="modal_change__form">
                         <div class="modal_change__fields">
                             <div data-hint="Заполните поле" class="modal_change__field input">
                                 <input data-validate="" data-required="email" autocomplete="off" type="text" name="form[]" placeholder="E-mail" class="input__field">
@@ -1057,7 +1065,7 @@
                 <div class="modal__inner info-modal">
                     <span class="info-modal__title h h_h3">изображение загружено</span>
                     <p class="info-modal__text">Ваше фото профиля успешно изменено</p>
-                    <a href="/" class="info-modal__btn btn btn_primary">
+                    <a href="/" data-close="" class="info-modal__btn btn btn_primary">
                         <span class="btn__txt">Вернуться в личный кабинет</span>
                     </a>
                 </div>
@@ -1100,7 +1108,7 @@
                 <div class="modal__inner info-modal">
                     <span class="info-modal__title h h_h3">Номер успешно изменен</span>
                     <p class="info-modal__text">Ваш новый контактный номер телефона успешно изменен</p>
-                    <a href="/" class="info-modal__btn btn btn_primary">
+                    <a data-close="" href="/" class="info-modal__btn btn btn_primary">
                         <span class="btn__txt">Вернуться в личный кабинет</span>
                     </a>
                 </div>
@@ -1120,7 +1128,7 @@
                 <div class="modal__inner info-modal">
                     <span class="info-modal__title h h_h3">E-mail успешно изменен</span>
                     <p class="info-modal__text">Ваш новый адрес электронной почты успешно изменен</p>
-                    <a href="/" class="info-modal__btn btn btn_primary">
+                    <a data-close="" href="/" class="info-modal__btn btn btn_primary">
                         <span class="btn__txt">Вернуться в личный кабинет</span>
                     </a>
                 </div>
@@ -1142,7 +1150,7 @@
                     <p class="info-modal__text">
                         Вы точно хотите отменить заказ? Изменить действие уже будет невозможно
                     </p>
-                    <a href="/" class="info-modal__btn btn btn_primary">
+                    <a href="/" data-close="" class="info-modal__btn btn btn_primary">
                         <span class="btn__txt">Отменить заказ</span>
                     </a>
                 </div>
@@ -1150,7 +1158,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- Удаление аккаунта -->
 <div id="accountDeletingModal" aria-hidden="true" class="modal modal_form-sent">
@@ -1163,7 +1170,7 @@
                 <div class="modal__inner info-modal">
                     <span class="info-modal__title h h_h3">Вы действительно хотите удалить аккаунт?</span>
                     <p class="info-modal__text">После удаления аккаунта все данные будут утеряны</p>
-                    <a href="/" class="info-modal__btn btn btn_primary">
+                    <a href="/" data-close="" class="info-modal__btn btn btn_primary">
                         <span class="btn__txt">Удалить аккаунт</span>
                     </a>
                 </div>
@@ -1185,7 +1192,7 @@
                     <p class="info-modal__text">
                         После выхода из аккаунта необходимо будет повторно пройти авторизацию
                     </p>
-                    <a href="/" class="info-modal__btn btn btn_primary">
+                    <a href="/" data-close="" class="info-modal__btn btn btn_primary">
                         <span class="btn__txt">Выйти из аккаунта</span>
                     </a>
                 </div>
@@ -1194,8 +1201,304 @@
     </div>
 </div>
 
+<!-- код телефон  -->
+<div id="codePhoneModal" aria-hidden="true" class="modal modal_code">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner modal_code__inner">
+                    <div class="modal_code__title-box">
+                        <span class="modal_code__title h h_h3">Введите код</span>
+                        <div class="modal_code__text-box">
+                            <p class="modal_code__text txt16">
+                                Укажите код из СМС на номер <span>+7(900)000-00-00</span>
+                            </p>
+                            <a href="#" data-modal="#changePhoneModal" class="modal_code__link btn btn_secondary">
+                                <span class="btn__txt">Изменить номер</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form data-modal-message="#phoneChangedModal" action="" data-dev="" class="modal_code__form modal_code__form--phone">
+                        <div class="modal_code__fields">
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
 
+                            <p class="modal_code__field-error ">Неверный код</p>
+                            <!-- isActive - класс активации текста ошибки -->
+                        </div>
+                        <div class="modal_code__btn-box">
+                            <button type="submit" class="modal_code__btn btn btn_primary _is-disabled">
+                                <span class="btn__txt">Запросить код повторно через 0:55 </span>
+                            </button>
+                            <a href="#" data-modal="#noCodePhoneModal" class="modal_code__link btn btn_secondary">
+                                <span class="btn__txt">Не приходит СМС с кодом?</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- код почта -->
+<div id="codeMailModal" aria-hidden="true" class="modal modal_code">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner modal_code__inner">
+                    <div class="modal_code__title-box">
+                        <span class="modal_code__title h h_h3">Введите код</span>
+                        <div class="modal_code__text-box">
+                            <p class="modal_code__text txt16">
+                                Укажите код из сообщения, отправленного на почту.
+                            </p>
+                            <a href="#" data-modal="#changeMailModal" class="modal_code__link btn btn_secondary">
+                                <span class="btn__txt">Изменить e-mail</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form data-modal-message="#mailChangedModal" action="" data-dev="" class="modal_code__form modal_code__form--mail">
+                        <div class="modal_code__fields">
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <p class="modal_code__field-error ">Неверный код</p>
+                            <!-- isActive - класс активации текста ошибки -->
+                        </div>
+                        <div class="modal_code__btn-box">
+                            <button type="submit" class="modal_code__btn btn btn_primary _is-disabled">
+                                <span class="btn__txt">Запросить код повторно через 0:55 </span>
+                            </button>
+                            <a href="#" data-modal="#noCodeMailModal" class="modal_code__link btn btn_secondary">
+                                <span class="btn__txt">Не приходит СМС с кодом?</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- не приходит код телефон  -->
+
+<div id="noCodePhoneModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner no-code-modal">
+                    <span class="no-code-modal__title h h_h3">Не поступает смс <br>
+                        с кодом?</span>
+                    <div class="no-code-modal__text-wrapper">
+                        <p class="no-code-modal__text">Если вы столкнулись с проблемой неполучения SMS-кода, есть несколько шагов, которые можно предпринять:</p>
+                        <ul class="no-code-modal__list">
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">1.</p>
+                                <p class="no-code-modal__desc"><span>Проверьте правильность номера телефона.</span> Убедитесь, что вы указали правильный номер телефона в настройках вашего профиля.</p>
+                            </li>
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">2.</p>
+                                <p class="no-code-modal__desc">
+                                    <span>Проверьте соединение с сетью.</span> Убедитесь, что у вас хорошее соединение с мобильной сетью, так как плохая связь может привести к задержкам в доставке SMS.</p>
+                            </li>
+                          
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">3.</p>
+                                <p class="no-code-modal__desc">
+                                    <span>Проверьте папку «Спам»</span> Иногда SMS-коды могут попадать в папку со спамом. Пожалуйста, проверьте эту папку в вашем мобильном устройстве.</p>
+                            </li>
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">4.</p>
+                                <p class="no-code-modal__desc">
+                                    <span> Попробуйте еще раз.</span>
+                                    В случае отсутствия SMS-кода, попробуйте запросить его повторно.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- не приходит код почта  -->
+
+<div id="noCodeMailModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner no-code-modal">
+                    <span class="no-code-modal__title h h_h3">Не поступает сообщение <br>
+                        с кодом?</span>
+                    <div class="no-code-modal__text-wrapper">
+                        <p class="no-code-modal__text">Если вы столкнулись с проблемой неполучения SMS-кода, есть несколько шагов, которые можно предпринять:</p>
+                        <ul class="no-code-modal__list">
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">1.</p>
+                                <p class="no-code-modal__desc"><span>Проверьте правильность адреса электронной почты.</span>  Убедитесь, что вы указали правильный адрес электронной почты в настройках вашего профиля.</p>
+                            </li>
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">2.</p>
+                                <p class="no-code-modal__desc">
+                                    <span>Проверьте соединение с сетью.</span> Убедитесь, что у вас хорошее соединение с мобильной сетью, так как плохая связь может привести к задержкам в доставке SMS.</p>
+                            </li>
+                          
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">3.</p>
+                                <p class="no-code-modal__desc">
+                                    <span>Проверьте папку «Спам»</span> Иногда SMS-коды могут попадать в папку со спамом. Пожалуйста, проверьте эту папку в вашем мобильном устройстве.</p>
+                            </li>
+                            <li class="no-code-modal__item">
+                                <p class="no-code-modal__num">4.</p>
+                                <p class="no-code-modal__desc">
+                                    <span> Попробуйте еще раз.</span>
+                                    В случае отсутствия SMS-кода, попробуйте запросить его повторно.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Войти -->
+<div id="loginModal" aria-hidden="true" class="modal modal_form-sent">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner login-modal">
+                  
+                    <p class="login-modal__text">Войдите, чтобы&nbsp;получить доступ к&nbsp;избранным товарам, возможности сохранять товары и&nbsp;оформлять
+                        заказы</p>
+                    <a data-modal="#loginPhoneModal" href="/" class="login-modal__btn btn btn_primary">
+                        <span class="btn__txt">Войти или зарегистрироваться</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- войти тел -->
+<div id="loginPhoneModal" aria-hidden="true" class="modal modal_change">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner modal_change__inner">
+                    <div class="modal_change__title-box">
+                        <span class="modal_change__title h h_h3">Войти</span>
+                        <p class="modal_change__text txt16">
+                            Введите новый контактный номер телефона. <br>Вам поступит СМС с кодом.
+                        </p>
+                    </div>
+                    <form data-modal-message="#codeLoginModal" action="" data-dev="" class="modal_change__form">
+                        <div class="modal_change__fields">
+                            <div data-hint="Заполните поле" class="modal_change__field input">
+                                <input data-validate="" data-required="" data-tel-mask="" autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="input__field">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="modal_change__btn btn btn_primary _is-disabled">
+                            <span class="btn__txt">Получить код</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- код вход -->
+<div id="codeLoginModal" aria-hidden="true" class="modal modal_code">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg class="modal__close-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <div class="modal__inner modal_code__inner">
+                    <div class="modal_code__title-box">
+                        <span class="modal_code__title h h_h3">Введите код</span>
+                        <div class="modal_code__text-box">
+                            <p class="modal_code__text txt16">
+                                Укажите код из СМС на номер <span>+7(900)000-00-00</span>
+                            </p>
+                            <a href="#" data-modal="#changePhoneModal" class="modal_code__link btn btn_secondary">
+                                <span class="btn__txt">Изменить номер</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form data-modal-message="" action="" data-dev="" class="modal_code__form modal_code__form--login">
+                        <div class="modal_code__fields">
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+                            <div class="modal_code__field input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="" class="input__field popup__fields-num">
+                            </div>
+
+                            <p class="modal_code__field-error ">Неверный код</p>
+                            <!-- isActive - класс активации текста ошибки -->
+                        </div>
+                        <div class="modal_code__btn-box">
+                            <button type="submit" class="modal_code__btn btn btn_primary _is-disabled">
+                                <span class="btn__txt">Запросить код повторно через 0:55 </span>
+                            </button>
+                            <a href="#" data-modal="#noCodePhoneModal" class="modal_code__link btn btn_secondary">
+                                <span class="btn__txt">Не приходит СМС с кодом?</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             <svg style="display: none">
     <symbol id="vk-svg" viewBox="0 0 32 32">
         <path d="M4 16C4 9.40228 9.40228 4 16 4C22.5977 4 28 9.40228 28 16C28 22.5977 22.5977 28 16 28C9.40228 28 4 22.5977 4 16Z" stroke="currentColor" stroke-width="2" fill="none"></path>

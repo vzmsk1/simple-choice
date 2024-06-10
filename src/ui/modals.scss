@@ -388,11 +388,9 @@ body::after {
         position: absolute;
         inset: 0;
     }
-
 }
 
 .modal_change {
-
     // .modal_change__inner
 
     &__inner {
@@ -418,6 +416,13 @@ body::after {
 
     &__text {
         color: rgba(0, 48, 87, 0.5);
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+            letter-spacing: -0.05rem;
+            & br {
+                display: none;
+            }
+        }
     }
 
     // .modal_change__form
@@ -443,8 +448,6 @@ body::after {
     &__btn {
     }
 }
-
-
 
 .color {
     position: relative;
@@ -509,5 +512,279 @@ body::after {
     &__btn {
         align-self: flex-start;
         min-width: 50.6rem;
+    }
+}
+
+.modal_code {
+    // .modal_code__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        @media (max-width: 48em) {
+            gap: 4.8rem;
+        }
+    }
+
+    // .modal_code__title-box
+
+    &__title-box {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        @media (max-width: 48em) {
+            gap: 4rem;
+        }
+    }
+
+    // .modal_code__title
+
+    &__title {
+    }
+
+    // .modal_code__text-box
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        @media (max-width: 48em) {
+            gap: 4rem;
+        }
+    }
+
+    // .modal_code__text
+
+    &__text {
+        @media (max-width: 48em) {
+            font-weight: 500;
+            font-size: 2.8rem;
+            line-height: 140%;
+            color: rgba(0, 48, 87, 0.5);
+        }
+    }
+
+    // .modal_code__link
+
+    &__link {
+        width: fit-content;
+        @media (max-width: 48em) {
+            font-weight: 500;
+        }
+    }
+
+    // .modal_code__form
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        @media (max-width: 48em) {
+            gap: 4rem;
+        }
+    }
+
+    // .modal_code__fields
+
+    &__fields {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        width: fit-content;
+        position: relative;
+
+        padding-bottom: 2.2rem;
+        @media (max-width: 48em) {
+            justify-content: space-between;
+        }
+    }
+
+    // .modal_code__field
+
+    &__field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+
+        &.input {
+            padding: 0;
+            border: none !important;
+            &._has-error {
+                border: none !important;
+                & .popup__fields-num {
+                    border: 0.1rem solid red;
+                    @media (max-width: 48em) {
+                        border: 0.2rem solid $red;
+                    }
+                }
+            }
+            & .popup__fields-num {
+                width: 6rem;
+                height: 8rem;
+                border-radius: 0.8rem;
+                border: 0.1rem solid rgba(0, 48, 87, 0.3);
+                text-align: center;
+                font-size: 3rem;
+                padding: 0;
+                transition: border 0.5s;
+                &:focus {
+                    border: 0.1rem solid $blue;
+                    @media (max-width: 48em) {
+                        border: 0.2rem solid $blue;
+                    }
+                }
+                @media (max-width: 48em) {
+                    font-size: 6rem;
+                    width: 12rem;
+                    height: 16rem;
+                    border: 0.2rem solid rgba(0, 48, 87, 0.3);
+                    border-radius: 1.6rem;
+                }
+            }
+        }
+    }
+    &__field-error {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: -0.5rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 137%;
+        text-align: center;
+        color: #eb5749;
+        opacity: 0;
+        transition: opacity 0.5s;
+        &.isActive {
+            opacity: 1;
+        }
+    }
+    // .modal_code__btn-box
+
+    &__btn-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+        @media (max-width: 48em) {
+            gap: 4.8rem;
+        }
+    }
+
+    // .modal_code__btn
+
+    &__btn {
+        width: 100%;
+        @media (max-width: 48em) {
+            font-size: 2.6rem;
+            padding: 2.4rem 3rem;
+        }
+    }
+}
+
+.no-code-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    // .no-code-modal__title
+
+    &__title {
+    }
+
+    // .no-code-modal__text-wrapper
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    // .no-code-modal__text
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.6rem;
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+            line-height: 140%;
+        }
+    }
+
+    // .no-code-modal__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 50.6rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    // .no-code-modal__item
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    // .no-code-modal__num
+
+    &__num {
+        font-size: 1.6rem;
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+            line-height: 140%;
+        }
+    }
+
+    // .no-code-modal__desc
+
+    &__desc {
+        font-size: 1.6rem;
+        span {
+            color: $blue;
+        }
+        font-weight: 400;
+        color: rgba(0, 48, 87, 0.5);
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+            line-height: 140%;
+        }
+    }
+}
+
+.login-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    line-height: 140%;
+    @media (max-width: 48em) {
+        align-items: flex-start;
+        text-align: left;
+    }
+    // .login-modal__text
+
+    &__text {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 140%;
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+        }
+    }
+
+    // .login-modal__btn
+
+    &__btn {
+        @media (max-width: 48em) {
+            font-size: 2.6rem;
+        }
     }
 }
