@@ -326,6 +326,18 @@ function initSliders() {
             spaceBetween: remToPx(4)
         });
     }
+    if (document.querySelector('.catalog__categories-swiper')) {
+        new Swiper('.catalog__categories-swiper', {
+            modules: [Navigation],
+            ...swiperDefaults,
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(2),
+            navigation: {
+                prevEl: '.catalog__categories .swiper-nav__arr_prev',
+                nextEl: '.catalog__categories .swiper-nav__arr_next'
+            }
+        });
+    }
 }
 
 window.addEventListener('load', initSliders);
