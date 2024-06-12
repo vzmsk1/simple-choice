@@ -44,8 +44,6 @@ function onClickHandler(e) {
 
     if (target.closest('.cookie__btn')) {
         document.querySelector('.cookie').classList.add('_is-hidden');
-
-        bodyLock();
     }
 
     toggleClass(e, '.sort-catalog__btn', '.sort-catalog', '_show-categories', true);
