@@ -1,4 +1,7 @@
 import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/all';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const mm = gsap.matchMedia();
 
@@ -311,6 +314,22 @@ export const switchAttrValue = () => {
                     return () => {
                         switchValue(i[1]);
                     };
+                });
+            });
+        });
+    }
+};
+
+export const initAnchors = () => {
+    if (document.querySelectorAll('[data-anchor]').length) {
+        document.querySelectorAll('[data-anchor]').forEach((anchor) => {
+            anchor.addEventListener('click', function () {
+                gsap.to(window, {
+                    duration: 1.5,
+                    scrollTo: {
+                        y: anchor.dataset.anchor,
+                        offsetY: 156
+                    }
                 });
             });
         });

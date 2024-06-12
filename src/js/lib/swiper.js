@@ -107,11 +107,11 @@ function initSliders() {
             modules: [Navigation, Pagination, Controller, Autoplay],
             ...swiperDefaults,
             virtualTranslate: true,
-            // autoplay: {
-            //     delay: 4000,
-            //     disableOnInteraction: false,
-            //     waitForTransition: false
-            // },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                waitForTransition: false
+            },
             allowTouchMove: false,
             navigation: {
                 nextEl: '.about .swiper-nav__arr_next',

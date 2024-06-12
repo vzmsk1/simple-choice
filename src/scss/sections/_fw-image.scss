@@ -1,0 +1,22 @@
+.fw-image {
+    margin-bottom: 20rem;
+
+    &__image-wrap {
+        height: 78rem;
+
+        @media (max-width: 48em) {
+            height: 47.2rem;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        border-radius: 2rem;
+
+        object-fit: cover;
+
+        @media (max-width: 48em) {
+            border-radius: 2.4rem;
+        }
+    }
+}
