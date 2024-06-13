@@ -1,3 +1,6 @@
+import Swiper from 'swiper';
+import { EffectCreative, Navigation } from 'swiper/modules';
+
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.payment-info__nav') && paumentInfoDropdown();
 });

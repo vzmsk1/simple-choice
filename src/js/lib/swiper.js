@@ -338,6 +338,29 @@ function initSliders() {
             }
         });
     }
+    if (document.querySelector('.viewing-swiper')) {
+        const viewingSwiper = new Swiper('.viewing-swiper', {
+            modules: [Navigation],
+
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            virtualTranslate: true,
+            allowTouchMove: false,
+
+            on: {
+                slideChangeTransitionStart: (swiper) => {
+                    setTimeout(() => {
+                        swiper.animating = false;
+                    }, 0);
+                }
+            },
+
+            navigation: {
+                prevEl: '.viewing-swiper__left-btn',
+                nextEl: '.viewing-swiper__right-btn'
+            }
+        });
+    }
 }
 
 window.addEventListener('load', initSliders);
