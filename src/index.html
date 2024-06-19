@@ -1,118 +1,282 @@
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>список страниц</title>
-    </head>
-    <body>
-        <div class="root">
-            <h2>список страниц:</h2>
-            <ol>
-                <li>
-                    <a target="_blank" href="./home.html">главная</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./card-page.html">карточка товара</a>
-                </li>
-                
-            </ol>
-            <h2>модалки:</h2>
-            <ol>
-<!--                 <li> -->
-<!--                     <button type="button" data-modal="#"></button> -->
-<!--                 </li> -->
-            </ol>
-            <a target="_blank" href="./ui.html">*ui*</a>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>список страниц</title>
+</head>
+
+<body>
+    <div class="root">
+        <h2>список страниц:</h2>
+        <ol>
+            <li>
+                <a target="_blank" href="./home.html">главная</a>
+            </li>
+            <li>
+
+                <a target="_blank" href="./card-page.html">карточка товара</a>
+            </li>
+
+            <li>
+            <a target="_blank" href="./catalog.html">каталог</a>
+            </li>
+            <li>
+                <a target="_blank" href="./catalog-no-items.html">каталог (не найдено)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./cart.html">корзина</a>
+            </li>
+            <li>
+                <a target="_blank" href="./cart-no-items.html">корзина (нет товаров)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./checkout.html">оформление заказа</a>
+            </li>
+            <li>
+                <a target="_blank" href="./checkout-auth.html">оформление заказа (пользователь авторизован)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./edit-address.html">редактировать адрес</a>
+            </li>
+            <li>
+                <a target="_blank" href="./data-policy.html">политика обработки персональных данных</a>
+            </li>
+            <li>
+                <a target="_blank" href="./privacy-policy.html">политика конфиденциальности</a>
+            </li>
+            <li>
+                <a target="_blank" href="./404.html">404</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-personal.html">ЛК (личные данные)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-personal-field.html">ЛК (личные данные-заполненно)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-purchase-active.html">ЛК (Мои покупки-активные)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-purchase-archival.html">ЛК (Мои покупки-архивные)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-purchase-canceled.html">ЛК (Мои покупки-отмененные)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-purchase-det-active.html">ЛК (Мои покупки-детальная заказа)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-purchase-det-canceled.html">ЛК (Мои покупки-детальная
+                    заказа-отмененный)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-purchase-empty.html">ЛК (Мои покупки- нет покупок)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-favorites.html">ЛК (Избранное)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./lk-favorites-empty.html">ЛК (Избранное- нет избранного)</a>
+            </li>
+            <li>
+                <a target="_blank" href="./reviews.html">Отзывы</a>
+            </li>
+            <li>
+                <a target="_blank" href="./contacts.html">Контакты</a>
+            </li>
+            <li>
+                <a target="_blank" href="./delivery.html">Доставка</a>
+            </li>
+            <li>
+                <a target="_blank" href="./payment.html">Оплата</a>
+            </li>
+            <li>
+                <a target="_blank" href="./return.html">Возврат</a>
+            </li>
+            <li>
+                <a target="_blank" href="./question.html">Вопрос-ответ</a>
+            </li>
+            <li>
+                <a target="_blank" href="./size-table.html">таблица размеров</a>
+            </li>
+
+        </ol>
+        <h2>модалки:</h2>
+        <ol>
+            <li>
+                <button type="button" data-modal="#feedbackModal">обратная связь</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#formSentModal">форма отправлена</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#orderModal">заказ оформлен</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#editAddressModal">редактировать адрес</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#changePhoneModal">Изменение номера</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#changeMailModal">Изменение почты</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#changeImageModal">Изменение изображения</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#imageUploadedModal">Изображение загружено</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#imageUnUploadedModal">Изображение не загружено</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#phoneChangedModal">Номер изменен</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#mailChangedModal">Почта изменена</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#cancellationsModal">Отмена заказа</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#accountDeletingModal">Удаление аккаунта</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#accountLogoutModal">Выход из аккаунта</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#codePhoneModal">Код телефон</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#codeMailModal">Код почта</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#noCodePhoneModal">Не приходит код телефон</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#noCodeMailModal">Не приходит код почта</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#loginModal">Войти (моб)</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#loginPhoneModal">Войти тел</button>
+            </li>
+            <li>
+                <button type="button" data-modal="#codeLoginModal">код вход</button>
+            </li>
+        </ol>
+        <a target="_blank" href="./ui.html">*ui*</a>
 
 
-        </div>
-        <style>
-            @charset "UTF-8";
-            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
-            * {
-                padding: 0;
-                margin: 0;
-                border: 0;
-                box-sizing: border-box;
-            }
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-                min-width: 32rem;
-                background-color: #ffffff;
-                color: #202020;
-            }
+    </div>
+    <style>
+        @charset "UTF-8";
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            min-width: 32rem;
+            background-color: #ffffff;
+            /* color: $blue; */
+        }
+
+        html {
+            font-size: 0.5208335vw;
+        }
+
+        body {
+            padding: 5rem 0;
+            font-size: 100%;
+            line-height: 1;
+            font-size: 1.8rem;
+            user-select: none;
+        }
+
+        .root {
+            font-family: 'Source Code Pro';
+        }
+
+        .root ul,
+        .root ol {
+            margin-bottom: 10rem;
+        }
+
+        .root ul li,
+        .root ol li {
+            font-size: 2.3rem;
+        }
+
+        .root li {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            text-transform: lowercase;
+        }
+
+        .root a {
+            text-decoration: none;
+        }
+
+        .root a {
+            color: #202020;
+            transition: color 0.5s ease;
+        }
+
+        .root a:visited {
+            text-decoration: none;
+            color: #202020;
+        }
+
+        .root a:hover {
+            color: #202020;
+            text-decoration: underline;
+        }
+
+        .root h1 {
+            margin-bottom: 5rem;
+            font-size: 5rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .root h2 {
+            margin-bottom: 2.5rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .root {
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 48em) {
             html {
-                font-size: 0.5208335vw;
+                font-size: calc((100 / 375) * 5vw);
             }
+
             body {
-                padding: 5rem 0;
-                font-size: 100%;
-                line-height: 1;
-                font-size: 1.8rem;
-                user-select: none;
+                font-size: 2.8rem;
             }
-            .root {
-                font-family: 'Source Code Pro';
-            }
-            .root ul,
-            .root ol {
-                margin-bottom: 10rem;
-            }
-            .root ul li,
-            .root ol li {
-                font-size: 2.3rem;
-            }
-            .root li {
-                margin-bottom: 2rem;
-                font-size: 2rem;
-                text-transform: lowercase;
-            }
-            .root a {
-                text-decoration: none;
-            }
-            .root a {
-                color: #202020;
-                transition: color 0.5s ease;
-            }
-            .root a:visited {
-                text-decoration: none;
-                color: #202020;
-            }
-            .root a:hover {
-                color: #202020;
-                text-decoration: underline;
-            }
-            .root h1 {
-                margin-bottom: 5rem;
-                font-size: 5rem;
-                font-weight: 300;
-                text-align: center;
-            }
-            .root h2 {
-                margin-bottom: 2.5rem;
-                font-size: 2.5rem;
-                font-weight: 300;
-            }
-            .root {
-                padding: 5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            @media (max-width: 48em) {
-                html {
-                    font-size: calc((100 / 375) * 5vw);
-                }
-                body {
-                    font-size: 2.8rem;
-                }
-            }
-        </style>
-        <include src="./components/modals.html"></include>
-        <include src="./components/svg.html"></include>
-    </body>
+        }
+    </style>
+    <include src="./components/modals.html"></include>
+    <include src="./components/svg.html"></include>
+</body>
+
 </html>

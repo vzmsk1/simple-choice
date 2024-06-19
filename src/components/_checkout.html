@@ -1,0 +1,375 @@
+<section class="checkout">
+    <div class="checkout__container container">
+        <div class="checkout__head">
+            <span class="checkout__title h h_h2">Оформление заказа</span>
+        </div>
+        <div class="checkout__body">
+            <form action="#" data-dev class="checkout__main">
+                <div class="checkout__group group-checkout">
+                    <span class="group-checkout__subtitle h h_h3">Получатель</span>
+                    <div class="group-checkout__fields">
+                        <div data-hint="Заполните поле" class="group-checkout__input input">
+                            <input
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="text"
+                                name="form[]"
+                                placeholder="Ваше имя"
+                                class="input__field"
+                            />
+                        </div>
+                        <div data-hint="Заполните поле" class="group-checkout__input input">
+                            <input
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="text"
+                                name="form[]"
+                                placeholder="Фамилия"
+                                class="input__field"
+                            />
+                        </div>
+                        <div data-hint="Заполните поле" class="group-checkout__input input">
+                            <input
+                                data-validate
+                                data-required
+                                data-tel-mask
+                                autocomplete="off"
+                                type="tel"
+                                name="form[]"
+                                placeholder="Телефон"
+                                class="input__field"
+                            />
+                        </div>
+                        <div data-hint="Заполните поле" class="group-checkout__input input">
+                            <input
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="email"
+                                name="form[]"
+                                placeholder="E-mail"
+                                class="input__field"
+                            />
+                        </div>
+                        <div class="group-checkout__dropdown dropdown">
+                            <select
+                                data-sel-hint="Город не выбран"
+                                data-sel-label="Ваш город"
+                                data-show-selection
+                            >
+                                <option value="1">Москва</option>
+                                <option value="2">Москва</option>
+                                <option value="3">Москва</option>
+                                <option value="3">Москва</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout__group group-checkout group-checkout_shipping">
+                    <span class="group-checkout__subtitle h h_h3">Доставка</span>
+                    <div class="group-checkout__shipping-list">
+                        <div class="group-checkout__shipping shipping-group-checkout">
+                            <input
+                                checked
+                                type="radio"
+                                name="checkoutShippingOption"
+                                class="shipping-group-checkout__input"
+                            />
+                            <div class="shipping-group-checkout__content">
+                                <span class="shipping-group-checkout__title txt20 txt20_lora">Курьером</span>
+                                <ul class="shipping-group-checkout__list">
+                                    <li class="shipping-group-checkout__list-item list-item">
+                                        СПб и 20 км от КАД - бесплатно
+                                    </li>
+                                    <li class="shipping-group-checkout__list-item list-item">
+                                        дальше 20 км от КАД - 350₽
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group-checkout__shipping shipping-group-checkout">
+                            <input
+                                type="radio"
+                                name="checkoutShippingOption"
+                                class="shipping-group-checkout__input"
+                            />
+                            <div class="shipping-group-checkout__content">
+                                <span class="shipping-group-checkout__title txt20 txt20_lora"
+                                    >Транспортной компанией</span
+                                >
+                                <ul class="shipping-group-checkout__list">
+                                    <li class="shipping-group-checkout__list-item list-item">
+                                        СПб и 20 км от КАД - бесплатно
+                                    </li>
+                                    <li class="shipping-group-checkout__list-item list-item">
+                                        дальше 20 км от КАД - 350₽
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-checkout__fields-wrap">
+                        <span class="group-checkout__fields-subtitle">Ваш адрес:</span>
+                        <div class="group-checkout__fields">
+                            <div class="group-checkout__dropdown dropdown">
+                                <select
+                                    data-sel-hint="Город не выбран"
+                                    data-sel-label="Ваш город"
+                                    data-show-selection
+                                >
+                                    <option value="1">Москва</option>
+                                    <option value="2">Москва</option>
+                                    <option value="3">Москва</option>
+                                    <option value="3">Москва</option>
+                                </select>
+                            </div>
+                            <div data-hint="Заполните поле" class="group-checkout__input input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Улица"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div class="group-checkout__fields-row">
+                                <div data-hint="Заполните поле" class="group-checkout__input input">
+                                    <input
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="text"
+                                        name="form[]"
+                                        placeholder="Номер дома"
+                                        class="input__field"
+                                    />
+                                </div>
+                                <div data-hint="Заполните поле" class="group-checkout__input input">
+                                    <input
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="text"
+                                        name="form[]"
+                                        placeholder="Подъезд"
+                                        class="input__field"
+                                    />
+                                </div>
+                                <div data-hint="Заполните поле" class="group-checkout__input input">
+                                    <input
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="text"
+                                        name="form[]"
+                                        placeholder="Номер квартиры"
+                                        class="input__field"
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                data-hint="Заполните поле"
+                                class="group-checkout__input group-checkout__input_large input"
+                            >
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Комментарий для курьера"
+                                    class="input__field"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout__group group-checkout">
+                    <span class="group-checkout__subtitle h h_h3">Оплата</span>
+                    <div class="group-checkout__options">
+                        <div class="group-checkout__option option-group-checkout">
+                            <div class="option-group-checkout__option option">
+                                <input
+                                    checked
+                                    type="radio"
+                                    name="checkoutPaymentOption"
+                                    class="option__input"
+                                />
+                                <span class="option__txt"
+                                    ><span class="_desktop-only"
+                                        >Оплата банковской картой на сайте</span
+                                    ></span
+                                >
+                            </div>
+                            <svg class="option-group-checkout__icon"><use href="#card-svg"></use></svg>
+                            <span class="option-group-checkout__txt _mobile-only"
+                                >Оплата банковской картой на сайте</span
+                            >
+                        </div>
+                        <div class="group-checkout__option option-group-checkout">
+                            <div class="option-group-checkout__option option">
+                                <input type="radio" name="checkoutPaymentOption" class="option__input" />
+                                <span class="option__txt"
+                                    ><span class="_desktop-only">Оплата наличными при получении</span></span
+                                >
+                            </div>
+                            <svg class="option-group-checkout__icon"><use href="#coins-svg"></use></svg>
+                            <span class="option-group-checkout__txt _mobile-only"
+                                >Оплата наличными при получении</span
+                            >
+                        </div>
+                        <div class="group-checkout__option option-group-checkout">
+                            <div class="option-group-checkout__option option">
+                                <input type="radio" name="checkoutPaymentOption" class="option__input" />
+                                <span class="option__txt"
+                                    ><span class="_desktop-only"
+                                        >Оплата банковской картой при получении</span
+                                    ></span
+                                >
+                            </div>
+                            <svg class="option-group-checkout__icon"><use href="#card-svg"></use></svg>
+                            <span class="option-group-checkout__txt _mobile-only"
+                                >Оплата банковской картой при получении</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="checkout__total total-cart">
+                <div class="total-cart__head">
+                    <span class="total-cart__title txt20">Ваш заказ</span>
+                    <span class="total-cart__quantity">2 товара</span>
+                </div>
+                <div class="total-cart__body">
+                    <div class="total-cart__items">
+                        <div class="total-cart__item item-header-cart-widget">
+                            <a href="#" class="item-header-cart-widget__image-wrap">
+                                <img
+                                    class="item-header-cart-widget__image"
+                                    src="./assets/images/items/707164.932x1242@2x.webp"
+                                    alt=""
+                                />
+                            </a>
+                            <div class="item-header-cart-widget__title-wrap">
+                                <a href="#" class="item-header-cart-widget__title">Платье с перьями</a>
+                            </div>
+                            <ul class="item-header-cart-widget__characteristics">
+                                <li
+                                    class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget"
+                                >
+                                    <span class="characteristic-item-header-cart-widget__title">Цвет:</span>
+                                    <div
+                                        style="background-color: #eac8bd"
+                                        class="characteristic-item-header-cart-widget__color"
+                                    ></div>
+                                </li>
+                                <li
+                                    class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget"
+                                >
+                                    <span class="characteristic-item-header-cart-widget__title">Размер:</span>
+                                    <div class="characteristic-item-header-cart-widget__text">124</div>
+                                </li>
+                                <li
+                                    class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget"
+                                >
+                                    <span class="characteristic-item-header-cart-widget__title">Кол-во:</span>
+                                    <div class="characteristic-item-header-cart-widget__text">1 шт</div>
+                                </li>
+                            </ul>
+                            <div class="item-header-cart-widget__price price price_cart">
+                                <span class="price__value">140 000</span>
+                                <span class="price__symbol">₽</span>
+                            </div>
+                        </div>
+                        <div class="total-cart__item item-header-cart-widget">
+                            <a href="#" class="item-header-cart-widget__image-wrap">
+                                <img
+                                    class="item-header-cart-widget__image"
+                                    src="./assets/images/items/01608508450-e1.webp"
+                                    alt=""
+                                />
+                            </a>
+                            <div class="item-header-cart-widget__title-wrap">
+                                <a href="#" class="item-header-cart-widget__title"
+                                    >СТРЕЙЧЕВЫЙ ПИДЖАК ДВУБОРТНЫЙ</a
+                                >
+                            </div>
+                            <ul class="item-header-cart-widget__characteristics">
+                                <li
+                                    class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget"
+                                >
+                                    <span class="characteristic-item-header-cart-widget__title">Цвет:</span>
+                                    <div
+                                        style="background-color: #c69259"
+                                        class="characteristic-item-header-cart-widget__color"
+                                    ></div>
+                                </li>
+                                <li
+                                    class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget"
+                                >
+                                    <span class="characteristic-item-header-cart-widget__title">Размер:</span>
+                                    <div class="characteristic-item-header-cart-widget__text">124</div>
+                                </li>
+                                <li
+                                    class="item-header-cart-widget__characteristic characteristic-item-header-cart-widget"
+                                >
+                                    <span class="characteristic-item-header-cart-widget__title">Кол-во:</span>
+                                    <div class="characteristic-item-header-cart-widget__text">1 шт</div>
+                                </li>
+                            </ul>
+                            <div class="item-header-cart-widget__price price price_cart">
+                                <span class="price__value">140 000</span>
+                                <span class="price__symbol">₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="total-cart__list">
+                        <li class="total-cart__list-item">
+                            <span class="total-cart__list-txt">Товары на сумму</span>
+                            <span class="total-cart__list-price price price_cart">
+                                <span class="price__value">140 000</span>
+                                <span class="price__symbol">₽</span>
+                            </span>
+                        </li>
+                        <li class="total-cart__list-item">
+                            <span class="total-cart__list-txt">Скидка</span>
+                            <span class="total-cart__list-price price price_cart">
+                                <span class="price__value">140 000</span>
+                                <span class="price__symbol">₽</span>
+                            </span>
+                        </li>
+                        <li class="total-cart__list-item">
+                            <span class="total-cart__list-txt">Доставка</span>
+                            <span class="total-cart__list-price price price_cart">
+                                <span class="price__value">140 000</span>
+                                <span class="price__symbol">₽</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <button type="button" class="total-cart__code-btn btn btn_secondary">
+                        <span class="btn__txt">Ввести промокод</span>
+                    </button>
+                    <div class="total-cart__total">
+                        <span class="total-cart__total-subtitle">Итого:</span>
+                        <span class="total-cart__total-price price price_cart">
+                            <span class="price__value">140 000</span>
+                            <span class="price__symbol">₽</span>
+                        </span>
+                    </div>
+                    <button type="button" class="total-cart__btn btn btn_primary _is-disabled">
+                        <span class="btn__txt">Заказать</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="checkout__widget">
+        <button class="checkout__widget-btn btn btn_primary _is-disabled">
+            <span class="btn__txt"> Заказать </span>
+        </button>
+    </div>
+</section>

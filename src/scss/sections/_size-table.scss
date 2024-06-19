@@ -1,0 +1,159 @@
+.size-table {
+    // .size-table__dropdown
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    @media (max-width: 48em) {
+        gap: 12rem;
+    }
+
+    &__dropdown {
+        width: fit-content;
+        min-width: 17.5rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    // .size-table__table
+
+    &__table {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        @media (max-width: 48em) {
+            display: flex;
+            flex-direction: column;
+            overflow-x: auto;
+            overflow-y: hidden;
+            width: 75rem;
+            padding: 0 4rem;
+            margin: 0 -4rem;
+            &::-webkit-scrollbar,
+            &::-webkit-scrollbar-track,
+            &::-webkit-scrollbar-thumb {
+                display: none;
+            }
+        }
+    }
+
+    // .size-table__row
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8.2rem auto;
+        @media (max-width: 48em) {
+            display: grid;
+            grid-template-rows: auto;
+            width: fit-content;
+            grid-template-columns: 24rem 125rem;
+            position: relative;
+            &:first-of-type {
+                & .size-table__row-title {
+                    border-radius: 1.6rem 0 0 0;
+                    border-top: 0.2rem solid rgba(0, 48, 87, 0.1);
+                }
+                & .size-table__row-item {
+                    border-top: 0.2rem solid rgba(0, 48, 87, 0.1);
+                    &:last-of-type {
+                        border-radius: 0 1.6rem 0 0;
+                    }
+                }
+            }
+            &:last-of-type {
+                & .size-table__row-title {
+                    border-radius: 0 0 0 1.6rem;
+                }
+                & .size-table__row-item {
+                    &:last-of-type {
+                        border-radius: 0 0 1.6rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // .size-table__row-title
+
+    &__row-title {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        border-bottom: 0.2rem solid rgba(0, 48, 87, 0.1);
+        text-align: center;
+        @media (max-width: 48em) {
+            background-color: #eae8e6;
+            font-size: 3rem;
+            padding: 3.4rem;
+            text-align: left;
+            position: sticky;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            border: 0.2rem solid rgba(0, 48, 87, 0.1);
+            border-top: unset;
+            color: rgba(0, 48, 87, 0.5);
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4.2rem;
+                top: -0.4rem;
+                bottom: -0.4rem;
+                left: -4.4rem;
+                background-color: #eae8e6;
+            }
+        }
+    }
+
+    // .size-table__row-list
+
+    &__row-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(9rem, 1fr));
+        @media (max-width: 48em) {
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        }
+    }
+
+    // .size-table__row-item
+
+    &__row-item {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        height: 9rem;
+        border-bottom: 0.2rem solid rgba(0, 48, 87, 0.1);
+        &:last-of-type {
+            @media (max-width: 48em) {
+                border-right: 0.2rem solid rgba(0, 48, 87, 0.1);
+            }
+        }
+        @media (max-width: 48em) {
+            font-size: 3rem;
+            height: auto;
+            border-bottom: 0.2rem solid rgba(0, 48, 87, 0.1);
+            font-weight: 400;
+        }
+    }
+    &__img-box {
+        width: 29.3rem;
+        height: 39.2rem;
+        border-radius: 2rem;
+        overflow: hidden;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .select__value {
+        color: $blue;
+        font-weight: 500;
+    }
+}

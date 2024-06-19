@@ -1,95 +1,110 @@
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+    -webkit-appearance: none;
 }
 textarea:focus,
 input:focus {
-  outline: none;
+    outline: none;
 }
 
 .input {
-  position: relative;
+    position: relative;
 
-  padding-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
 
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.6rem;
-  border-bottom: 1.5px solid #0030574d;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    border-bottom: 1.5px solid #0030574d;
 
-  transition: border-bottom 0.3s ease;
+    transition: border-bottom 0.3s ease;
 
-  &__field,
-  &__field::placeholder {
-    font-weight: 500;
-    line-height: 2.2rem;
-  }
-
-  &__field {
-    &::placeholder {
-      color: #00305780;
-    }
-  }
-
-  &__label {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: rgba(0, 48, 87, 0.3);
-  }
-
-  &._has-error {
-    border-bottom: 1.5px solid $red;
-
-    &::after {
-      content: attr(data-hint);
-
-      position: absolute;
-      bottom: -2rem;
-      left: 0;
-
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-      color: $red;
-    }
-
-    @media (max-width: 48em) {
-      border-bottom: 1px solid $red;
-    }
-  }
-
-  &._has-focus,
-  &._is-filled {
-    border-bottom: 1.5px solid #00305780;
-
-    @media (max-width: 48em) {
-      border-bottom: 1px solid #00305780;
-    }
-  }
-
-  @media (max-width: 48em) {
-    padding-bottom: 2.4rem;
-
-    border-bottom: 1px solid #0030574d;
-
-    .input {
-      &::after,
-      &__label {
-        font-size: 1.6rem;
+    &__field,
+    &__field::placeholder {
+        font-weight: 500;
         line-height: 2.2rem;
-      }
-
-      &::after {
-        bottom: -4rem;
-      }
-
-      &__field,
-      &__field::placeholder {
-        line-height: 4rem;
-      }
     }
-  }
+
+    &__field {
+        &::placeholder {
+            color: #00305780;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: rgba(0, 48, 87, 0.3);
+    }
+
+    &:not(.header &) {
+        &._has-error {
+            border-bottom: 1.5px solid $red;
+
+            &::after {
+                content: attr(data-hint);
+
+                position: absolute;
+                bottom: -2rem;
+                left: 0;
+
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                color: $red;
+            }
+
+            @media (max-width: 48em) {
+                border-bottom: 1px solid $red;
+
+                &::after {
+                    bottom: -4rem;
+
+                    font-size: 2.4rem;
+                    line-height: 100%;
+                }
+            }
+        }
+
+        &._has-focus,
+        &._is-filled {
+            border-bottom: 1.5px solid #00305780;
+
+            @media (max-width: 48em) {
+                border-bottom: 1px solid #00305780;
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding-bottom: 2.4rem;
+
+        border-bottom: 1px solid #0030574d;
+
+        .input {
+            &::after,
+            &__label {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+
+            &::after {
+                bottom: -4rem;
+            }
+
+            &__field,
+            &__field::placeholder {
+                line-height: 4rem;
+            }
+        }
+    }
 }

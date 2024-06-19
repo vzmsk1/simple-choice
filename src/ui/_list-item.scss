@@ -1,0 +1,38 @@
+.list-item {
+    display: flex;
+    column-gap: 1.2rem;
+
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: rgba(0, 48, 87, 0.5);
+
+    @media (max-width: 48em) {
+        column-gap: 2.4rem;
+
+        font-weight: 500;
+        font-size: 2.8rem;
+    }
+
+    &::before {
+        content: '';
+
+        flex: 0 0 0.6rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 0.1rem;
+
+        background-color: $blue;
+
+        opacity: 0.5;
+        transform: translateY(0.8rem);
+
+        @media (max-width: 48em) {
+            flex: 0 0 1.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 0.2rem;
+
+            transform: translateY(1.4rem);
+        }
+    }
+}

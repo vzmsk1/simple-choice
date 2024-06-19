@@ -1,182 +1,260 @@
 .dropdown {
-  position: relative;
-
-  .select {
     position: relative;
 
-    &__value {
-      font-weight: 500;
-      line-height: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
 
-      &._has-label {
-        &::before {
-          content: attr(data-sel-label);
-
-          padding-left: 0.2rem;
-
-          font-weight: 500;
-          line-height: 2.2rem;
-        }
-      }
-
-      @media (max-width: 48em) {
-        font-size: 2.8rem;
-        line-height: 140%;
-
-        &._has-label {
-          &::before {
-            padding-left: 0.4rem;
-
-            font-size: 2.8rem;
-            line-height: 140%;
-          }
-        }
-      }
+    &__label {
+        font-weight: 500;
     }
+}
 
-    &__content {
-      display: none;
-    }
+.select {
+    position: relative;
 
-    &__title {
-      padding-bottom: 1.2rem;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      column-gap: 2rem;
-      width: 100%;
-      border-bottom: 1.5px solid #0030574d;
-
-      &::after {
-        content: "";
-
+    &__i-btn {
         flex: 0 0 2.4rem;
         width: 2.4rem;
         height: 2.4rem;
+    }
 
-        background: url("./assets/images/icons/sm-arr.svg") center / contain
-          no-repeat;
+    &__value {
+        color: #00305780;
+        font-weight: 500;
+        line-height: 2.2rem;
 
-        transition: transform 0.3s ease;
-      }
+        transition: color 0.7s ease;
 
-      @media (max-width: 48em) {
-        padding-bottom: 2.4rem;
+        &._has-label {
+            &::before {
+                content: attr(data-sel-label);
 
-        column-gap: 4rem;
-        border-bottom: 1px solid #0030574d;
+                padding-left: 0.2rem;
+
+                font-weight: 500;
+                line-height: 2.2rem;
+            }
+        }
+
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+            line-height: 140%;
+
+            &._has-label {
+                &::before {
+                    padding-left: 0.4rem;
+
+                    font-size: 2.8rem;
+                    line-height: 140%;
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+        max-width: 51rem;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__title {
+        padding-bottom: 1.2rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 2rem;
+        width: 100%;
+        border-bottom: 1.5px solid #0030574d;
 
         &::after {
-          flex: 0 0 4.8rem;
-          width: 4.8rem;
-          height: 4.8rem;
+            content: '';
+
+            flex: 0 0 2.4rem;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            background: url('./assets/images/icons/sm-arr.svg') center / contain no-repeat;
+
+            transition: transform 0.3s ease;
         }
-      }
+
+        @media (max-width: 48em) {
+            padding-bottom: 2.4rem;
+
+            column-gap: 4rem;
+            border-bottom: 1px solid #0030574d;
+
+            &::after {
+                flex: 0 0 4.8rem;
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+        }
     }
 
     &__options {
-      position: absolute;
-      z-index: 2;
-      top: calc(100% + 1.2rem);
-      left: 0;
+        position: absolute;
+        z-index: 2;
+        top: calc(100% + 1.2rem);
+        left: 0;
 
-      padding: 1.2rem 2rem;
+        padding: 1.2rem 2rem;
 
-      width: 100%;
-      box-shadow: 1.4rem 2rem 16rem rgba(51, 52, 54, 0.18);
-      border-radius: 2rem;
+        width: 100%;
+        box-shadow: 1.4rem 2rem 16rem rgba(51, 52, 54, 0.18);
+        border-radius: 2rem;
 
       background-color: $white;
-
+      max-height: 29rem;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &::-webkit-scrollbar-track {
+        display: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
       @media (max-width: 48em) {
         top: calc(100% + 2.4rem);
-
+        max-height: 43rem;
         padding: 2.4rem 2rem;
 
-        box-shadow: 2.8rem 4rem 32rem rgba(51, 52, 54, 0.18);
-        border-radius: 4rem;
-      }
+            box-shadow: 2.8rem 4rem 32rem rgba(51, 52, 54, 0.18);
+            border-radius: 4rem;
+        }
     }
 
     &__option {
-      padding: 1.6rem;
+        padding: 1.6rem;
 
-      display: block;
-      width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
 
-      font-weight: 500;
-      font-size: 1.6rem;
-      line-height: 140%;
-      color: #0030574d;
+        color: #0030574d;
 
-      transition: color 0.3s ease;
+        transition: color 0.3s ease;
 
-      &:not(:last-child) {
-        border-bottom: 1px solid #0030571a;
-      }
+        span {
+            max-width: 46rem;
 
-      &._is-selected {
-        color: $blue;
-      }
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 140%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
 
-      @media (max-width: 48em) {
-        padding: 3.2rem;
+            @media (max-width: 48em) {
+                max-width: 49rem;
+            }
+        }
 
-        font-size: 2.8rem;
-      }
+        &._is-selected {
+            span {
+                max-width: 41rem;
+            }
+
+            &::after {
+                content: '';
+
+                flex: 0 0 2.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
+
+                background: url('./assets/images/icons/edit.svg') center / contain no-repeat;
+
+                @media (max-width: 48em) {
+                    flex: 0 0 4.8rem;
+                    width: 4.8rem;
+                    height: 4.8rem;
+                }
+            }
+
+            @media (max-width: 48em) {
+                span {
+                    max-width: 43rem;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #0030571a;
+        }
+
+        &._is-selected {
+            color: $blue;
+        }
+
+        @media (max-width: 48em) {
+            padding: 3.2rem;
+
+            span {
+                font-size: 2.8rem;
+            }
+        }
     }
 
     &__hint {
-      position: absolute;
-      bottom: -2rem;
-      left: 0;
+        position: absolute;
+        bottom: -2rem;
+        left: 0;
 
-      display: none;
+        display: none;
 
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-      color: $red;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: $red;
 
-      @media (max-width: 48em) {
-        bottom: -4rem;
+        @media (max-width: 48em) {
+            bottom: -4rem;
 
-        font-size: 1.6rem;
-        line-height: 2rem;
-      }
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
     }
 
     &._is-opened {
-      .select__title {
-        &::after {
-          transform: rotate(-180deg);
+        .select__title {
+            &::after {
+                transform: rotate(-180deg);
+            }
         }
-      }
-    }
-
-    &._is-filled {
-      .select__value._has-label::before {
-        display: none;
-      }
-      .select__content {
-        display: block;
-      }
     }
 
     &._has-error {
-      .select {
-        &__title {
-          border-bottom: 1.5px solid $red;
+        .select {
+            &__title {
+                border-bottom: 1.5px solid $red;
 
-          @media (max-width: 48em) {
-            border-bottom: 1px solid $red;
-          }
-        }
+                @media (max-width: 48em) {
+                    border-bottom: 1px solid $red;
+                }
+            }
 
-        &__hint {
-          display: inline-block;
+            &__hint {
+                display: inline-block;
+            }
         }
-      }
     }
-  }
+
+    &._is-filled {
+        .select__value {
+            color: $blue;
+        }
+        .select__value._has-label::before {
+            display: none;
+        }
+        .select__content {
+            display: block;
+        }
+    }
 }

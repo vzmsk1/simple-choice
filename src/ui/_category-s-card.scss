@@ -1,0 +1,65 @@
+.category-s-card {
+    position: relative;
+
+    &__input {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        appearance: none;
+
+        &:checked + .category-s-card__content {
+            border: 1.6px solid rgba(0, 48, 87);
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.05rem;
+        text-align: center;
+    }
+
+    &__content {
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 19.2rem;
+        height: 100%;
+        border: 1.6px solid rgba(0, 48, 87, 0.3);
+        border-radius: 1.2rem;
+
+        transition: border 0.7s ease;
+    }
+
+    &__image-wrap {
+        position: relative;
+
+        margin-bottom: auto;
+
+        width: 100%;
+        height: 12rem;
+
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transform: translate(-50%, -50%);
+    }
+}

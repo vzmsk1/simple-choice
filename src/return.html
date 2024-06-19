@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Главная</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb__list">
+                            <li><a href="#">Главная </a></li>
+                            <li>Вопросы-ответы</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="payment-info">
+                    <div class="payment-info__container container">
+                        <div class="payment-info__nav">
+                            <div class="payment-info__nav-wrapper _desktop-only">
+                                <div class="payment-info__nav-box">
+                                    <a href="#" class="payment-info__nav-item txt20 isActive">Доставка</a>
+                                    <a href="#" class="payment-info__nav-item txt20">Оплата</a>
+                                    <a href="#" class="payment-info__nav-item txt20">Возврат</a>
+                                </div>
+                            </div>
+                            <div class="payment-info__nav-mob-selector _mobile-only">
+                                <div class="payment-info__nav-mob-selector-top">
+                                    <span class="payment-info__nav-mob-selector-top-text">Доставка</span>
+                                    <div class="payment-info__nav-mob-selector-top-svg-box">
+                                        <img src="./assets/images/icons/sm-arr.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="payment-info__nav-mob-selector-bottom">
+                                    <div class="payment-info__nav-mob-selector-bottom-list">
+                                        <a href="#" class="payment-info__nav-mob-selector-item isActive"
+                                            >Доставка</a
+                                        >
+                                        <a href="#" class="payment-info__nav-mob-selector-item">Оплата</a>
+                                        <a href="#" class="payment-info__nav-mob-selector-item">Возврат</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-info__right">
+                            <div class="payment-info__title h h_h2 text-wide">Возврат</div>
+                            <div
+                                data-accordion=""
+                                data-accordion-single=""
+                                class="payment-info__accordion _accordion-init"
+                            >
+                                <div class="payment-info__item accordion-item">
+                                    <button
+                                        type="button"
+                                        data-accordion-item=""
+                                        class="accordion-item__title"
+                                    >
+                                        <span class="accordion-item__title-txt h h_h3"
+                                            >Возврат товара, приобритенного на сайте simplechoice.ru</span
+                                        >
+                                        <svg
+                                            class="accordion-item__icon"
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M7.60637 23.2929L6.89926 24L8.31348 25.4142L9.02058 24.7071L7.60637 23.2929ZM24.0206 9.70711C24.4111 9.31658 24.4111 8.68342 24.0206 8.29289C23.6301 7.90237 22.9969 7.90237 22.6064 8.29289L24.0206 9.70711ZM9.02058 24.7071L24.0206 9.70711L22.6064 8.29289L7.60637 23.2929L9.02058 24.7071Z"
+                                                fill="#003057"
+                                            />
+                                            <path
+                                                d="M11.3135 8L24.3135 8L24.3135 21"
+                                                stroke="#003057"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </button>
+                                    <div class="accordion-item__body" style="" hidden="">
+                                        <div class="accordion-item__text-wrap">
+                                            <p class="accordion-item__text txt20">
+                                                Свяжитесь с нами при обнаружении дефекта
+                                            </p>
+                                            <p class="accordion-item__text txt18">
+                                                При обнаружении дефекта свяжитесь с нами по телефону или по
+                                                почте service@tamigee.com. К письму приложите фото товара с
+                                                дефектом и укажите номер заказа. С Вами свяжется наш
+                                                специалист, который согласует дату прибытия курьера и иные
+                                                условия. Заявление о возврате Товара заполняется по форме,
+                                                предоставленной специалистом, в электронном виде либо
+                                                прилагается к возвращаемому Товару, подписанное Покупателем.
+                                            </p>
+                                        </div>
+                                        <div class="accordion-item__text-wrap">
+                                            <p class="accordion-item__text txt20">Условия возврата</p>
+                                            <p class="accordion-item__text txt18">
+                                                Покупатель вправе оформить возврат товара, приобретенного в
+                                                интернет-магазине www.tamigee.ru, в течение 14 дней с момента
+                                                совершения покупки, если сохранены товарный вид,
+                                                потребительские свойства, а также при наличии документа,
+                                                подтверждающего факт покупки товара.
+                                            </p>
+                                            <p class="accordion-item__text txt18">
+                                                Покупатель возвращает Товар со всеми принадлежностями и полным
+                                                комплектом аксессуаров, указанным в документации на Товар.
+                                                Возвращаемый Товар должен быть упакован обеспечивающим
+                                                сохранность при доставке образом.
+                                            </p>
+                                            <p class="accordion-item__text txt18">
+                                                В случае возврата товара надлежащего качества, расходы по
+                                                возврату товара несет Покупатель. В случае возврата товара
+                                                ненадлежащего качества, расходы по возврату товара несет
+                                                Продавец.
+                                            </p>
+                                            <p class="accordion-item__text txt18">
+                                                При наличии спора о причинах возникновения недостатков, факте
+                                                употребления товара и сохранности его товарного вида будет
+                                                проведена независимая экспертиза товара.
+                                            </p>
+                                        </div>
+                                        <div class="accordion-item__text-wrap">
+                                            <p class="accordion-item__text txt20">
+                                                Свяжитесь с нами при обнаружении дефекта
+                                            </p>
+                                            <ol class="txt18">
+                                                <li>Товар, удовлетворяющий условиям возврата</li>
+                                                <li>Оригинальную упаковку, ярлыки, ценники</li>
+                                                <li>Бланк заказа или кассовый чек</li>
+                                                <li>Копию паспорта</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-info__item accordion-item">
+                                    <button
+                                        type="button"
+                                        data-accordion-item=""
+                                        class="accordion-item__title"
+                                    >
+                                        <span class="accordion-item__title-txt h h_h3"
+                                            >Возврат денежных средств</span
+                                        >
+
+                                        <svg
+                                            class="accordion-item__icon"
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M7.60637 23.2929L6.89926 24L8.31348 25.4142L9.02058 24.7071L7.60637 23.2929ZM24.0206 9.70711C24.4111 9.31658 24.4111 8.68342 24.0206 8.29289C23.6301 7.90237 22.9969 7.90237 22.6064 8.29289L24.0206 9.70711ZM9.02058 24.7071L24.0206 9.70711L22.6064 8.29289L7.60637 23.2929L9.02058 24.7071Z"
+                                                fill="#003057"
+                                            />
+                                            <path
+                                                d="M11.3135 8L24.3135 8L24.3135 21"
+                                                stroke="#003057"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </button>
+                                    <div class="accordion-item__body" hidden="" style="">
+                                        <div class="accordion-item__text-wrap">
+                                            <p class="accordion-item__text txt18">
+                                                При оплате на сайте вам нужно ввести данные банковской карты и
+                                                пароль из SMS-сообщения (если подключена услуга мобильный
+                                                банк). Вы оплачиваете только стоимость покупки и доставку,
+                                                комиссия при оплате картой на сайте не взимается. После
+                                                подтверждения оплаты Ваш заказ будет сформирован и отправлен.
+                                            </p>
+                                            <p class="accordion-item__text txt18">
+                                                Если у Вас есть банковская карта, привязанная к аккаунту в
+                                                Яндекс, вы можете воспользоваться Yandex Pay, не вводя её
+                                                данные.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>

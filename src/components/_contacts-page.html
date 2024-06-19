@@ -1,0 +1,76 @@
+<section class="contacts-page">
+    <div class="container">
+        <div class="contacts-page__left">
+            <ul class="breadcrumb__list">
+                <li><a href="#">Главная</a></li>
+                <li>Контакты</li>
+            </ul>
+            <div class="contacts-page__title h h_h2">контакты</div>
+            <div class="contacts-page__info">
+                <div class="contacts-page__info-item">
+                    <span>телефон</span>
+                    <span>+7 (903) 007-56-71</span>
+                </div>
+                <div class="contacts-page__info-item">
+                    <span>e-mail</span>
+                    <span>simplechoice@mail.ru</span>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-page__photo">
+            <img src="../assets/images/contacts-page/contacts-page-main.webp" alt="">
+        </div>
+        <div class="contacts-page__right">
+            <div class="contacts-page__sign">
+                <img src="../assets/images/contacts-page/contacts-page-sign.png" alt="">
+            </div>
+            <form class="contacts-page__form" data-dev action="#">
+                <div class="contacts-page__form-title h h_h3">оставьте нам заявку, и мы свяжемся с вами </div>
+                <div class="contacts-page__form-container">
+                    <div data-hint="Заполните поле" class="input">
+                        <input
+                            data-validate
+                            data-required
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            placeholder="Ваше имя"
+                            class="input__field"
+                        />
+                    </div>
+                    <div data-hint="Заполните поле" class="input">
+                        <input
+                            data-validate
+                            data-required
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            placeholder="Телефон"
+                            class="input__field"
+                        />
+                    </div>
+                    <div data-hint="Заполните поле" class="input">
+                        <input
+                            data-validate
+                            data-required
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            placeholder="E-mail"
+                            class="input__field"
+                        />
+                    </div>
+                </div>
+                
+                <div class="contacts-page__footer">
+                    <button type="submit" class="contacts-page__btn btn btn_primary _is-disabled">
+                        <span class="btn__txt">Отправить</span>
+                    </button>
+                    <p class="contacts-page__text">
+                        Нажимая на кнопку, Вы принимаете условия пользовательского соглашения
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

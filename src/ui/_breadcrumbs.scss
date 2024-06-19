@@ -1,0 +1,51 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    column-gap: 3.2rem;
+
+    @media (max-width: 48em) {
+        column-gap: 6rem;
+    }
+
+    &__txt {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.05rem;
+
+        &_link {
+            position: relative;
+
+            color: rgba(0, 48, 87, 0.5);
+
+            &::after {
+                content: '/';
+
+                position: absolute;
+                top: 50%;
+                right: -1.2rem;
+
+                font-family: 'Open Sans';
+                font-size: 2rem;
+                line-height: 2.7rem;
+                color: $blue;
+
+                transform: translate(100%, -50%);
+            }
+        }
+
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+            line-height: 140%;
+
+            &_link {
+                &::after {
+                    right: -2.4rem;
+
+                    font-size: 2.8rem;
+                    line-height: 140%;
+                }
+            }
+        }
+    }
+}

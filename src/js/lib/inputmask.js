@@ -12,5 +12,16 @@ const initInputmask = () => {
             );
         });
     }
+
+    const birthInputCollection = document.querySelectorAll('[data-birth-mask]');
+    if (birthInputCollection.length) {
+        birthInputCollection.forEach((input) => {
+            Inputmask({ mask: '99.99.9999', showMaskOnHover: false, clearIncomplete: true }).mask(
+                input
+            );
+        });
+    }
+
+
 };
 initInputmask();

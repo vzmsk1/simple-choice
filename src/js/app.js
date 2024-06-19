@@ -22,13 +22,22 @@ import './utils/forms';
 import './utils/tabs.js';
 
 // accordion
-// import './utils/accordion.js';
+import './utils/accordion.js';
 
 // select
 import './utils/select.js';
 
 // modals
 import './utils/modals.js';
+
+// animations
+import './utils/animations';
+
+// header scroll
+import './utils/header-scroll';
+
+// quantity
+import './utils/quantity';
 
 // ---------------------------------- libs ----------------------------------
 
@@ -44,7 +53,13 @@ import './lib/map';
 // input mask
 import './lib/inputmask';
 
+// simplebar
+import './lib/simplebar';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';
 import './dev/markusDM.js';
+import './dev/monsters.js';
+import './dev/kuloverova.js';
+import './dev/lgleb.js';

@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Главная</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header _blue-colored">
+                <div class="header__container container">
+                    <a href="/" class="header__logo-wrap">
+                        <svg class="header__logo-icon">
+                            <use href="#logo-svg"></use>
+                        </svg>
+                    </a>
+                    <div class="header__content">
+                        <nav data-da=".menu-header__nav-wrap,768,last" class="header__nav">
+                            <a href="#" class="header__nav-link">Каталог</a>
+                            <a href="#" class="header__nav-link">Lookbook</a>
+                            <a href="#" class="header__nav-link">О нас</a>
+                            <a href="#" class="header__nav-link">Отзывы</a>
+                            <a href="#" class="header__nav-link">Новости</a>
+                            <a href="#" class="header__nav-link">Контакты</a>
+                            <a href="#" class="header__nav-link _mobile-only">Доставка и оплата</a>
+                            <a href="#" class="header__nav-link _mobile-only">Возврат</a>
+                            <a href="#" class="header__nav-link _mobile-only">Вопросы-ответы</a>
+                        </nav>
+                        <a href="tel:79030075671" class="header__tel">
+                            <svg class="header__tel-icon">
+                                <use href="#tel-svg"></use>
+                            </svg>
+                            <span class="header__tel-txt">+7 (903) 007-56-71</span>
+                        </a>
+                        <div class="header__actions">
+                            <button data-search-btn type="button" class="header__actions-item">
+                                <svg class="header__actions-icon">
+                                    <use href="#search-svg"></use>
+                                </svg></button
+                            ><a href="#" class="header__actions-item header__actions-item--lk">
+                                <svg class="header__actions-icon">
+                                    <use href="#user-svg"></use>
+                                </svg> </a
+                            ><a href="#" class="header__actions-item _desktop-only">
+                                <svg class="header__actions-icon">
+                                    <use href="#fav-svg"></use>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="header__actions-item header__actions-item_cart">
+                                <svg class="header__actions-icon">
+                                    <use href="#cart-svg"></use>
+                                </svg>
+                            </a>
+
+                            <button type="button" class="header__actions-item hamburger _mobile-only">
+                                <svg class="header__actions-icon">
+                                    <use href="#hamburger-svg"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__menu menu-header">
+                    <button type="button" class="menu-header__close-btn hamburger">
+                        <svg class="menu-header__close-btn-icon"><use href="#cross-svg"></use></svg>
+                    </button>
+                    <a href="#" class="menu-header__logo-wrap">
+                        <img class="menu-header__logo" src="./assets/images/logo-blue.svg" alt="" />
+                    </a>
+                    <div class="menu-header__nav-wrap"></div>
+                    <div class="menu-header__footer">
+                        <ul class="menu-header__list">
+                            <li class="menu-header__list-item">
+                                <a href="tel:79030075671" class="menu-header__list-item-txt"
+                                    >+7 (903) 007-56-71</a
+                                >
+                            </li>
+                            <li class="menu-header__list-item">
+                                <a href="mailto:simplechoice@mail.ru" class="menu-header__list-item-txt"
+                                    >simplechoice@mail.ru</a
+                                >
+                            </li>
+                        </ul>
+                        <ul class="menu-header__socials">
+                            <li class="menu-header__socials-item">
+                                <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                                    <svg>
+                                        <use href="#ig-svg"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu-header__socials-item">
+                                <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                                    <svg>
+                                        <use href="#vk-svg"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu-header__socials-item">
+                                <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                                    <svg>
+                                        <use href="#whatsapp-svg"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu-header__socials-item">
+                                <a href="#" target="_blank" class="menu-header__socials-item-icon i-btn">
+                                    <svg>
+                                        <use href="#telegram-svg"></use></svg
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__search search-header">
+                    <div class="search-header__container container">
+                        <div class="search-header__head">
+                            <div class="search-header__logo-wrap">
+                                <img class="search-header__logo" src="./assets/images/logo-blue.svg" alt="" />
+                            </div>
+                            <form action="#" data-dev class="search-header__form">
+                                <div data-hint="Заполните поле" class="search-header__input input">
+                                    <input
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="search"
+                                        name="form[]"
+                                        placeholder="Введите свой поисковой запрос"
+                                        class="input__field"
+                                    />
+                                </div>
+                                <button type="submit" class="search-header__btn">
+                                    <svg class="search-header__btn-icon">
+                                        <use href="#search-svg"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <button data-search-btn class="search-header__close-btn">
+                                <svg class="search-header__close-btn-icon">
+                                    <use href="#cross-svg"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search-header__body">
+                            <div class="search-header__aside">
+                                <div class="search-header__group search-header__group_results">
+                                    <span class="search-header__title">Часто ищут</span>
+                                    <ul class="search-header__list list-search-header">
+                                        <li class="list-search-header__item">
+                                            <svg class="list-search-header__icon">
+                                                <use href="#search-svg"></use>
+                                            </svg>
+                                            <span
+                                                data-value="Не нашли что искали?"
+                                                class="list-search-header__text"
+                                                >Не нашли что искали?</span
+                                            >
+                                        </li>
+                                        <li class="list-search-header__item">
+                                            <svg class="list-search-header__icon">
+                                                <use href="#search-svg"></use>
+                                            </svg>
+                                            <span
+                                                data-value="Флисовый комбинезон"
+                                                class="list-search-header__text"
+                                                >Флисовый комбинезон</span
+                                            >
+                                        </li>
+                                        <li class="list-search-header__item">
+                                            <svg class="list-search-header__icon">
+                                                <use href="#search-svg"></use>
+                                            </svg>
+                                            <span
+                                                data-value="Жилет для мальчика"
+                                                class="list-search-header__text"
+                                                >Жилет для мальчика</span
+                                            >
+                                        </li>
+                                        <li class="list-search-header__item">
+                                            <svg class="list-search-header__icon">
+                                                <use href="#search-svg"></use>
+                                            </svg>
+                                            <span
+                                                data-value="Костюм на праздник для ребенка"
+                                                class="list-search-header__text"
+                                                >Костюм на праздник для ребенка</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="search-header__group search-header__group_categories">
+                                    <span class="search-header__title">Найти в категории</span>
+                                    <ul
+                                        class="search-header__list list-search-header list-search-header_reversed"
+                                    >
+                                        <li class="list-search-header__item">
+                                            <span class="list-search-header__text">Кофты для мальчиков</span>
+                                            <svg class="list-search-header__icon">
+                                                <use href="#arr-left-svg"></use>
+                                            </svg>
+                                        </li>
+                                        <li class="list-search-header__item">
+                                            <span class="list-search-header__text">Кофты для девочек</span>
+                                            <svg class="list-search-header__icon">
+                                                <use href="#arr-left-svg"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="search-header__btn btn btn_primary">
+                                    <span class="btn__txt">Не нашли что искали?</span>
+                                </button>
+                            </div>
+                            <div class="search-header__main">
+                                <div class="search-header__swiper swiper">
+                                    <ul class="search-header__swiper-wrapper swiper-wrapper">
+                                        <li class="search-header__slide shopify-card swiper-slide">
+                                            <a href="#" class="shopify-card__inner">
+                                                <div class="shopify-card__body">
+                                                    <div class="shopify-card__head">
+                                                        <div class="shopify-card__title-wrap">
+                                                            <span class="shopify-card__title">футболка</span>
+                                                            <span class="shopify-card__subtitle"
+                                                                >базовая</span
+                                                            >
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="shopify-card__fav-btn btn btn_primary btn_primary_i"
+                                                        >
+                                                            <svg>
+                                                                <use href="#fav-svg"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="shopify-card__footer">
+                                                        <div class="shopify-card__group">
+                                                            <div class="shopify-card__price">
+                                                                <span
+                                                                    class="shopify-card__price-txt shopify-card__price-txt_value"
+                                                                    >2 500</span
+                                                                >
+                                                                <span class="shopify-card__price-txt">₽</span>
+                                                            </div>
+                                                            <div class="shopify-card__bullets">
+                                                                <button
+                                                                    style="background-color: #ffffff"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                                <button
+                                                                    style="background-color: #7ba8d1"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                                <button
+                                                                    style="background-color: #0e0e0e"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                            </div>
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="shopify-card__cart-btn btn btn_primary btn_primary_i"
+                                                        >
+                                                            <svg>
+                                                                <use href="#cart-svg"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="shopify-card__btn-wrap">
+                                                        <div class="shopify-card__btn-inner">
+                                                            <button type="button" class="btn btn_primary">
+                                                                <span class="btn__txt">Купить в 1 клик</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <span class="shopify-card__label">new</span>
+                                                </div>
+                                                <div class="shopify-card__image-wrap">
+                                                    <img
+                                                        class="shopify-card__image"
+                                                        src="./assets/images/content/ebb2366a1aeef24257b7daf42e6c343d.webp"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        class="shopify-card__image"
+                                                        src="./assets/images/content/0a09fa50b35ac7cfcccf3e63ee7bbabe.webp"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-header__slide shopify-card swiper-slide">
+                                            <a href="#" class="shopify-card__inner">
+                                                <div class="shopify-card__body">
+                                                    <div class="shopify-card__head">
+                                                        <div class="shopify-card__title-wrap">
+                                                            <span class="shopify-card__title">футболка</span>
+                                                            <span class="shopify-card__subtitle"
+                                                                >базовая</span
+                                                            >
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="shopify-card__fav-btn btn btn_primary btn_primary_i"
+                                                        >
+                                                            <svg>
+                                                                <use href="#fav-svg"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="shopify-card__footer">
+                                                        <div class="shopify-card__group">
+                                                            <div class="shopify-card__price">
+                                                                <span
+                                                                    class="shopify-card__price-txt shopify-card__price-txt_value"
+                                                                    >2 500</span
+                                                                >
+                                                                <span class="shopify-card__price-txt">₽</span>
+                                                            </div>
+                                                            <div class="shopify-card__bullets">
+                                                                <button
+                                                                    style="background-color: #ffffff"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                                <button
+                                                                    style="background-color: #7ba8d1"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                                <button
+                                                                    style="background-color: #0e0e0e"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                            </div>
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="shopify-card__cart-btn btn btn_primary btn_primary_i"
+                                                        >
+                                                            <svg>
+                                                                <use href="#cart-svg"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="shopify-card__btn-wrap">
+                                                        <div class="shopify-card__btn-inner">
+                                                            <button type="button" class="btn btn_primary">
+                                                                <span class="btn__txt">Купить в 1 клик</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <span class="shopify-card__label">new</span>
+                                                </div>
+                                                <div class="shopify-card__image-wrap">
+                                                    <img
+                                                        class="shopify-card__image"
+                                                        src="./assets/images/content/505abe15ee49f5bed9042a31c30a2f38.webp"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        class="shopify-card__image"
+                                                        src="./assets/images/content/0a09fa50b35ac7cfcccf3e63ee7bbabe.webp"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-header__slide shopify-card swiper-slide">
+                                            <a href="#" class="shopify-card__inner">
+                                                <div class="shopify-card__body">
+                                                    <div class="shopify-card__head">
+                                                        <div class="shopify-card__title-wrap">
+                                                            <span class="shopify-card__title">футболка</span>
+                                                            <span class="shopify-card__subtitle"
+                                                                >базовая</span
+                                                            >
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="shopify-card__fav-btn btn btn_primary btn_primary_i"
+                                                        >
+                                                            <svg>
+                                                                <use href="#fav-svg"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="shopify-card__footer">
+                                                        <div class="shopify-card__group">
+                                                            <div class="shopify-card__price">
+                                                                <span
+                                                                    class="shopify-card__price-txt shopify-card__price-txt_value"
+                                                                    >2 500</span
+                                                                >
+                                                                <span class="shopify-card__price-txt">₽</span>
+                                                            </div>
+                                                            <div class="shopify-card__bullets">
+                                                                <button
+                                                                    style="background-color: #ffffff"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                                <button
+                                                                    style="background-color: #7ba8d1"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                                <button
+                                                                    style="background-color: #0e0e0e"
+                                                                    type="button"
+                                                                    class="shopify-card__bullet"
+                                                                ></button>
+                                                            </div>
+                                                        </div>
+                                                        <button
+                                                            type="button"
+                                                            class="shopify-card__cart-btn btn btn_primary btn_primary_i"
+                                                        >
+                                                            <svg>
+                                                                <use href="#cart-svg"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="shopify-card__btn-wrap">
+                                                        <div class="shopify-card__btn-inner">
+                                                            <button type="button" class="btn btn_primary">
+                                                                <span class="btn__txt">Купить в 1 клик</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <span class="shopify-card__label">new</span>
+                                                </div>
+                                                <div class="shopify-card__image-wrap">
+                                                    <img
+                                                        class="shopify-card__image"
+                                                        src="./assets/images/content/feb12ec186c933e1debd0e8f51528162.webp"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        class="shopify-card__image"
+                                                        src="./assets/images/content/0a09fa50b35ac7cfcccf3e63ee7bbabe.webp"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="search-header__link link">
+                                    <span class="link__txt">Смотреть все результаты</span>
+                                    <svg class="link__icon"><use href="#arr-left-svg"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!--             <div class="search-header__no-results"> -->
+                        <!--                 <span class="search-header__title">Ничего не найдено</span> -->
+                        <!--                 <span class="search-header__text"> -->
+                        <!--                     <svg class="search-header__text-icon"><use href="#search-svg"></use></svg> -->
+                        <!--                     <span class="search-header__text-content" -->
+                        <!--                         >По вашему запросу «<span></span>» ничего не найдено. Попробуйте изменить ваш -->
+                        <!--                         запрос</span -->
+                        <!--                     > -->
+                        <!--                 </span> -->
+                        <!--                 <button type="button" class="search-header__btn btn btn_primary"> -->
+                        <!--                     <span class="btn__txt">Не нашли что искали?</span> -->
+                        <!--                 </button> -->
+                        <!--             </div> -->
+                    </div>
+                </div>
+                <include src="./components/_header-cart-widget.html"></include>
+                <include src="./components/_header-lk-widget.html"></include>
+            </header>
+
+            <main>
+                <section class="policy">
+                    <div class="policy__container container">
+                        <div class="policy__title h_h2">политика конфиденциальности</div>
+                        <div class="policy__box">
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">1. Общие положения</div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        Настоящая политика обработки персональных данных составлена в
+                                        соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ
+                                        «О персональных данных» и определяет порядок обработки персональных
+                                        данных и меры по обеспечению безопасности персональных данных,
+                                        предпринимаемые Обществом с ограниченной ответственностью «Simple
+                                        choice» (далее – Оператор).
+                                    </div>
+                                    <div class="policy__row-text--box">
+                                        <p>
+                                            1.1. Оператор ставит своей важнейшей целью и условием
+                                            осуществления своей деятельности соблюдение прав и свобод человека
+                                            и гражданина при обработке его персональных данных, в том числе
+                                            защиты прав на неприкосновенность частной жизни, личную и семейную
+                                            тайну.
+                                        </p>
+                                        <p>
+                                            1.2. Настоящая политика Оператора в отношении обработки
+                                            персональных данных (далее – Политика) применяется ко всей
+                                            информации, которую Оператор может получить о посетителях
+                                            веб-сайта
+                                            <a href="#">https://simplechoice.ru</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">
+                                    2. Основные понятия, используемые в Политике
+                                </div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        <p>
+                                            2.1. Автоматизированная обработка персональных данных – обработка
+                                            персональных данных с помощью средств вычислительной техники;
+                                        </p>
+                                        <p>
+                                            2.2. Блокирование персональных данных – временное прекращение
+                                            обработки персональных данных (за исключением случаев, если
+                                            обработка необходима для уточнения персональных данных);
+                                        </p>
+                                        <p>
+                                            2.3. Веб-сайт – совокупность графических и информационных
+                                            материалов, а также программ для ЭВМ и баз данных, обеспечивающих
+                                            их доступность в сети интернет по сетевому адресу
+                                            <a href="#">https://simplechoice.ru</a>;
+                                        </p>
+                                        <p>
+                                            2.4. Информационная система персональных данных — совокупность
+                                            содержащихся в базах данных персональных данных, и обеспечивающих
+                                            их обработку информационных технологий и технических средств;
+                                        </p>
+                                        <p>
+                                            2.5. Обезличивание персональных данных — действия, в результате
+                                            которых невозможно определить без использования дополнительной
+                                            информации принадлежность персональных данных конкретному
+                                            Пользователю или иному субъекту персональных данных;
+                                        </p>
+                                        <p>
+                                            2.6. Обработка персональных данных – любое действие (операция) или
+                                            совокупность действий (операций), совершаемых с использованием
+                                            средств автоматизации или без использования таких средств с
+                                            персональными данными, включая сбор, запись, систематизацию,
+                                            накопление, хранение, уточнение (обновление, изменение),
+                                            извлечение, использование, передачу (распространение,
+                                            предоставление, доступ), обезличивание, блокирование, удаление,
+                                            уничтожение персональных данных;
+                                        </p>
+                                        <p>
+                                            2.7. Оператор – государственный орган, муниципальный орган,
+                                            юридическое или физическое лицо, самостоятельно или совместно с
+                                            другими лицами организующие и (или) осуществляющие обработку
+                                            персональных данных, а также определяющие цели обработки
+                                            персональных данных, состав персональных данных, подлежащих
+                                            обработке, действия (операции), совершаемые с персональными
+                                            данными;
+                                        </p>
+                                        <p>
+                                            2.8. Персональные данные – любая информация, относящаяся прямо или
+                                            косвенно к определенному или определяемому Пользователю веб-сайта
+                                            <a href="#">https://simplechoice.ru</a>;
+                                        </p>
+                                        <p>
+                                            2.9. Пользователь – любой посетитель веб-сайта
+                                            <a href="#">https://simplechoice.ru</a>;
+                                        </p>
+                                        <p>
+                                            2.10. Предоставление персональных данных – действия, направленные
+                                            на раскрытие персональных данных определенному лицу или
+                                            определенному кругу лиц;
+                                        </p>
+                                        <p>
+                                            2.11. Распространение персональных данных – любые действия,
+                                            направленные на раскрытие персональных данных неопределенному
+                                            кругу лиц (передача персональных данных) или на ознакомление с
+                                            персональными данными неограниченного круга лиц, в том числе
+                                            обнародование персональных данных в средствах массовой информации,
+                                            размещение в информационно-телекоммуникационных сетях или
+                                            предоставление доступа к персональным данным каким-либо иным
+                                            способом;
+                                        </p>
+                                        <p>
+                                            2.12. Трансграничная передача персональных данных – передача
+                                            персональных данных на территорию иностранного государства органу
+                                            власти иностранного государства, иностранному физическому или
+                                            иностранному юридическому лицу;
+                                        </p>
+                                        <p>
+                                            2.13. Уничтожение персональных данных – любые действия, в
+                                            результате которых персональные данные уничтожаются безвозвратно с
+                                            невозможностью дальнейшего восстановления содержания персональных
+                                            данных в информационной системе персональных данных и (или)
+                                            уничтожаются материальные носители персональных данных.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">
+                                    3. Оператор может обрабатывать следующие персональные данные Пользователя
+                                </div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        <p>3.1. Электронный адрес;</p>
+                                        <p>3.2. Номера телефонов;</p>
+                                        <p>
+                                            3.3. Также на сайте происходит сбор и обработка обезличенных
+                                            данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов
+                                            интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).
+                                        </p>
+                                        <p>
+                                            3.4. Вышеперечисленные данные далее по тексту Политики объединены
+                                            общим понятием Персональные данные.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">
+                                    4. Цели обработки персональных данных
+                                </div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        <p>
+                                            4.1. Цель обработки персональных данных Пользователя —
+                                            информирование Пользователя посредством звонка и/или отправки
+                                            электронных писем.
+                                        </p>
+                                        <p>
+                                            4.2. Также Оператор имеет право направлять Пользователю
+                                            уведомления о новых продуктах и услугах, специальных предложениях
+                                            и различных событиях. Пользователь всегда может отказаться от
+                                            получения информационных сообщений, направив Оператору письмо на
+                                            адрес электронной почты info@руно.ru с пометкой «Отказ от
+                                            уведомлений о новых продуктах и услугах и специальных
+                                            предложениях».
+                                        </p>
+                                        <p>
+                                            4.3. Обезличенные данные Пользователей, собираемые с помощью
+                                            сервисов интернет-статистики, служат для сбора информации о
+                                            действиях Пользователей на сайте, улучшения качества сайта и его
+                                            содержания.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">
+                                    5. Правовые основания обработкиперсональных данных
+                                </div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        <p>
+                                            5.1. Оператор обрабатывает персональные данные Пользователя только
+                                            в случае их заполнения и/или отправки Пользователем самостоятельно
+                                            через специальные формы, расположенные на сайте https://руно.ru.
+                                            Заполняя соответствующие формы и/или отправляя свои персональные
+                                            данные Оператору, Пользователь выражает свое согласие с данной
+                                            Политикой.
+                                        </p>
+                                        <p>
+                                            5.2. Оператор обрабатывает обезличенные данные о Пользователе в
+                                            случае, если это разрешено в настройках браузера Пользователя
+                                            (включено сохранение файлов «cookie» и использование технологии
+                                            JavaScript).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">
+                                    6. Порядок сбора, хранения, передачи и других видов обработки персональных
+                                    данных
+                                </div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        <p>
+                                            6.1. Оператор обеспечивает сохранность персональных данных и
+                                            принимает все возможные меры, исключающие доступ к персональным
+                                            данным неуполномоченных лиц.
+                                        </p>
+                                        <p>
+                                            6.2. Персональные данные Пользователя никогда, ни при каких
+                                            условиях не будут переданы третьим лицам, за исключением случаев,
+                                            связанных с исполнением действующего законодательства.
+                                        </p>
+                                        <p>
+                                            6.3. В случае выявления неточностей в персональных данных,
+                                            Пользователь может актуализировать их самостоятельно, путем
+                                            направления Оператору уведомление на адрес электронной почты
+                                            Оператора simplechoice@mail.ru с пометкой «Актуализация
+                                            персональных данных».
+                                        </p>
+                                        <p>
+                                            6.4. Срок обработки персональных данных является неограниченным.
+                                            Пользователь может в любой момент отозвать свое согласие на
+                                            обработку персональных данных, направив Оператору уведомление
+                                            посредством электронной почты на электронный адрес Оператора
+                                            info@руно.ru с пометкой «Отзыв согласия на обработку персональных
+                                            данных».
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">
+                                    7. Трансграничная передачаперсональных данных
+                                </div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        <p>
+                                            7.1. Оператор до начала осуществления трансграничной передачи
+                                            персональных данных обязан убедиться в том, что иностранным
+                                            государством, на территорию которого предполагается осуществлять
+                                            передачу персональных данных, обеспечивается надежная защита прав
+                                            субъектов персональных данных.
+                                        </p>
+                                        <p>
+                                            7.2. Трансграничная передача персональных данных на территории
+                                            иностранных государств, не отвечающих вышеуказанным требованиям,
+                                            может осуществляться только в случае наличия согласия в письменной
+                                            форме субъекта персональных данных на трансграничную передачу его
+                                            персональных данных и/или исполнения договора, стороной которого
+                                            является субъект персональных данных.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="policy__row">
+                                <div class="policy__row-title h h_lora h_h3 txt_wide">
+                                    8. Заключительные положения
+                                </div>
+                                <div class="policy__row-text txt18">
+                                    <div class="policy__row-text--box">
+                                        <p>
+                                            8.1. Пользователь может получить любые разъяснения по интересующим
+                                            вопросам, касающимся обработки его персональных данных,
+                                            обратившись к Оператору с помощью электронной почты
+                                            <a href="mailto:simplechoice@mail.ru">simplechoice@mail.ru</a>.
+                                        </p>
+                                        <p>
+                                            8.2. В данном документе будут отражены любые изменения политики
+                                            обработки персональных данных Оператором. Политика действует
+                                            бессрочно до замены ее новой версией.
+                                        </p>
+                                        <p>
+                                            8.3. Актуальная версия Политики в свободном доступе расположена в
+                                            сети Интернет по адресу
+                                            <a href="#">https://simplechoice.ru/privacy-policy</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>
+<!-- <div class="policy__row">
+    <div class="policy__row-title h h_lora h_h3 txt_wide"></div>
+    <div class="policy__row-text txt18">
+        <div class="policy__row-text--box">
+            <p></p>
+        </div>
+    </div>
+</div> -->

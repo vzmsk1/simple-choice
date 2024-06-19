@@ -1,0 +1,21 @@
+[data-simplebar] {
+    .simplebar-wrapper + .simplebar-track.simplebar-horizontal + .simplebar-track.simplebar-vertical {
+        margin: 4rem 2rem 4rem 0;
+
+        width: 0.3rem;
+        border-radius: 1rem;
+
+        background-color: $gray;
+
+        .simplebar-scrollbar.simplebar-visible:before {
+            left: 0;
+            right: 0;
+
+            width: 0.3rem;
+
+            background: $beige;
+
+            opacity: 1;
+        }
+    }
+}

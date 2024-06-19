@@ -1,17 +1,36 @@
 .card {
     padding-top: 17.6rem;
-    
+
     .container {
         position: relative;
     }
     &__top {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 48em) {
+            margin-bottom: 7.6rem;
+        }
+    }
+
+    &__wrapper {
+        @media (max-width: 48em) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__like {
         width: 3.2rem;
         height: 3.2rem;
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__like.active {
+        svg {
+            fill: #003057;
+        }
     }
 
     &__tabs {
@@ -19,6 +38,10 @@
         flex-direction: column;
         position: absolute;
         top: 26.8rem;
+        @media (max-width: 48em) {
+            position: initial;
+            flex-direction: row;
+        }
     }
 
     &__tab {
@@ -26,47 +49,98 @@
         height: 1.6rem;
         border-radius: 50%;
         cursor: pointer;
-        border: 0.2rem solid $white;
         margin-bottom: 1.2rem;
+        @media (max-width: 48em) {
+            margin-bottom: 0;
+            margin-right: 2.4rem;
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+
+    &__tab:last-child {
+        margin-bottom: 0;
+        @media (max-width: 48em) {
+            margin-right: 0;
+        }
+    }
+
+    &__tab.active {
+        border: 0.2rem solid $white;
+    }
+
+    &__center {
+        @media (max-width: 48em) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__swiper {
         width: 84rem;
         margin: 0 auto;
         margin-bottom: 9rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    .swiper-slide-thumb-active {
+        .card__mini {
+            border: 0.2rem solid $white;
+        }
     }
 
     &__image {
         width: 84rem;
         height: 56.9rem;
+        @media (max-width: 48em) {
+            width: 100%;
+            height: 49rem;
+        }
     }
 
     &__wrap {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: 48em) {
+                align-items: initial;
+                margin-bottom: 3.2rem;
+        }
     }
 
     &__content {
         position: absolute;
+        @media (max-width: 48em) {
+            position: initial;
+        }
     }
 
     &__title {
         margin-bottom: 1.9rem;
         font-weight: 500;
-        
     }
 
     &__price {
         position: relative;
         font-size: 3rem;
         padding-right: 2rem;
+        @media (max-width: 48em) {
+            width: fit-content;
+            font-size: 4.8rem;
+            padding-right: 2.6rem;
+        }
         &::before {
             position: absolute;
-            content:'₽';
+            content: "₽";
             font-size: 2rem;
             right: 0;
             top: -0.2rem;
+            @media (max-width: 48em) {
+                font-size: 3rem;
+                top: -0.3rem;
+            }
         }
     }
 
@@ -74,10 +148,12 @@
         width: 32rem;
         right: 0;
         bottom: 0;
-
+        @media (max-width: 48em) {
+            width: 100%;
+        }
         &-select {
             display: flex;
-            align-items:center;
+            align-items: center;
 
             &-span {
                 text-transform: uppercase;
@@ -88,16 +164,28 @@
         &-icon {
             width: 6.2rem;
             height: 6.2rem;
+            cursor: pointer;
+            @media (max-width: 48em) {
+                width: 10.4rem;
+                height: 10.4rem;
+                margin-left: 4.8rem;
+            }
         }
 
         &-inner {
             display: flex;
             justify-content: space-between;
             margin-bottom: 9.8rem;
+            @media (max-width: 48em) {
+                justify-content: flex-start;
+            }
         }
 
         &-text {
             margin-bottom: 4.1rem;
+            @media (max-width: 48em) {
+                margin-bottom: 4rem;
+            }
         }
 
         .select__title {
@@ -108,6 +196,95 @@
 
         .select__options {
             padding: 0;
+            @media (max-width: 48em) {
+                min-width: 12rem;
+            }
+            
+        }
+
+        &-down-lists {
+            padding: 2.4rem 1.6rem;
+            padding-bottom: 1rem;
+            background-color: $white;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            min-width: 29.3rem;
+            border-radius: 2rem;
+            right: 0;
+            @media (max-width: 48em) {
+                min-width: 80%;
+                right: initial;
+                left: 2rem;
+            }
+        }
+
+        &-down-item {
+            width: 6.4rem;
+            height: 6.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2rem;
+            margin-right: 0.6rem;
+            cursor: pointer;
+            color: rgba(0, 48, 87, 0.5);
+            border: 0.1rem solid rgba(0, 48, 87, 0.5);
+            margin-bottom: 0.4rem;
+            @media (max-width: 48em) {
+                width: 8.4rem;
+                height: 8.4rem;
+                margin-right: 1rem;
+            }
+        }
+
+        &-down-item.active {
+            color: rgba(0, 48, 87, 1);
+            border: 0.1rem solid rgba(0, 48, 87, 1);
+        }
+    }
+
+    &__mini {
+        width: 5.8rem;
+        height: 7.2rem;
+        border-radius: 2rem;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+        }
+    }
+
+    .btn {
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    &__swiper-images.swiper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 30rem;
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    .swiper {
+        max-height: auto;
+    }
+
+    .swiper-wrapper {
+        max-height: auto;
+    }
+
+    &__pagination {
+       display: none;
+        @media (max-width: 48em) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4rem;
         }
     }
 }

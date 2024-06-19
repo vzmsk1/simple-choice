@@ -12,81 +12,82 @@ $red: #d71a00;
 // ----- fonts
 
 // imported fonts
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Montserrat:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Montserrat:wght@100..900&display=swap');
 
 // local fonts
-@import "./fonts";
+@import './fonts';
 
 // ----- base styles
 
 // base scss file
-@import "./set";
+@import './set';
 
 // html, body
 html.lock {
-  overflow: hidden;
-  touch-action: none;
+    overflow: hidden;
+    touch-action: none;
 }
 html,
 body {
-  overflow-x: clip;
+    overflow-x: clip;
 }
 
 // main
 main {
-  position: relative;
+    position: relative;
 
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 // wrapper
 .wrapper {
-  margin: 0 auto;
+    margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  max-width: 1920px;
-  height: 100%;
+    max-width: 1920px;
+    height: 100%;
 
-  user-select: none;
+    user-select: none;
 }
 
 ._desktop-only {
-  @media (max-width: 48em) {
-    display: none;
-  }
+    @media (max-width: 48em) {
+        display: none;
+    }
 }
 
 ._mobile-only {
-  @media (min-width: 48em) {
-    display: none;
-  }
+    @media (min-width: 48em) {
+        display: none;
+    }
 }
 
 // swiper fade fix
 .swiper-fade {
-  .swiper-slide {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transition:
-      opacity 0.8s ease,
-      visibility 0.8s ease;
-    &.swiper-slide-active {
-      opacity: 1 !important;
-      visibility: visible !important;
+    .swiper-slide {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        &.swiper-slide-active {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
     }
-  }
 }
 
 // ----- imports
 
 // header / footer
-@import "./sections/header";
-@import "./sections/footer";
+@import './sections/header';
+@import './sections/footer';
 
 // ui
-@import "../ui/ui";
+@import '../ui/ui';
 
-@import "./dev/vzmsk1";
-@import "./dev/markusDM";
+@import './dev/vzmsk1';
+@import './dev/markusDM';
+@import './dev/lgleb.scss';
+@import "./dev/monsters";
+@import "./dev/kuloverova";

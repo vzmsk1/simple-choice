@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ЛК Личные данные</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb__list">
+                            <li><a href="#">Главная </a></li>
+                            <li><a href="#">Личный кабинет </a></li>
+                            <li>Личные данные</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="lk">
+                    <div class="container">
+                        <div class="lk__inner">
+                            <div class="lk__nav">
+                                <div class="lk__nav-wrapper _desktop-only">
+                                    <div class="lk__nav-box">
+                                        <a href="#" class="lk__nav-item txt20 isActive">Личные данные</a>
+                                        <a href="#" class="lk__nav-item txt20">Мои покупки</a>
+                                        <a href="#" class="lk__nav-item txt20">Избранное</a>
+                                    </div>
+                                    <button class="lk__nav-exit" data-modal="#accountLogoutModal">
+                                        <span class="lk__nav-exit-text fw500">Выйти из аккаунта</span>
+                                        <div class="lk__nav-exit-svg-box">
+                                            <img src="./assets/images/icons/exit.svg" alt="" />
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="lk__nav-mob-selector _mobile-only">
+                                    <div class="lk__nav-mob-selector-top">
+                                        <span class="lk__nav-mob-selector-top-text">Личные данные</span>
+                                        <div class="lk__nav-mob-selector-top-svg-box">
+                                            <img src="./assets/images/icons/sm-arr.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="lk__nav-mob-selector-bottom">
+                                        <div class="lk__nav-mob-selector-bottom-list">
+                                            <a href="#" class="lk__nav-mob-selector-item isActive"
+                                                >Личные данные</a
+                                            >
+                                            <a href="#" class="lk__nav-mob-selector-item">Мои покупки</a>
+                                            <a href="#" class="lk__nav-mob-selector-item">Избранное</a>
+                                            <button
+                                                class="lk__nav-exit lk__nav-mob-selector-exit"
+                                                data-modal="#accountLogoutModal"
+                                            >
+                                                <span class="lk__nav-exit-text">Выйти из аккаунта</span>
+                                                <div class="lk__nav-exit-svg-box">
+                                                    <img src="./assets/images/icons/exit.svg" alt="" />
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lk__content">
+                                <p class="lk__content-title h h_h2">Личные данные</p>
+                                <form data-dev class="lk__personal">
+                                    <div class="lk__personal-photo-box">
+                                        <div class="lk__personal-photo-name-box">
+                                            <div class="lk__personal-photo-img-wrapper">
+                                                <div class="lk__personal-no-photo-img-box">
+                                                    <img
+                                                        src="./assets/images/content/personal-no-photo.webp"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="lk__personal-photo-img-box">
+                                                    <img
+                                                        src="./assets/images/content/personal-photo.webp"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                            <p class="lk__personal-name h h_h3 _mobile-only">Иванова ОЛьга</p>
+                                        </div>
+
+                                        <div class="lk__personal-info-box">
+                                            <p class="lk__personal-name h h_h3 _desktop-only">
+                                                Иванова ОЛьга
+                                            </p>
+
+                                            <button
+                                                class="lk__personal-file-text txt16"
+                                                data-modal="#changeImageModal"
+                                            >
+                                                Изменить изображение
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="lk__personal-form-wrapper">
+                                        <p class="lk__personal-form-title txt20">Личные данные</p>
+
+                                        <div class="lk__personal-form-box">
+                                            <div
+                                                data-hint="Заполните поле"
+                                                class="input lk__personal-form-input"
+                                            >
+                                                <span class="input__label">Имя*</span>
+                                                <input
+                                                    autocomplete="off"
+                                                    type="text"
+                                                    name="form[]"
+                                                    placeholder="Ваше имя"
+                                                    class="input__field"
+                                                    data-placeholder="Ваше имя"
+                                                    data-validate
+                                                    data-required
+                                                    value="Ольга"
+                                                />
+                                            </div>
+                                            <div
+                                                data-hint="Заполните поле"
+                                                class="input lk__personal-form-input"
+                                            >
+                                                <span class="input__label">Фамилия</span>
+                                                <input
+                                                    autocomplete="off"
+                                                    type="text"
+                                                    name="form[]"
+                                                    placeholder="Ваша фамилия"
+                                                    class="input__field"
+                                                    data-placeholder="Ваша фамилия"
+                                                    value="Иванова"
+                                                />
+                                            </div>
+                                            <div
+                                                data-hint="Заполните поле"
+                                                class="input lk__personal-form-input"
+                                            >
+                                                <span class="input__label">Дата рождения</span>
+                                                <input
+                                                    data-birth-mask
+                                                    autocomplete="off"
+                                                    type="text"
+                                                    name="form[]"
+                                                    placeholder="Ваша дата рождения"
+                                                    class="input__field"
+                                                    data-placeholder="Ваша дата рождения"
+                                                    value="12.06.1988"
+                                                />
+                                            </div>
+                                            <div
+                                                data-hint="Заполните поле"
+                                                class="input lk__personal-form-input"
+                                            >
+                                                <span class="input__label">Город</span>
+                                                <div class="dropdown">
+                                                    <select
+                                                        data-sel-hint="Город не выбран"
+                                                        data-sel-label="Выберите город"
+                                                        data-show-selection
+                                                    >
+                                                        <option selected value="1">Москва</option>
+                                                        <option value="2">Москва</option>
+                                                        <option value="3">Москва</option>
+                                                        <option value="4">Москва</option>
+                                                        <option value="5">Москва</option>
+                                                        <option value="6">Москва</option>
+                                                        <option value="7">Москва</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lk__personal-form-wrapper">
+                                        <p class="lk__personal-form-title txt20">Контактные данные</p>
+
+                                        <div class="lk__personal-form-box">
+                                            <div
+                                                data-hint="Заполните поле"
+                                                class="input lk__personal-form-input"
+                                                data-modal="#changePhoneModal"
+                                            >
+                                                <span class="input__label input__label--confirmed"
+                                                    >Телефон*
+                                                
+                                                </span>
+
+                                                <span
+                                                    class="lk__personal-form-input-text lk__personal-form-input-text--field"
+                                                    >+7(900) 000-00-00</span
+                                                >
+                                            </div>
+                                            <div
+                                                data-hint="Заполните поле"
+                                                class="input lk__personal-form-input"
+                                                data-modal="#changeMailModal"
+                                            >
+                                                <span class="input__label">Ваш E-mail*</span>
+
+                                                <span class="lk__personal-form-input-text">Ваш E-mail</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="lk__personal-checkbox-label">
+                                        <input type="checkbox" class="lk__personal-checkbox" checked />
+                                        <span class="lk__personal-checkbox-text-box">
+                                            <span class="lk__personal-checkbox-title txt16">
+                                                Получать чеки по e-mail</span
+                                            >
+                                            <span class="lk__personal-checkbox-text"
+                                                >Чеки будут приходить на указанную электронную почту</span
+                                            >
+                                        </span>
+                                    </label>
+                                    <div class="lk__personal-btn-box">
+                                        <button
+                                            type="button"
+                                            class="btn btn_primary _is-disabled lk__personal-btn-save"
+                                        >
+                                            <span class="btn__txt">Сохранить изменения</span>
+                                        </button>
+
+                                        <button class="lk__personal-remove" data-modal="#accountDeletingModal">
+                                            <span class="lk__personal-remove-text">Удалить аккаунт</span>
+                                            <div class="lk__personal-remove-svg-box">
+                                                <img src="./assets/images/icons/trash.svg" alt="" />
+                                            </div>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<section class="contacts">
+    <div class="contacts__container container">
+        <div class="contacts__group contacts__group_f">
+            <span class="contacts__title h h_h1">Контакты</span>
+            <form
+                data-da=".contacts__group_s,768,last"
+                action="#"
+                data-dev
+                class="contacts__form form-contacts"
+            >
+                <span class="form-contacts__title"
+                    >оставьте нам заявку и мы свяжемся с вами в ближайшее время</span
+                >
+                <div class="form-contacts__fields">
+                    <div data-hint="Заполните поле" class="form-contacts__input input">
+                        <input
+                            data-validate
+                            data-required
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            placeholder="Ваше имя"
+                            class="input__field"
+                        />
+                    </div>
+                    <div data-hint="Заполните поле" class="form-contacts__input input">
+                        <input
+                            data-tel-mask
+                            data-validate
+                            data-required
+                            autocomplete="off"
+                            type="tel"
+                            name="form[]"
+                            placeholder="Телефон"
+                            class="input__field"
+                        />
+                    </div>
+                </div>
+                <div class="form-contacts__footer">
+                    <button type="submit" class="form-contacts__btn btn btn_primary _is-disabled">
+                        <span class="btn__txt">Отправить</span>
+                    </button>
+                    <p class="form-contacts__text">
+                        Нажимая на кнопку, Вы принимаете условия пользовательского соглашения
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="contacts__group contacts__group_s">
+            <ul data-da=".contacts__group_f,768,last" class="contacts__list list-contacts">
+                <li class="list-contacts__item">
+                    <span class="list-contacts__subtitle">телефон</span>
+                    <a href="tel:79030075671" class="list-contacts__text">+7 (903) 007-56-71</a>
+                </li>
+                <li class="list-contacts__item">
+                    <span class="list-contacts__subtitle">e-mail</span>
+                    <a href="mailto:simplechoice@mail.ru" class="list-contacts__text">simplechoice@mail.ru</a>
+                </li>
+            </ul>
+            <div class="contacts__images">
+                <div class="contacts__image-wrap">
+                    <img
+                        class="contacts__image"
+                        src="./assets/images/content/712d44d20a09fa50b35ac7cfcccf3e63ee7bbabe.webp"
+                        alt=""
+                    />
+                </div>
+                <div class="contacts__image-wrap contacts__image-wrap_large">
+                    <img
+                        class="contacts__image"
+                        src="./assets/images/content/0a09fa50b35ac7csdsfcccf3e63ee7bbabe.webp"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

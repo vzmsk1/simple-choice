@@ -1,0 +1,72 @@
+.accordion-item {
+    padding-bottom: 3.2rem;
+
+    border-bottom: 1px solid #0030571a;
+
+    &:not(:first-child) {
+        padding-top: 3.2rem;
+    }
+
+    @media (max-width: 48em) {
+        padding-bottom: 4rem;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: flex-start;
+            gap: 3.2rem;
+        }
+    }
+
+    &__title-txt {
+        font-size: 3rem;
+        line-height: 3.7rem;
+        text-transform: uppercase;
+
+        @media (max-width: 48em) {
+            font-size: 4.8rem;
+            line-height: 120%;
+            letter-spacing: 0.3rem;
+        }
+    }
+
+    &__icon {
+        flex: 0 0 3.2rem;
+        width: 3.2rem;
+        height: 3.2rem;
+
+        transform: rotate(140deg);
+
+        transition: transform 0.5s ease;
+
+        ._is-active & {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 48em) {
+            flex: 0 0 6.4rem;
+            width: 6.4rem;
+            height: 6.4rem;
+        }
+    }
+
+    &__text-wrap {
+        padding-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+
+        @media (max-width: 48em) {
+            padding-top: 4rem;
+        }
+    }
+}

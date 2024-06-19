@@ -1,0 +1,187 @@
+<button class="filters__btn filters__btn_open btn_primary btn_primary_icon">
+    <svg class="btn__icon"><use href="#filters-svg"></use></svg>
+    <svg class="btn__icon btn__icon_close"><use href="#cross-svg"></use></svg>
+    <span class="btn__txt">Фильтры</span>
+</button>
+<div data-sb="md" class="filters__body">
+    <button class="filters__close-btn filters__btn">
+        <svg class="filters__close-btn-icon"><use href="#cross-svg"></use></svg>
+    </button>
+    <span class="filters__title h h_h3">ФИЛЬТРЫ</span>
+    <form action="#" data-dev data-accordion data-accordion-single class="filters__content">
+        <div class="filters__groups">
+            <div class="filters__group">
+                <span class="filters__subtitle txt20">Пол</span>
+                <div class="filters__options">
+                    <div class="filters__option-btn option-btn">
+                        <input checked type="radio" name="filtersGenderOption" class="option-btn__input" />
+                        <span class="option-btn__text">Все</span>
+                    </div>
+                    <div class="filters__option-btn option-btn">
+                        <input type="radio" name="filtersGenderOption" class="option-btn__input" />
+                        <span class="option-btn__text">Девочкам</span>
+                    </div>
+                    <div class="filters__option-btn option-btn">
+                        <input type="radio" name="filtersGenderOption" class="option-btn__input" />
+                        <span class="option-btn__text">Мальчикам</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filters__group filters__group_accordion">
+                <button type="button" data-accordion-item class="filters__subtitle-wrap">
+                    <span class="filters__subtitle txt20">Категория</span>
+                    <svg class="filters__icon"><use href="#arr-sel-svg"></use></svg>
+                </button>
+                <div class="filters__inner">
+                    <div class="filters__cards">
+                        <div class="filters__category-s-card category-s-card">
+                            <input
+                                checked
+                                type="radio"
+                                name="filtersCategoryOption"
+                                class="category-s-card__input"
+                            />
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img
+                                        class="category-s-card__image"
+                                        src="./assets/images/items/1657b93ad9070b308d50d1596bf89f8e.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <span class="category-s-card__title">Футболки/ рубашки</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input" />
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img
+                                        class="category-s-card__image"
+                                        src="./assets/images/items/fd46c34bc92caa4bee2781bf3a7a0a8f.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <span class="category-s-card__title">Шорты/брюки</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input" />
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img
+                                        class="category-s-card__image"
+                                        src="./assets/images/items/357b0c806c2a66de01df144ddcd68594c.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <span class="category-s-card__title">Платья/юбки</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input" />
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img
+                                        class="category-s-card__image"
+                                        src="./assets/images/items/9ddb7cf50d2fcf2ebc0511f3b3b15317f.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <span class="category-s-card__title">Костюмы</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input" />
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img
+                                        class="category-s-card__image"
+                                        src="./assets/images/items/a63a99ab8302e95b660de37db1c35e077cb8d6ae.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <span class="category-s-card__title">Бомберы</span>
+                            </div>
+                        </div>
+                        <div class="filters__category-s-card category-s-card">
+                            <input type="radio" name="filtersCategoryOption" class="category-s-card__input" />
+                            <div class="category-s-card__content">
+                                <div class="category-s-card__image-wrap">
+                                    <img
+                                        class="category-s-card__image"
+                                        src="./assets/images/items/357b0c806c2a66fde01df144ddc68594c.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <span class="category-s-card__title">Плащи</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters__group filters__group_accordion">
+                <button type="button" data-accordion-item class="filters__subtitle-wrap">
+                    <span class="filters__subtitle txt20">Размер</span>
+                    <svg class="filters__icon"><use href="#arr-sel-svg"></use></svg>
+                </button>
+                <div class="filters__inner">
+                    <div class="filters__options">
+                        <div class="filters__option-btn option-btn">
+                            <input checked type="radio" name="filtersSizeOption" class="option-btn__input" />
+                            <span class="option-btn__text">98</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input" />
+                            <span class="option-btn__text">104</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input" />
+                            <span class="option-btn__text">110</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input" />
+                            <span class="option-btn__text">116</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input" />
+                            <span class="option-btn__text">122</span>
+                        </div>
+                        <div class="filters__option-btn option-btn">
+                            <input type="radio" name="filtersSizeOption" class="option-btn__input" />
+                            <span class="option-btn__text">128</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters__group">
+                <span class="filters__subtitle txt20">Цвет</span>
+                <div class="filters__colors">
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input" />
+                        <div style="background-color: #c69259" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input" />
+                        <div style="background-color: #ffffff" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input" />
+                        <div style="background-color: #7ba8d1" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input" />
+                        <div style="background-color: #88b884" class="color__inner"></div>
+                    </div>
+                    <div class="filters__color color">
+                        <input type="radio" name="filtersColorOption" class="color__input" />
+                        <div style="background-color: #9e84b8" class="color__inner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="filters__reset-btn btn btn_secondary">
+            <span class="btn__txt">Очистить фильтры</span>
+        </button>
+    </form>
+</div>
