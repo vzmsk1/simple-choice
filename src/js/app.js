@@ -59,7 +59,10 @@ import './lib/inputmask';
 // simplebar
 import './lib/simplebar';
 
-import './lib/video.js';
+
+
+import videojs from 'video.js';
+
 
 // --------------------------------------------------------------------------
 
