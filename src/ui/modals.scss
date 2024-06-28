@@ -70,11 +70,34 @@ body::after {
                     padding: 24rem 4rem 8rem 4rem;
                 }
             }
+
+
+
             &__close {
                 @media (max-width: 48em) {
                     top: 4rem;
                     right: 4rem;
                 }
+            }
+        }
+    }
+
+
+    
+    &__body--size {
+        @media (max-width: 48em) {
+            .modal__close {
+                top: 3.6rem;
+                right: 3.6rem;
+            }
+
+            .h_h2 {
+                font-size: 5.4rem;
+            }
+
+            .payment-info__title {
+                margin-bottom: 8rem;
+                margin-top: 6rem;
             }
         }
     }
@@ -137,6 +160,11 @@ body::after {
 
             background-color: $white;
         }
+    }
+
+
+    &__content--size {
+        max-width: 139rem;
     }
 
     &__body {
