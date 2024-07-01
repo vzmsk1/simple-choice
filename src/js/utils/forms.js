@@ -270,6 +270,9 @@ class FormFields extends Validation {
         }, 0);
     }
 
+
+    
+
     handleFocusout(e) {
         const target = e.target;
 
@@ -323,3 +326,5 @@ class FormFields extends Validation {
 // --------------------------------------------------------------------------
 
 new FormFields();
+
+

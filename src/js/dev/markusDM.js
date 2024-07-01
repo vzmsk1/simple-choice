@@ -170,3 +170,32 @@ const player = new Plyr('#player', {
     controls: ['play-large']
 });
 
+
+
+
+
+$(document).ready(function() {
+    var $button = $('.filters__btn');
+    var $section2 = $('#section2');
+
+   
+    if ($section2.length && $button.length) {
+        function checkScroll() {
+            var section2Top = $section2.offset().top;
+            var scrollPos = $(window).scrollTop();
+            var windowHeight = $(window).height();
+
+            if (scrollPos + windowHeight > section2Top) {
+                $button.fadeIn();
+            } else {
+                $button.fadeOut();
+            }
+        }
+
+       
+        checkScroll();
+
+       
+        $(window).on('scroll', checkScroll);
+    }
+});
