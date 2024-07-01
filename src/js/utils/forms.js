@@ -306,6 +306,8 @@ class FormFields extends Validation {
     }
 
     init() {
+        const _this = this;
+
         // save placeholder in data attribute
         this.savePlaceholder();
 
@@ -313,8 +315,8 @@ class FormFields extends Validation {
         new FormSubmition();
 
         // events
-        document.body.addEventListener('focusin', this.handleFocusin.bind(this));
-        document.body.addEventListener('focusout', this.handleFocusout.bind(this));
+        document.addEventListener('focusin', _this.handleFocusin.bind(_this));
+        document.addEventListener('focusout', _this.handleFocusout.bind(_this));
     }
 }
 
